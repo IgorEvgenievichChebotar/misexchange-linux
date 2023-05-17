@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<content>
+  <sSex>
+    <o n ="sSex">
+      <f t="S" n="name" v="sSex"/>
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Мужской"/>
+          <f t="S" n="code" v="Муж."/>
+          <f t="S" n="mnemonics" v="Муж."/>
+          <f t="S" n="ExternalCode" v="М"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Женский"/>
+          <f t="S" n="code" v="Жен."/>
+          <f t="S" n="mnemonics" v="Жен."/>
+          <f t="S" n="ExternalCode" v="Ж"/>
+        </o>
+      </s>
+    </o>
+  </sSex>
+
+  <fSex>
+    <o n ="fSex">
+      <f t="S" n="name" v="fSex"/>
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="(не указан)"/>
+          <f t="S" n="code" v="н/у"/>
+          <f t="S" n="mnemonics" v="н/у"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Мужской"/>
+          <f t="S" n="code" v="Муж."/>
+          <f t="S" n="mnemonics" v="Муж."/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Женский"/>
+          <f t="S" n="code" v="Жен."/>
+          <f t="S" n="mnemonics" v="Жен."/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="(не важно)"/>
+          <f t="S" n="code" v="н.в."/>
+          <f t="S" n="mnemonics" v="н.в."/>
+        </o>
+      </s>
+    </o>
+  </fSex>
+
+
+  <sDonorStatus>
+    <o n ="sDonorStatus">
+      <f t="S" n="name" v="sDonorStatus" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="1"/>
+          <f t="S" n="name" v="Активный" />
+          <f t="S" n="code" v="1" />
+          <f t="S" n="mnemonics" v="Активный"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="2"/>
+          <f t="S" n="name" v="Резервный" />
+          <f t="S" n="code" v="2" />
+          <f t="S" n="mnemonics" v="Резервный"/>
+        </o>
+      </s>
+    </o>
+  </sDonorStatus>
+
+
+  <visitReserveType>
+    <o n ="visitReserveType">
+      <f t="S" n="name" v="visitReserveType" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="1"/>
+          <f t="S" n="name" v="Первичный" />
+          <f t="S" n="code" v="1" />
+          <f t="S" n="mnemonics" v="Первичный"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="2"/>
+          <f t="S" n="name" v="Первый раз в году" />
+          <f t="S" n="code" v="2" />
+          <f t="S" n="mnemonics" v="Первый раз в году"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="3"/>
+          <f t="S" n="name" v="Повторный" />
+          <f t="S" n="code" v="3" />
+          <f t="S" n="mnemonics" v="Повторный"/>
+        </o>
+      </s>
+    </o>
+  </visitReserveType>
+
+  <expressDonationResult>
+    <o n ="expressDonationResult">
+      <f t="S" n="name" v="expressDonationResult" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="0"/>
+          <f t="S" n="name" v="Не определен" />
+          <f t="S" n="code" v="0" />
+          <f t="S" n="mnemonics" v="Не определен"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="1"/>
+          <f t="S" n="name" v="Донация" />
+          <f t="S" n="code" v="1" />
+          <f t="S" n="mnemonics" v="Донация"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="2"/>
+          <f t="S" n="name" v="Отвод" />
+          <f t="S" n="code" v="2" />
+          <f t="S" n="mnemonics" v="Отвод"/>
+        </o>
+      </s>
+    </o>
+  </expressDonationResult>
+
+  <edcRecordType>
+    <o n ="edcRecordType">
+      <f t="S" n="name" v="edcRecordType" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="1"/>
+          <f t="S" n="name" v="Донор" />
+          <f t="S" n="code" v="1" />
+          <f t="S" n="mnemonics" v="Донор"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="2"/>
+          <f t="S" n="name" v="Отвод" />
+          <f t="S" n="code" v="2" />
+          <f t="S" n="mnemonics" v="Отвод"/>
+        </o>
+      </s>
+    </o>
+  </edcRecordType>
+
+  <denyDurationUnits>
+    <o n ="denyDurationUnits">
+      <f t="S" n="name" v="denyDurationUnits" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="1"/>
+          <f t="S" n="name" v="дней" />
+          <f t="S" n="code" v="1" />
+          <f t="S" n="mnemonics" v="дней"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="2"/>
+          <f t="S" n="name" v="недель" />
+          <f t="S" n="code" v="2" />
+          <f t="S" n="mnemonics" v="недель"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="3"/>
+          <f t="S" n="name" v="месяцев" />
+          <f t="S" n="code" v="3" />
+          <f t="S" n="mnemonics" v="месяцев"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="4"/>
+          <f t="S" n="name" v="лет" />
+          <f t="S" n="code" v="4" />
+          <f t="S" n="mnemonics" v="лет"/>
+        </o>
+      </s>
+    </o>
+  </denyDurationUnits>
+
+  <sDenyType>
+    <o n ="sDenyType">
+      <f t="S" n="name" v="sDenyType" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="1"/>
+          <f t="S" n="name" v="Абсолютный отвод" />
+          <f t="S" n="code" v="1" />
+          <f t="S" n="mnemonics" v="Абсолютный"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="2"/>
+          <f t="S" n="name" v="Относительный(временный) отвод" />
+          <f t="S" n="code" v="2" />
+          <f t="S" n="mnemonics" v="Временный"/>
+        </o>
+      </s>
+    </o>
+  </sDenyType>
+
+  <sDononorOccupation>
+    <o n ="sDononorOccupation">
+      <f t="S" n="name" v="sDononorOccupation" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="1"/>
+          <f t="S" n="name" v="Работающий (рабочий)" />
+          <f t="S" n="code" v="1" />
+          <f t="S" n="mnemonics" v="Работающий (рабочий)"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="2"/>
+          <f t="S" n="name" v="Учащийся" />
+          <f t="S" n="code" v="2" />
+          <f t="S" n="mnemonics" v="Учащийся"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="3"/>
+          <f t="S" n="name" v="Безработный" />
+          <f t="S" n="code" v="3" />
+          <f t="S" n="mnemonics" v="Безработный"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="4"/>
+          <f t="S" n="name" v="Пенсионер" />
+          <f t="S" n="code" v="4" />
+          <f t="S" n="mnemonics" v="Пенсионер"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="5"/>
+          <f t="S" n="name" v="Военный" />
+          <f t="S" n="code" v="5" />
+          <f t="S" n="mnemonics" v="Военный"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="6"/>
+          <f t="S" n="name" v="Работающий (служащий)" />
+          <f t="S" n="code" v="6" />
+          <f t="S" n="mnemonics" v="Работающий (служащий)"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="7"/>
+          <f t="S" n="name" v="Предприниматель" />
+          <f t="S" n="code" v="7" />
+          <f t="S" n="mnemonics" v="Предприниматель"/>
+        </o>
+      </s>
+    </o>
+  </sDononorOccupation>
+
+
+  <sTransfusionRequestState>
+    <o n="sTransfusionRequestState">
+      <f t="S" n="name" v="sTransfusionRequestState" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="10"/>
+          <f t="S" n="name" v="Новая" />
+          <f t="S" n="code" v="10" />
+          <f t="S" n="mnemonics" v="NEW"/>
+          <f t="S" n="color" v="7CFFFF"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="20"/>
+          <f t="S" n="name" v="Одобрена зав. отделением" />
+          <f t="S" n="code" v="20" />
+          <f t="S" n="mnemonics" v="DOCTOR_APPROVED"/>
+          <f t="S" n="color" v="7CE495"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="30"/>
+          <f t="S" n="name" v="Одобрена трансфузиологом" />
+          <f t="S" n="code" v="30" />
+          <f t="S" n="mnemonics" v="TRANSFUSIOLOGIST_APPROVED"/>
+          <f t="S" n="color" v="7CE495"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="40"/>
+          <f t="S" n="name" v="Продукты подобраны" />
+          <f t="S" n="code" v="40" />
+          <f t="S" n="mnemonics" v="PRODUCTS_SELECTED"/>
+          <f t="S" n="color" v="74B9F5"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="50"/>
+          <f t="S" n="name" v="Отправлена в донорский отдел" />
+          <f t="S" n="code" v="50" />
+          <f t="S" n="mnemonics" v="NEEDS_DONATION"/>
+          <f t="S" n="color" v="74B9F5"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="60"/>
+          <f t="S" n="name" v="Совершена донация" />
+          <f t="S" n="code" v="60" />
+          <f t="S" n="mnemonics" v="DONATION_DONE"/>
+          <f t="S" n="color" v="74B9F5"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="70"/>
+          <f t="S" n="name" v="Компонент передан в отделение" />
+          <f t="S" n="code" v="70" />
+          <f t="S" n="mnemonics" v="PRODUCTS_ISSUED"/>
+          <f t="S" n="color" v="DA70D6"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="80"/>
+          <f t="S" n="name" v="Продукты получены" />
+          <f t="S" n="code" v="80" />
+          <f t="S" n="mnemonics" v="PRODUCTS_DELIVERED"/>
+          <f t="S" n="color" v="7B68EE"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="90"/>
+          <f t="S" n="name" v="Трансфузия выполнена" />
+          <f t="S" n="code" v="90" />
+          <f t="S" n="mnemonics" v="TRANSFUSION_DONE"/>
+          <f t="S" n="color" v="7B68EE"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="100"/>
+          <f t="S" n="name" v="Отменена" />
+          <f t="S" n="code" v="100" />
+          <f t="S" n="mnemonics" v="CANCELED"/>
+          <f t="S" n="color" v="FF4500"/>
+        </o>
+      </s>
+    </o>
+  </sTransfusionRequestState >
+
+  <sListType>
+    <o n="sListType">
+      <f t="S" n="name" v="sListType" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="1"/>
+          <f t="S" n="name" v="Анкета" />
+          <f t="S" n="code" v="1" />
+          <f t="S" n="mnemonics" v=""/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="2"/>
+          <f t="S" n="name" v="Предварит. лаборатория" />
+          <f t="S" n="code" v="2" />
+          <f t="S" n="mnemonics" v=""/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="3"/>
+          <f t="S" n="name" v="Врачебный осмотр" />
+          <f t="S" n="code" v="3" />
+          <f t="S" n="mnemonics" v=""/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="4"/>
+          <f t="S" n="name" v="Основная лаборатория" />
+          <f t="S" n="code" v="4" />
+          <f t="S" n="mnemonics" v=""/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="5"/>
+          <f t="S" n="name" v="Финиш" />
+          <f t="S" n="code" v="5" />
+          <f t="S" n="mnemonics" v=""/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="6"/>
+          <f t="S" n="name" v="Физиологические показатели" />
+          <f t="S" n="code" v="6" />
+          <f t="S" n="mnemonics" v=""/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="7"/>
+          <f t="S" n="name" v="Параметры анамнеза" />
+          <f t="S" n="code" v="7" />
+          <f t="S" n="mnemonics" v=""/>
+        </o>
+      </s>
+    </o>
+  </sListType>
+
+  <sProductUnitType>
+    <o n="sProductUnitType">
+      <f t="S" n="name" v="sProductUnitType" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="1"/>
+          <f t="S" n="name" v="мл" />
+          <f t="S" n="code" v="1" />
+          <f t="S" n="mnemonics" v="мл"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="2"/>
+          <f t="S" n="name" v="л" />
+          <f t="S" n="code" v="2" />
+          <f t="S" n="mnemonics" v="л"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="3"/>
+          <f t="S" n="name" v="шт." />
+          <f t="S" n="code" v="3" />
+          <f t="S" n="mnemonics" v="шт."/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="4"/>
+          <f t="S" n="name" v="дозы" />
+          <f t="S" n="code" v="4" />
+          <f t="S" n="mnemonics" v="дозы"/>
+        </o>
+      </s>
+    </o>
+  </sProductUnitType>
+
+  <fBoolean>
+    <o n ="fBoolean">
+      <f t="S" n="name" v="fBoolean"/>
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Да"/>
+          <f t="S" n="code" v="Да"/>
+          <f t="S" n="mnemonics" v="Да"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="Нет"/>
+          <f t="S" n="code" v="Нет"/>
+          <f t="S" n="mnemonics" v="Нет"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Не важно"/>
+          <f t="S" n="code" v="Не важно"/>
+          <f t="S" n="mnemonics" v="Не важно"/>
+        </o>
+      </s>
+    </o>
+  </fBoolean>
+
+  <sTransfusionState>
+    <o n="sTransfusionState">
+      <f t="S" n="name" v="sTransfusionState" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="0"/>
+          <f t="S" n="name" v="Новая" />
+          <f t="S" n="code" v="0" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="7CFFFF"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="10"/>
+          <f t="S" n="name" v="Выполненая" />
+          <f t="S" n="code" v="10" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="7CE495"/>
+        </o>
+      </s>
+    </o>
+  </sTransfusionState>
+
+  <sTreatmentRequestState>
+    <o n="sTreatmentRequestState">
+      <f t="S" n="name" v="sTreatmentRequestState" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="0"/>
+          <f t="S" n="name" v="Новая" />
+          <f t="S" n="code" v="0" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="FFAAAA"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="10"/>
+          <f t="S" n="name" v="Принята" />
+          <f t="S" n="code" v="10" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="D456FF"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="15"/>
+          <f t="S" n="name" v="Процедура начата" />
+          <f t="S" n="code" v="15" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="CCFFFF"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="20"/>
+          <f t="S" n="name" v="Обработана" />
+          <f t="S" n="code" v="20" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="4F69FF"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="30"/>
+          <f t="S" n="name" v="Отменена" />
+          <f t="S" n="code" v="30" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="C0C0C0"/>
+        </o>
+      </s>
+    </o>
+  </sTreatmentRequestState>
+
+  <sTreatmentState>
+    <o n="sTreatmentState">
+      <f t="S" n="name" v="sTreatmentState" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="1"/>
+          <f t="S" n="name" v="Требуется подбор продуктов" />
+          <f t="S" n="code" v="1" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="FFAAAA"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="2"/>
+          <f t="S" n="name" v="Компоненты заказаны" />
+          <f t="S" n="code" v="2" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="D456FF"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="5"/>
+          <f t="S" n="name" v="Готова к выполнению" />
+          <f t="S" n="code" v="5" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="FFF8BC"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="10"/>
+          <f t="S" n="name" v="Начата" />
+          <f t="S" n="code" v="10" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="CCFFFF"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="15"/>
+          <f t="S" n="name" v="Отменена" />
+          <f t="S" n="code" v="15" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="C0C0C0"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="20"/>
+          <f t="S" n="name" v="Завершена" />
+          <f t="S" n="code" v="20" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="4F69FF"/>
+        </o>
+      </s>
+    </o>
+  </sTreatmentState>
+
+  <sBooleanValue>
+    <o n="sBooleanValue">
+      <f t="S" n="name" v="sBooleanValue" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="1"/>
+          <f t="S" n="name" v="Да" />
+          <f t="S" n="code" v="1" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="7CFFFF"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="0"/>
+          <f t="S" n="name" v="Нет" />
+          <f t="S" n="code" v="0" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="7CE495"/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="2"/>
+          <f t="S" n="name" v="(не указано)" />
+          <f t="S" n="code" v="2" />
+          <f t="S" n="mnemonics" v=""/>
+          <f t="S" n="color" v="7CFFFF"/>
+        </o>        
+      </s>
+    </o>
+  </sBooleanValue>
+  
+  <static-workState>
+    <o n="static-workState">
+      <f t="S" n="name" v="static-workState"/>
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="Превью"/>
+          <f t="S" n="code" v="Preview"/>
+          <f t="S" n="mnemonics" v="Prev"/>
+          <f t="S" n="color" v="#7CB9E8"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Открыта"/>
+          <f t="S" n="code" v="New"/>
+          <f t="S" n="mnemonics" v="New"/>
+          <f t="S" n="color" v="#C9FFE5"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Загружена"/>
+          <f t="S" n="code" v="Loaded"/>
+          <f t="S" n="mnemonics" v="Load"/>
+          <f t="S" n="color" v="#B284BE"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="Выполнена"/>
+          <f t="S" n="code" v="Done"/>
+          <f t="S" n="mnemonics" v="Done"/>
+          <f t="S" n="color" v="#5D8AA8"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="4"/>
+          <f t="S" n="name" v="Утверждена"/>
+          <f t="S" n="code" v="Approved"/>
+          <f t="S" n="mnemonics" v="Appr"/>
+          <f t="S" n="color" v="#72A0C1"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="5"/>
+          <f t="S" n="name" v="Отменена"/>
+          <f t="S" n="code" v="Cancelled"/>
+          <f t="S" n="mnemonics" v="Canc"/>
+          <f t="S" n="color" v="#A32638"/>
+        </o>
+      </s>
+    </o>
+  </static-workState>
+  
+  <sTransfusionRequestType>
+    <o n="sTransfusionRequestType">
+      <f t="S" n="name" v="sTransfusionRequestType" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I"  n="id" v="0"/>
+          <f t="S" n="name" v="Основная" />
+          <f t="S" n="code" v="0" />
+          <f t="S" n="mnemonics" v=""/>
+        </o>
+        <o n="elements">
+          <f t="I"  n="id" v="1"/>
+          <f t="S" n="name" v="Дозаказ" />
+          <f t="S" n="code" v="1" />
+          <f t="S" n="mnemonics" v=""/>
+        </o>
+      </s>
+    </o>
+  </sTransfusionRequestType>
+  <!--
+ Заготовка для справочника
+  <Имя>
+  <o n="Имя">
+    <f t="S" n="name" v="Имя" />
+    <s n="elements">
+      <o n="elements">
+        <f t="I"  n="id" v=""/>
+        <f t="S" n="name" v="" />
+        <f t="S" n="code" v="" />
+        <f t="S" n="mnemonics" v=""/>
+      </o>
+    </s>
+    </o>
+  </Имя>
+-->
+</content>
