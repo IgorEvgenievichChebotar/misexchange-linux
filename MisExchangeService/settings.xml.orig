@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE request SYSTEM "lims.dtd">
+<request type="" version="2.0">
+  <content>
+    <o>
+      <!--  
+      <s n="defaultUserFieldValues" item-class="ru.novolabs.MisExchangeService.Classes.DefaultUserFieldValue">
+        <o>
+          <f t="s" n="userObjectType" v="Request" />
+          <f t="s" n="userFieldCode" v="1" />
+          <f t="s" n="defaultValue" v="www" />
+        </o>
+        <o>
+          <f t="s" n="userObjectType" v="Patient" />
+          <f t="s" n="userFieldCode" v="2" />
+          <f t="s" n="defaultValue" v="rrr" />
+        </o>
+      </s> -->
+      <f t="s" n="defaultSampleBlankCode" v="10" />
+      <f t="b" n="useUniqueSampleBarcoding" v="false" />
+      <!--<f t="s" n="registrationFormCode" v="10012" />-->
+      <f t="s" n="registrationFormCode" v="12" />
+      <f t="s" n="versionAfter129" v="true" />
+      <f t="s" n="appServerListenerURI" v="http://*:9507/" />
+      <f t="i" n="taskManagerWaitInterval" v="5" />
+      <!--<f t="s" n="serverAddress" v="192.168.100.102:8080/limsDev/" />-->
+      <f t="s" n="serverAddress" v="lis50:8073/lims/" />
+      <!--<f t="s" n="serverAddress" v="192.168.100.101:8080/lims/" />-->
+      <!--<f t="s" n="serverAddress" v="192.168.100.60:9292/lims/" />-->
+      <f t="s" n="rotateLogs" v="true" />
+      <f t="s" n="patientCodePrefix" v="И" />
+      
+      <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_Niarmedic" />-->
+      <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_FilesNew" /> -->
+      <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_FTMIS" />-->
+      <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_EMIAS" />-->
+      <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_HL7Files" /> -->
+      <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_INOVUS" />-->
+      <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_BARS" />-->
+      <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_SOAP" />-->
+      <f t="s" n="exchangeMode" v="ExchangeHelper3_INTERIN" />
+
+<<<<<<< .mine
+     <!-- <f t="s" n="exportDictionaryMode" v="ExportDictionariesHelper_Interin" />-->
+=======
+      <f t="s" n="exportDictionaryMode" v="ExportDictionaries_KAZAN" /> <!-- ExportDictionariesHelper_Interin -->
+>>>>>>> .r18140
+      <!--<f t="s" n="exportDictionaryMode" v="ExportDictionaries_ENC" />-->
+      <!--<f t="s" n="exportDictionaryMode" v="ExportDictionaries_Bars" />-->
+      <!--<f t="s" n="exportDictionaryMode" v="ExportDictionaries_KAZAN" />-->
+      <!--<f t="s" n="exportDictionaryMode" v="ExportDictionaries_ENC_NEW" />-->
+
+      <f t="s" n="loggingLevel" v="DEBUG" />
+      <f t="s" n="serviceDBConnectionString" v="Driver={SQL Server};Server=LIS60;Database=MIS_Exchange_developer;Uid=sa;Pwd=sa;" />
+      <!--<f t="s" n="externalSystemCode" v="MisExchange" />-->
+      <f t="s" n="externalSystemCode" v="1" />
+      <f t="s" n="logFile" v="MisExchange.log" />
+      <f t="s" n="serviceAddress" v="http://192.168.100.101:9999/lis_service_demo/" />
+      <f t="s" n="requestsCacherSettings" v="CacherSet.xml" />
+
+      <!--<f t="s" n="__fileNameIds" v="ids.xml" />-->
+      <f t="b" n="isAllowedToAddUserValues" v="true" />
+      <!--<f t="b" n="isCryptedCredentialsAndConnStrs" v="true" />-->
+      <!--<f t="b" n="isFullConnectionStringCrypted" v="true" />-->      
+      <!--<f t="b" n="issue_Result_OrganizationCode" v="true" /> -->
+      <!--<f t="b" n="issue_Result_OrganizationName" v="true" /> -->
+<<<<<<< .mine
+=======
+      <!--<f t="b" n="issue_Result_Work_PatientGroupCode" v="true" />-->
+>>>>>>> .r18140
+    </o>
+  </content>
+</request>

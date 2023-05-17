@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RequestFilter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<FirstName></FirstName>
+	<LastName></LastName>
+	<MiddleName></MiddleName>
+	<BirthDate></BirthDate>
+	<RequestCodes>
+		<Code>2208110002</Code>
+		<Code>2208110003</Code>
+	</RequestCodes>
+	<DateFrom>2011-01-01T18:14:16.2773194+03:00</DateFrom>
+	<DateTill>2011-12-31T18:14:16.2773194+03:00</DateTill>
+	<Priority>0</Priority>
+	<DefectState>0</DefectState>
+	<!--States>
+		<State>1</State>
+	</States-->	
+	<!--CustomStates>
+		<Code>0</Code>
+	</CustomStates>
+	<Targets>
+		<Code>106</Code>
+	</Targets>
+	<Hospitals>
+		<Code>444</Code>
+		<Code>777</Code>
+	</Hospitals>
+	<CustDepartments>
+		<Code>21</Code>
+	</CustDepartments>
+	<Doctors>
+		<Code>12</Code>
+	</Doctors>
+	<Departments>
+		<Code>122</Code>
+		<Code>555</Code>
+	</Departments-->
+</RequestFilter>

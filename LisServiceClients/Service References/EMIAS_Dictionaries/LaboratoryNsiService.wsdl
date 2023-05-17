@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:st="http://emias.gov.ru/CUI/LaboratoryTypes/1" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://emias.gov.ru/types/1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://emias.gov.ru/CUI/LaboratoryService" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns="http://emias.gov.ru/servicetypes/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://emias.gov.ru/CUI/LaboratoryService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema>
+      <xs:import schemaLocation="LaboratoryNsiServiceTypes.xsd" namespace="http://emias.gov.ru/CUI/LaboratoryTypes/1" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="faultMessage">
+    <wsdl:part name="errorInfo" element="st:fault" />
+  </wsdl:message>
+  <wsdl:message name="getLiListRequest">
+    <wsdl:part name="getLiListIn" element="st:getLiRequest" />
+  </wsdl:message>
+  <wsdl:message name="getLiListResponse">
+    <wsdl:part name="getLiListOut" element="st:getLiResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTestsListRequest">
+    <wsdl:part name="getTestsListIn" element="st:getTestsRequest" />
+  </wsdl:message>
+  <wsdl:message name="getTestsListResponse">
+    <wsdl:part name="getTestsListOut" element="st:getTestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLiTestsListRequest">
+    <wsdl:part name="getLiTestsListRequestIn" element="st:getLiTestsRequest" />
+  </wsdl:message>
+  <wsdl:message name="getLiTestsListResponse">
+    <wsdl:part name="getLiTestsListRequestOut" element="st:getLiTestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLocusListRequest">
+    <wsdl:part name="getLocusListIn" element="st:getLocusRequest" />
+  </wsdl:message>
+  <wsdl:message name="getLocusListResponse">
+    <wsdl:part name="getLocusListOut" element="st:getLocusResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTakeBiomatherialMethodsListRequest">
+    <wsdl:part name="getTakeBiomatherialMethodsListIn" element="st:getTakeBiomatherialMethodsRequest" />
+  </wsdl:message>
+  <wsdl:message name="getTakeBiomatherialMethodsListResponse">
+    <wsdl:part name="getTakeBiomatherialMethodsListOut" element="st:getTakeBiomatherialMethodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBiomatetialsListRequest">
+    <wsdl:part name="getBiomatetialsListIn" element="st:getBiomatetialsRequest" />
+  </wsdl:message>
+  <wsdl:message name="getBiomatetialsListResponse">
+    <wsdl:part name="getBiomatetialsListOut" element="st:getBiomatetialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getVialsListRequest">
+    <wsdl:part name="getVialsListIn" element="st:getVialsRequest" />
+  </wsdl:message>
+  <wsdl:message name="getVialsListResponse">
+    <wsdl:part name="getVialsListOut" element="st:getVialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUnitsListRequest">
+    <wsdl:part name="getUnitsListIn" element="st:getUnitsRequest" />
+  </wsdl:message>
+  <wsdl:message name="getUnitsListResponse">
+    <wsdl:part name="getUnitsListOut" element="st:getUnitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAnthropometricDataListRequest">
+    <wsdl:part name="getAnthropometricDataListIn" element="st:getAnthropometricDataRequest" />
+  </wsdl:message>
+  <wsdl:message name="getAnthropometricDataListResponse">
+    <wsdl:part name="getAnthropometricDataListOut" element="st:getAnthropometricDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LaboratoryNsiServicePorts">
+    <wsdl:operation name="getLiList">
+      <wsdl:documentation>Получение списка ЛИ</wsdl:documentation>
+      <wsdl:input message="tns:getLiListRequest" />
+      <wsdl:output message="tns:getLiListResponse" />
+      <wsdl:fault name="generalFault" message="tns:faultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTestsList">
+      <wsdl:documentation>Получение списка тестов</wsdl:documentation>
+      <wsdl:input message="tns:getTestsListRequest" />
+      <wsdl:output message="tns:getTestsListResponse" />
+      <wsdl:fault name="generalFault" message="tns:faultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLiTestsList">
+      <wsdl:documentation>Получение списка связей ЛИ-Тест</wsdl:documentation>
+      <wsdl:input message="tns:getLiTestsListRequest" />
+      <wsdl:output message="tns:getLiTestsListResponse" />
+      <wsdl:fault name="generalFault" message="tns:faultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLocusList">
+      <wsdl:documentation>Получение списка локусов</wsdl:documentation>
+      <wsdl:input message="tns:getLocusListRequest" />
+      <wsdl:output message="tns:getLocusListResponse" />
+      <wsdl:fault name="generalFault" message="tns:faultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTakeBiomatherialMethodsList">
+      <wsdl:documentation>Получение списка методов взятия БМ</wsdl:documentation>
+      <wsdl:input message="tns:getTakeBiomatherialMethodsListRequest" />
+      <wsdl:output message="tns:getTakeBiomatherialMethodsListResponse" />
+      <wsdl:fault name="generalFault" message="tns:faultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBiomatetialsList">
+      <wsdl:documentation>Получение списка БМ</wsdl:documentation>
+      <wsdl:input message="tns:getBiomatetialsListRequest" />
+      <wsdl:output message="tns:getBiomatetialsListResponse" />
+      <wsdl:fault name="generalFault" message="tns:faultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getVialsList">
+      <wsdl:documentation>Получение списка видов РМ</wsdl:documentation>
+      <wsdl:input message="tns:getVialsListRequest" />
+      <wsdl:output message="tns:getVialsListResponse" />
+      <wsdl:fault name="generalFault" message="tns:faultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUnitsList">
+      <wsdl:documentation>Получение списка единиц измерения</wsdl:documentation>
+      <wsdl:input message="tns:getUnitsListRequest" />
+      <wsdl:output message="tns:getUnitsListResponse" />
+      <wsdl:fault name="generalFault" message="tns:faultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAnthropometricDataList">
+      <wsdl:documentation>Получение списка антропометрических данных</wsdl:documentation>
+      <wsdl:input message="tns:getAnthropometricDataListRequest" />
+      <wsdl:output message="tns:getAnthropometricDataListResponse" />
+      <wsdl:fault name="generalFault" message="tns:faultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LaboratoryNsiServiceBinding" type="tns:LaboratoryNsiServicePorts">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getLiList">
+      <soap:operation soapAction="urn:#getLiList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap:fault use="literal" name="generalFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTestsList">
+      <soap:operation soapAction="urn:#getTestsList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap:fault use="literal" name="generalFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLiTestsList">
+      <soap:operation soapAction="urn:#getLiTestsList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap:fault use="literal" name="generalFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLocusList">
+      <soap:operation soapAction="urn:#getLocusList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap:fault use="literal" name="generalFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTakeBiomatherialMethodsList">
+      <soap:operation soapAction="urn:#getTakeBiomatherialMethodsList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap:fault use="literal" name="generalFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBiomatetialsList">
+      <soap:operation soapAction="urn:#getBiomatetialsList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap:fault use="literal" name="generalFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getVialsList">
+      <soap:operation soapAction="urn:#getVialsList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap:fault use="literal" name="generalFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUnitsList">
+      <soap:operation soapAction="urn:#getUnitsList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap:fault use="literal" name="generalFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAnthropometricDataList">
+      <soap:operation soapAction="urn:#getAnthropometricDataList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap:fault use="literal" name="generalFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LaboratoryNsiService">
+    <wsdl:port name="LaboratoryNsiService" binding="tns:LaboratoryNsiServiceBinding">
+      <wsdl:documentation>Сервис предоставления данных спрвочников ЕМИАС-ЦЛС</wsdl:documentation>
+      <soap:address location="http://emias.gov.ru/CUI/LaboratoryNsiService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

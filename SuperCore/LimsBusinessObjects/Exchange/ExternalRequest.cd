@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalRequestPatientCard">
+    <Position X="12.75" Y="2.75" Width="2.25" />
+    <Members>
+      <Property Name="UserValues" Hidden="true" />
+    </Members>
+    <AssociationLine Name="UserFields" Type="MisExchange.BusinessObjectsLis.UserValue">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="9.886" Y="4.825" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="PayCategory" Type="MisExchange.Core.ObjectRef">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="6.49" Y="7.757" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAABAAAAAAAAAAEAAAAAAABIBAAAAAgEAAAA=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalRequest\ExternalRequestPatientCard.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PayCategory" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="UserFields" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalRequestPatient">
+    <Position X="5.5" Y="2.5" Width="2.25" />
+    <Members>
+      <Property Name="UserValues" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAIAFCAAAAABAAIAAAwEUIAAAIIAAAEAAIAAAEACAg=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalRequest\ExternalRequestPatient.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PatientCard" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="UserFields" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalRequestTarget">
+    <Position X="10.5" Y="7.5" Width="2" />
+    <AssociationLine Name="Target" Type="MisExchange.Core.ObjectRef" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12" Y="9.632" />
+        <Point X="12" Y="13.688" />
+        <Point X="11.302" Y="13.688" Type="JumpStart" />
+        <Point X="11.135" Y="13.688" Type="JumpEnd" />
+        <Point X="6.25" Y="13.688" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="5.471" Y="2.235" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Tests" Type="MisExchange.Core.ObjectRef">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="3.893" Y="2.957" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAQAAAAAAEAAAgACAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalRequest\ExternalRequestTarget.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Target" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Tests" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalRequestSample">
+    <Position X="5.5" Y="7.5" Width="2" />
+    <Members>
+      <Property Name="internalNr" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Biomaterial" Type="MisExchange.Core.ObjectRef">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.511" Y="1.793" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAABAEAAAAAAAAAAAIAEAAAAAAAAAgAAA=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalRequest\ExternalRequestSample.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Biomaterial" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Targets" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalRequest">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <Members>
+      <Property Name="CustDepartmentCode" Hidden="true" />
+      <Property Name="CustDepartmentName" Hidden="true" />
+      <Property Name="InternalNr" Hidden="true" />
+      <Property Name="UserValues" Hidden="true" />
+    </Members>
+    <AssociationLine Name="RequestForm" Type="MisExchange.Core.ObjectRef" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.021" Y="5.454" />
+        <Point X="1.021" Y="14" />
+        <Point X="4.75" Y="14" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="2.662" Y="5.435" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="UserFields" Type="MisExchange.BusinessObjectsLis.UserValue">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.942" Y="2.383" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAgEAAAACAgUCEAQgJAEpAAAAEQAAoAQQAAAFECCA=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalRequest\ExternalRequest.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Patient" />
+      <Property Name="RequestForm" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Errors" />
+      <Property Name="UserFields" />
+      <Property Name="Warnings" />
+      <Property Name="Samples" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsLis.ErrorMessage">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAQAAAA=</HashCode>
+      <FileName>BusinessObjectsLis\ErrorMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MisExchange.Core.ObjectRef">
+    <Position X="4.75" Y="13" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAgAEEgAAAQAAGAAAAAIAgANgAogYQACI=</HashCode>
+      <FileName>Core\BloodClasses.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsLis.UserValue">
+    <Position X="2.25" Y="9.5" Width="1.5" />
+    <AssociationLine Name="Reference" Type="MisExchange.Core.ObjectRef" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.75" Y="11.44" />
+        <Point X="2.75" Y="13.812" />
+        <Point X="4.75" Y="13.812" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="1.726" Y="1.71" Height="0.182" Width="0.899" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="UserField" Type="MisExchange.Core.ObjectRef" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.125" Y="11.44" />
+        <Point X="3.125" Y="13.438" />
+        <Point X="4.75" Y="13.438" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.056" Y="0.848" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Values" Type="MisExchange.Core.ObjectRef" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="11.125" />
+        <Point X="4.125" Y="11.125" />
+        <Point X="4.125" Y="13.25" />
+        <Point X="4.75" Y="13.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.695" Y="1.267" Height="0.182" Width="1.875" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAgAAQAAAAAAAAAAAAoAAAAAAA=</HashCode>
+      <FileName>BusinessObjectsLis\UserValue.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Reference" />
+      <Property Name="UserField" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Values" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

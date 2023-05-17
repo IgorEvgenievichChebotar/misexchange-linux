@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE request SYSTEM "lims.dtd">
+<request type="update-document-state" version="2.0">
+  <content>
+    <o>
+      <s n="requests">
+        <r i="%requestId%"/>
+      </s>
+      <s n="samples">
+      </s>
+      <f n="state" v="%state%"/>
+      <f n="comments" v="okay"/>
+      <f n="autoDetectUnsentSamples" v="true"/>
+    </o>
+  </content>
+</request>

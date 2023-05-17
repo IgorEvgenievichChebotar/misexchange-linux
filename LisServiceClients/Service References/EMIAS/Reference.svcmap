@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5a76ad26-7ee5-4304-8fef-8058211eec53" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LaboratoryResearchResultsProxyService.xsd" MetadataType="Schema" ID="781450ef-a4c9-4733-b4fc-8d82345050fd" SourceId="1" SourceUrl="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FACK" />
+    <MetadataFile FileName="LaboratoryResearchResultsProxyService1.xsd" MetadataType="Schema" ID="83887719-d383-44b5-a922-ef516f8c75f2" SourceId="1" SourceUrl="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FOUL_R22" />
+    <MetadataFile FileName="LaboratoryResearchResultsProxyService2.xsd" MetadataType="Schema" ID="5e6bc851-ed57-4b97-81bd-0d82712b6e93" SourceId="1" SourceUrl="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2Ffields" />
+    <MetadataFile FileName="LaboratoryResearchResultsProxyService3.xsd" MetadataType="Schema" ID="e5acc4bd-34cb-4786-af3e-f382d2edae13" SourceId="1" SourceUrl="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FOML_O33" />
+    <MetadataFile FileName="LaboratoryResearchResultsProxyService4.xsd" MetadataType="Schema" ID="499daffb-66e9-4db7-ab7d-01577cae6a8c" SourceId="1" SourceUrl="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2Fsegments" />
+    <MetadataFile FileName="LaboratoryResearchResultsProxyService5.xsd" MetadataType="Schema" ID="940af918-5092-4219-bf7a-cacaf4dd1875" SourceId="1" SourceUrl="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2Fdatatypes" />
+    <MetadataFile FileName="LaboratoryResearchResultsProxyService.wsdl" MetadataType="Wsdl" ID="902ba517-ce28-481e-92c0-4a11ab7f86d1" SourceId="1" SourceUrl="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?wsdl" />
+    <MetadataFile FileName="LaboratoryResearchResultsProxyService6.xsd" MetadataType="Schema" ID="6b2b08a9-b7d0-45ef-9d05-1df1a29d1969" SourceId="1" SourceUrl="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FORL_O34" />
+    <MetadataFile FileName="LaboratoryResearchResultsProxyService7.xsd" MetadataType="Schema" ID="b345acf9-70c5-4343-93ea-4c78eca41e65" SourceId="1" SourceUrl="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FORL_O22" />
+    <MetadataFile FileName="LaboratoryResearchResultsProxyService8.xsd" MetadataType="Schema" ID="1462949b-0042-4f6f-9478-8b7ade59a39a" SourceId="1" SourceUrl="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FOML_O21" />
+    <MetadataFile FileName="LaboratoryResearchResultsProxyService9.xsd" MetadataType="Schema" ID="41e7f366-1390-403d-858f-fb35c1fe68ea" SourceId="1" SourceUrl="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FORU_R01" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

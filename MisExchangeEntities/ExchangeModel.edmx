@@ -1,0 +1,1441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Mis_Exchange_ObjectsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Mis_Exchange_ObjectsModelStoreContainer">
+    <EntitySet Name="RequestFilterSet" EntityType="Mis_Exchange_ObjectsModel.Store.RequestFilterSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RequestFilterStatusSet" EntityType="Mis_Exchange_ObjectsModel.Store.RequestFilterStatusSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SampleSet" EntityType="Mis_Exchange_ObjectsModel.Store.SampleSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TargetSet" EntityType="Mis_Exchange_ObjectsModel.Store.TargetSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RequestSet" EntityType="Mis_Exchange_ObjectsModel.Store.RequestSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PatientSet" EntityType="Mis_Exchange_ObjectsModel.Store.PatientSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PatientCardSet" EntityType="Mis_Exchange_ObjectsModel.Store.PatientCardSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserFieldSet" EntityType="Mis_Exchange_ObjectsModel.Store.UserFieldSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RequestStatusSet" EntityType="Mis_Exchange_ObjectsModel.Store.RequestStatusSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ResultSet" EntityType="Mis_Exchange_ObjectsModel.Store.ResultSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SampleResultSet" EntityType="Mis_Exchange_ObjectsModel.Store.SampleResultSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DefectSet" EntityType="Mis_Exchange_ObjectsModel.Store.DefectSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TargetResultSet" EntityType="Mis_Exchange_ObjectsModel.Store.TargetResultSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MicroResultSet" EntityType="Mis_Exchange_ObjectsModel.Store.MicroResultSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WorkSet" EntityType="Mis_Exchange_ObjectsModel.Store.WorkSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NormSet" EntityType="Mis_Exchange_ObjectsModel.Store.NormSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ResultStatusSet" EntityType="Mis_Exchange_ObjectsModel.Store.ResultStatusSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="RequestFilterStatusRequestFilter" Association="Mis_Exchange_ObjectsModel.Store.RequestFilterStatusRequestFilter">
+      <End Role="RequestFilterStatus" EntitySet="RequestFilterStatusSet" />
+      <End Role="RequestFilter" EntitySet="RequestFilterSet" />
+    </AssociationSet>
+    <AssociationSet Name="SampleTarget" Association="Mis_Exchange_ObjectsModel.Store.SampleTarget">
+      <End Role="Sample" EntitySet="SampleSet" />
+      <End Role="Target" EntitySet="TargetSet" />
+    </AssociationSet>
+    <AssociationSet Name="RequestPatient" Association="Mis_Exchange_ObjectsModel.Store.RequestPatient">
+      <End Role="Request" EntitySet="RequestSet" />
+      <End Role="Patient" EntitySet="PatientSet" />
+    </AssociationSet>
+    <AssociationSet Name="PatientPatientCard" Association="Mis_Exchange_ObjectsModel.Store.PatientPatientCard">
+      <End Role="Patient" EntitySet="PatientSet" />
+      <End Role="PatientCard" EntitySet="PatientCardSet" />
+    </AssociationSet>
+    <AssociationSet Name="PatientCardUserField" Association="Mis_Exchange_ObjectsModel.Store.PatientCardUserField">
+      <End Role="PatientCard" EntitySet="PatientCardSet" />
+      <End Role="UserField" EntitySet="UserFieldSet" />
+    </AssociationSet>
+    <AssociationSet Name="PatientUserField" Association="Mis_Exchange_ObjectsModel.Store.PatientUserField">
+      <End Role="Patient" EntitySet="PatientSet" />
+      <End Role="UserField" EntitySet="UserFieldSet" />
+    </AssociationSet>
+    <AssociationSet Name="RequestUserField" Association="Mis_Exchange_ObjectsModel.Store.RequestUserField">
+      <End Role="Request" EntitySet="RequestSet" />
+      <End Role="UserField" EntitySet="UserFieldSet" />
+    </AssociationSet>
+    <AssociationSet Name="RequestSample" Association="Mis_Exchange_ObjectsModel.Store.RequestSample">
+      <End Role="Request" EntitySet="RequestSet" />
+      <End Role="Sample" EntitySet="SampleSet" />
+    </AssociationSet>
+    <AssociationSet Name="RequestStatusRequest" Association="Mis_Exchange_ObjectsModel.Store.RequestStatusRequest">
+      <End Role="RequestStatus" EntitySet="RequestStatusSet" />
+      <End Role="Request" EntitySet="RequestSet" />
+    </AssociationSet>
+    <AssociationSet Name="ResultSampleResult" Association="Mis_Exchange_ObjectsModel.Store.ResultSampleResult">
+      <End Role="Result" EntitySet="ResultSet" />
+      <End Role="SampleResult" EntitySet="SampleResultSet" />
+    </AssociationSet>
+    <AssociationSet Name="ResultStatusResult" Association="Mis_Exchange_ObjectsModel.Store.ResultStatusResult">
+      <End Role="ResultStatus" EntitySet="ResultStatusSet" />
+      <End Role="Result" EntitySet="ResultSet" />
+    </AssociationSet>
+    <AssociationSet Name="SampleResultTargetResult" Association="Mis_Exchange_ObjectsModel.Store.SampleResultTargetResult">
+      <End Role="SampleResult" EntitySet="SampleResultSet" />
+      <End Role="TargetResult" EntitySet="TargetResultSet" />
+    </AssociationSet>
+    <AssociationSet Name="TargetResultWork" Association="Mis_Exchange_ObjectsModel.Store.TargetResultWork">
+      <End Role="TargetResult" EntitySet="TargetResultSet" />
+      <End Role="Work" EntitySet="WorkSet" />
+    </AssociationSet>
+    <AssociationSet Name="SampleResultMicroResult" Association="Mis_Exchange_ObjectsModel.Store.SampleResultMicroResult">
+      <End Role="SampleResult" EntitySet="SampleResultSet" />
+      <End Role="MicroResult" EntitySet="MicroResultSet" />
+    </AssociationSet>
+    <AssociationSet Name="MicroResultWork" Association="Mis_Exchange_ObjectsModel.Store.MicroResultWork">
+      <End Role="MicroResult" EntitySet="MicroResultSet" />
+      <End Role="Work" EntitySet="WorkSet" />
+    </AssociationSet>
+    <AssociationSet Name="WorkNorm" Association="Mis_Exchange_ObjectsModel.Store.WorkNorm">
+      <End Role="Work" EntitySet="WorkSet" />
+      <End Role="Norm" EntitySet="NormSet" />
+    </AssociationSet>
+    <AssociationSet Name="PatientResult" Association="Mis_Exchange_ObjectsModel.Store.PatientResult">
+      <End Role="Result" EntitySet="ResultSet" />
+      <End Role="Patient" EntitySet="PatientSet" />
+    </AssociationSet>
+    <AssociationSet Name="ResultUserField" Association="Mis_Exchange_ObjectsModel.Store.ResultUserField">
+      <End Role="Result" EntitySet="ResultSet" />
+      <End Role="UserField" EntitySet="UserFieldSet" />
+    </AssociationSet>
+    <AssociationSet Name="WorkDefect" Association="Mis_Exchange_ObjectsModel.Store.WorkDefect">
+      <End Role="Work" EntitySet="WorkSet" />
+      <End Role="Defect" EntitySet="DefectSet" />
+    </AssociationSet>
+    <AssociationSet Name="SampleResultDefect" Association="Mis_Exchange_ObjectsModel.Store.SampleResultDefect">
+      <End Role="SampleResult" EntitySet="SampleResultSet" />
+      <End Role="Defect" EntitySet="DefectSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="RequestFilterSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MiddleName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PatientCodes" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BirthDate" Type="datetime" Nullable="true" />
+    <Property Name="Sex" Type="int" Nullable="true" />
+    <Property Name="RequestCodes" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DateFrom" Type="datetime" Nullable="true" />
+    <Property Name="DateTill" Type="datetime" Nullable="true" />
+    <Property Name="States" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Priority" Type="int" Nullable="true" />
+    <Property Name="DefectState" Type="int" Nullable="true" />
+    <Property Name="CustomStates" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Targets" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Departments" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Hospitals" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CustDepartments" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Doctors" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="EndDateFrom" Type="datetime" Nullable="true" />
+    <Property Name="EndDateTill" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="RequestFilterStatusSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifyDate" Type="datetime" Nullable="true" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="RequestFilter_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SampleSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Barcode" Type="nvarchar" Nullable="true" MaxLength="10" />
+    <Property Name="BiomaterialCode" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="Priority" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="RequestId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TargetSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="Priority" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="ReadOnly" Type="bit" Nullable="true" />
+    <Property Name="SampleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RequestSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="RequestCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="HospitalCode" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="HospitalName" Type="nvarchar" Nullable="true" MaxLength="64" />
+    <Property Name="DepartmentCode" Type="nvarchar" Nullable="true" MaxLength="16" />
+    <Property Name="DepartmentName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="DoctorCode" Type="nvarchar" Nullable="true" MaxLength="16" />
+    <Property Name="DoctorName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="SamplingDate" Type="datetime" Nullable="true" />
+    <Property Name="SampleDeliveryDate" Type="datetime" Nullable="true" />
+    <Property Name="PregnancyDuration" Type="int" Nullable="true" />
+    <Property Name="CyclePeriod" Type="int" Nullable="true" />
+    <Property Name="ReadOnly" Type="bit" Nullable="true" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientId" Type="int" Nullable="false" />
+    <Property Name="PayCategoryCode" Type="nvarchar" Nullable="true" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PatientSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="MiddleName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="BirthDay" Type="int" Nullable="false" />
+    <Property Name="BirthMonth" Type="int" Nullable="false" />
+    <Property Name="BirthYear" Type="int" Nullable="false" />
+    <Property Name="Sex" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="Country" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="City" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Street" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Building" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Flat" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="InsuranceCompany" Type="nvarchar" Nullable="true" MaxLength="1024" />
+    <Property Name="PolicySeries" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="PolicyNumber" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="PatientCard_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatientCardSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CardNr" Type="nvarchar" Nullable="false" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="UserFieldSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="64" />
+    <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="PatientCardId" Type="int" Nullable="true" />
+    <Property Name="PatientId" Type="int" Nullable="true" />
+    <Property Name="RequestId" Type="int" Nullable="true" />
+    <Property Name="ResultId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="RequestStatusSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifyDate" Type="datetime" Nullable="true" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Request_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ResultSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestCode" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="ResultStatusId" Type="int" Nullable="false" />
+    <Property Name="PatientId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SampleResultSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BiomaterialCode" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="Barcode" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="Comments" Type="nvarchar" Nullable="true" MaxLength="1024" />
+    <Property Name="ResultId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DefectSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="WorkId" Type="int" Nullable="true" />
+    <Property Name="SampleResultId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="TargetResultSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="Comments" Type="nvarchar" Nullable="true" MaxLength="1024" />
+    <Property Name="SampleResultId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MicroResultSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="Comments" Type="nvarchar" Nullable="true" MaxLength="1024" />
+    <Property Name="SampleResultId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="UnitName" Type="nvarchar" Nullable="true" MaxLength="64" />
+    <Property Name="State" Type="int" Nullable="false" />
+    <Property Name="ApprovingDoctor" Type="nvarchar" Nullable="true" MaxLength="1024" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ApproveDate" Type="datetime" Nullable="true" />
+    <Property Name="ModifyDate" Type="datetime" Nullable="true" />
+    <Property Name="GroupRank" Type="int" Nullable="true" />
+    <Property Name="RankInGroup" Type="int" Nullable="true" />
+    <Property Name="TestRank" Type="int" Nullable="true" />
+    <Property Name="Precision" Type="int" Nullable="true" />
+    <Property Name="Comments" Type="nvarchar" Nullable="true" MaxLength="1024" />
+    <Property Name="Normality" Type="int" Nullable="false" />
+    <Property Name="TargetResultId" Type="int" Nullable="true" />
+    <Property Name="MicroResultId" Type="int" Nullable="true" />
+    <Property Name="Norm_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NormSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CriticalLowLimit" Type="float" Nullable="true" />
+    <Property Name="LowLimit" Type="float" Nullable="true" />
+    <Property Name="CriticalHighLimit" Type="float" Nullable="true" />
+    <Property Name="HighLimit" Type="float" Nullable="true" />
+    <Property Name="Norms" Type="nvarchar" Nullable="true" DefaultValue="" MaxLength="1024" />
+    <Property Name="NormComment" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="UnitName" Type="nvarchar" Nullable="true" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="ResultStatusSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifyDate" Type="datetime" Nullable="true" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Result_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="RequestFilterStatusRequestFilter">
+    <End Role="RequestFilterStatus" Type="Mis_Exchange_ObjectsModel.Store.RequestFilterStatusSet" Multiplicity="*" />
+    <End Role="RequestFilter" Type="Mis_Exchange_ObjectsModel.Store.RequestFilterSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="RequestFilter">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RequestFilterStatus">
+        <PropertyRef Name="RequestFilter_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SampleTarget">
+    <End Role="Sample" Type="Mis_Exchange_ObjectsModel.Store.SampleSet" Multiplicity="1" />
+    <End Role="Target" Type="Mis_Exchange_ObjectsModel.Store.TargetSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sample">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Target">
+        <PropertyRef Name="SampleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RequestPatient">
+    <End Role="Request" Type="Mis_Exchange_ObjectsModel.Store.RequestSet" Multiplicity="*" />
+    <End Role="Patient" Type="Mis_Exchange_ObjectsModel.Store.PatientSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Request">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PatientPatientCard">
+    <End Role="Patient" Type="Mis_Exchange_ObjectsModel.Store.PatientSet" Multiplicity="*" />
+    <End Role="PatientCard" Type="Mis_Exchange_ObjectsModel.Store.PatientCardSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="PatientCard">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Patient">
+        <PropertyRef Name="PatientCard_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PatientCardUserField">
+    <End Role="PatientCard" Type="Mis_Exchange_ObjectsModel.Store.PatientCardSet" Multiplicity="0..1" />
+    <End Role="UserField" Type="Mis_Exchange_ObjectsModel.Store.UserFieldSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PatientCard">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserField">
+        <PropertyRef Name="PatientCardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PatientUserField">
+    <End Role="Patient" Type="Mis_Exchange_ObjectsModel.Store.PatientSet" Multiplicity="0..1" />
+    <End Role="UserField" Type="Mis_Exchange_ObjectsModel.Store.UserFieldSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserField">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RequestUserField">
+    <End Role="Request" Type="Mis_Exchange_ObjectsModel.Store.RequestSet" Multiplicity="0..1" />
+    <End Role="UserField" Type="Mis_Exchange_ObjectsModel.Store.UserFieldSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Request">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserField">
+        <PropertyRef Name="RequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RequestSample">
+    <End Role="Request" Type="Mis_Exchange_ObjectsModel.Store.RequestSet" Multiplicity="1" />
+    <End Role="Sample" Type="Mis_Exchange_ObjectsModel.Store.SampleSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Request">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sample">
+        <PropertyRef Name="RequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RequestStatusRequest">
+    <End Role="RequestStatus" Type="Mis_Exchange_ObjectsModel.Store.RequestStatusSet" Multiplicity="*" />
+    <End Role="Request" Type="Mis_Exchange_ObjectsModel.Store.RequestSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Request">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RequestStatus">
+        <PropertyRef Name="Request_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ResultSampleResult">
+    <End Role="Result" Type="Mis_Exchange_ObjectsModel.Store.ResultSet" Multiplicity="1" />
+    <End Role="SampleResult" Type="Mis_Exchange_ObjectsModel.Store.SampleResultSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Result">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SampleResult">
+        <PropertyRef Name="ResultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ResultStatusResult">
+    <End Role="ResultStatus" Type="Mis_Exchange_ObjectsModel.Store.ResultStatusSet" Multiplicity="*" />
+    <End Role="Result" Type="Mis_Exchange_ObjectsModel.Store.ResultSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Result">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ResultStatus">
+        <PropertyRef Name="Result_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SampleResultTargetResult">
+    <End Role="SampleResult" Type="Mis_Exchange_ObjectsModel.Store.SampleResultSet" Multiplicity="1" />
+    <End Role="TargetResult" Type="Mis_Exchange_ObjectsModel.Store.TargetResultSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SampleResult">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TargetResult">
+        <PropertyRef Name="SampleResultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TargetResultWork">
+    <End Role="TargetResult" Type="Mis_Exchange_ObjectsModel.Store.TargetResultSet" Multiplicity="0..1" />
+    <End Role="Work" Type="Mis_Exchange_ObjectsModel.Store.WorkSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TargetResult">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Work">
+        <PropertyRef Name="TargetResultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SampleResultMicroResult">
+    <End Role="SampleResult" Type="Mis_Exchange_ObjectsModel.Store.SampleResultSet" Multiplicity="1" />
+    <End Role="MicroResult" Type="Mis_Exchange_ObjectsModel.Store.MicroResultSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SampleResult">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MicroResult">
+        <PropertyRef Name="SampleResultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MicroResultWork">
+    <End Role="MicroResult" Type="Mis_Exchange_ObjectsModel.Store.MicroResultSet" Multiplicity="0..1" />
+    <End Role="Work" Type="Mis_Exchange_ObjectsModel.Store.WorkSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MicroResult">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Work">
+        <PropertyRef Name="MicroResultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="WorkNorm">
+    <End Role="Work" Type="Mis_Exchange_ObjectsModel.Store.WorkSet" Multiplicity="*" />
+    <End Role="Norm" Type="Mis_Exchange_ObjectsModel.Store.NormSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Norm">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Work">
+        <PropertyRef Name="Norm_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PatientResult">
+    <End Role="Result" Type="Mis_Exchange_ObjectsModel.Store.ResultSet" Multiplicity="*" />
+    <End Role="Patient" Type="Mis_Exchange_ObjectsModel.Store.PatientSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Result">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ResultUserField">
+    <End Role="Result" Type="Mis_Exchange_ObjectsModel.Store.ResultSet" Multiplicity="0..1" />
+    <End Role="UserField" Type="Mis_Exchange_ObjectsModel.Store.UserFieldSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Result">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserField">
+        <PropertyRef Name="ResultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="WorkDefect">
+    <End Role="Work" Type="Mis_Exchange_ObjectsModel.Store.WorkSet" Multiplicity="0..1" />
+    <End Role="Defect" Type="Mis_Exchange_ObjectsModel.Store.DefectSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Work">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Defect">
+        <PropertyRef Name="WorkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SampleResultDefect">
+    <End Role="SampleResult" Type="Mis_Exchange_ObjectsModel.Store.SampleResultSet" Multiplicity="0..1" />
+    <End Role="Defect" Type="Mis_Exchange_ObjectsModel.Store.DefectSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SampleResult">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Defect">
+        <PropertyRef Name="SampleResultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Mis_Exchange_ObjectsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ExchangeContext" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="RequestFilterSet" EntityType="Mis_Exchange_ObjectsModel.RequestFilter" />
+          <EntitySet Name="RequestFilterStatusSet" EntityType="Mis_Exchange_ObjectsModel.RequestFilterStatus" />
+          <AssociationSet Name="RequestFilterStatusRequestFilter" Association="Mis_Exchange_ObjectsModel.RequestFilterStatusRequestFilter">
+            <End Role="RequestFilterStatus" EntitySet="RequestFilterStatusSet" />
+            <End Role="RequestFilter" EntitySet="RequestFilterSet" />
+          </AssociationSet>
+          <EntitySet Name="SampleSet" EntityType="Mis_Exchange_ObjectsModel.Sample" />
+          <EntitySet Name="TargetSet" EntityType="Mis_Exchange_ObjectsModel.Target" />
+          <AssociationSet Name="SampleTarget" Association="Mis_Exchange_ObjectsModel.SampleTarget">
+            <End Role="Sample" EntitySet="SampleSet" />
+            <End Role="Target" EntitySet="TargetSet" />
+          </AssociationSet>
+          <EntitySet Name="RequestSet" EntityType="Mis_Exchange_ObjectsModel.Request" />
+          <EntitySet Name="PatientSet" EntityType="Mis_Exchange_ObjectsModel.Patient" />
+          <EntitySet Name="PatientCardSet" EntityType="Mis_Exchange_ObjectsModel.PatientCard" />
+          <AssociationSet Name="RequestPatient" Association="Mis_Exchange_ObjectsModel.RequestPatient">
+            <End Role="Request" EntitySet="RequestSet" />
+            <End Role="Patient" EntitySet="PatientSet" />
+          </AssociationSet>
+          <AssociationSet Name="PatientPatientCard" Association="Mis_Exchange_ObjectsModel.PatientPatientCard">
+            <End Role="Patient" EntitySet="PatientSet" />
+            <End Role="PatientCard" EntitySet="PatientCardSet" />
+          </AssociationSet>
+          <EntitySet Name="UserFieldSet" EntityType="Mis_Exchange_ObjectsModel.UserField" />
+          <AssociationSet Name="PatientCardUserField" Association="Mis_Exchange_ObjectsModel.PatientCardUserField">
+            <End Role="PatientCard" EntitySet="PatientCardSet" />
+            <End Role="UserField" EntitySet="UserFieldSet" />
+          </AssociationSet>
+          <AssociationSet Name="PatientUserField" Association="Mis_Exchange_ObjectsModel.PatientUserField">
+            <End Role="Patient" EntitySet="PatientSet" />
+            <End Role="UserField" EntitySet="UserFieldSet" />
+          </AssociationSet>
+          <AssociationSet Name="RequestUserField" Association="Mis_Exchange_ObjectsModel.RequestUserField">
+            <End Role="Request" EntitySet="RequestSet" />
+            <End Role="UserField" EntitySet="UserFieldSet" />
+          </AssociationSet>
+          <AssociationSet Name="RequestSample" Association="Mis_Exchange_ObjectsModel.RequestSample">
+            <End Role="Request" EntitySet="RequestSet" />
+            <End Role="Sample" EntitySet="SampleSet" />
+          </AssociationSet>
+          <EntitySet Name="RequestStatusSet" EntityType="Mis_Exchange_ObjectsModel.RequestStatus" />
+          <AssociationSet Name="RequestStatusRequest" Association="Mis_Exchange_ObjectsModel.RequestStatusRequest">
+            <End Role="RequestStatus" EntitySet="RequestStatusSet" />
+            <End Role="Request" EntitySet="RequestSet" />
+          </AssociationSet>
+          <EntitySet Name="ResultSet" EntityType="Mis_Exchange_ObjectsModel.Result" />
+          <EntitySet Name="SampleResultSet" EntityType="Mis_Exchange_ObjectsModel.SampleResult" />
+          <EntitySet Name="DefectSet" EntityType="Mis_Exchange_ObjectsModel.Defect" />
+          <EntitySet Name="TargetResultSet" EntityType="Mis_Exchange_ObjectsModel.TargetResult" />
+          <EntitySet Name="MicroResultSet" EntityType="Mis_Exchange_ObjectsModel.MicroResult" />
+          <EntitySet Name="WorkSet" EntityType="Mis_Exchange_ObjectsModel.Work" />
+          <EntitySet Name="NormSet" EntityType="Mis_Exchange_ObjectsModel.Norm" />
+          <EntitySet Name="ResultStatusSet" EntityType="Mis_Exchange_ObjectsModel.ResultStatus" />
+          <AssociationSet Name="ResultSampleResult" Association="Mis_Exchange_ObjectsModel.ResultSampleResult">
+            <End Role="Result" EntitySet="ResultSet" />
+            <End Role="SampleResult" EntitySet="SampleResultSet" />
+          </AssociationSet>
+          <AssociationSet Name="ResultStatusResult" Association="Mis_Exchange_ObjectsModel.ResultStatusResult">
+            <End Role="ResultStatus" EntitySet="ResultStatusSet" />
+            <End Role="Result" EntitySet="ResultSet" />
+          </AssociationSet>
+          <AssociationSet Name="SampleResultTargetResult" Association="Mis_Exchange_ObjectsModel.SampleResultTargetResult">
+            <End Role="SampleResult" EntitySet="SampleResultSet" />
+            <End Role="TargetResult" EntitySet="TargetResultSet" />
+          </AssociationSet>
+          <AssociationSet Name="TargetResultWork" Association="Mis_Exchange_ObjectsModel.TargetResultWork">
+            <End Role="TargetResult" EntitySet="TargetResultSet" />
+            <End Role="Work" EntitySet="WorkSet" />
+          </AssociationSet>
+          <AssociationSet Name="SampleResultMicroResult" Association="Mis_Exchange_ObjectsModel.SampleResultMicroResult">
+            <End Role="SampleResult" EntitySet="SampleResultSet" />
+            <End Role="MicroResult" EntitySet="MicroResultSet" />
+          </AssociationSet>
+          <AssociationSet Name="MicroResultWork" Association="Mis_Exchange_ObjectsModel.MicroResultWork">
+            <End Role="MicroResult" EntitySet="MicroResultSet" />
+            <End Role="Work" EntitySet="WorkSet" />
+          </AssociationSet>
+          <AssociationSet Name="WorkNorm" Association="Mis_Exchange_ObjectsModel.WorkNorm">
+            <End Role="Work" EntitySet="WorkSet" />
+            <End Role="Norm" EntitySet="NormSet" />
+          </AssociationSet>
+          <AssociationSet Name="PatientResult" Association="Mis_Exchange_ObjectsModel.PatientResult">
+            <End Role="Result" EntitySet="ResultSet" />
+            <End Role="Patient" EntitySet="PatientSet" />
+          </AssociationSet>
+          <AssociationSet Name="ResultUserField" Association="Mis_Exchange_ObjectsModel.ResultUserField">
+            <End Role="Result" EntitySet="ResultSet" />
+            <End Role="UserField" EntitySet="UserFieldSet" />
+          </AssociationSet>
+          <AssociationSet Name="WorkDefect" Association="Mis_Exchange_ObjectsModel.WorkDefect">
+            <End Role="Work" EntitySet="WorkSet" />
+            <End Role="Defect" EntitySet="DefectSet" />
+          </AssociationSet>
+          <AssociationSet Name="SampleResultDefect" Association="Mis_Exchange_ObjectsModel.SampleResultDefect">
+            <End Role="SampleResult" EntitySet="SampleResultSet" />
+            <End Role="Defect" EntitySet="DefectSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="RequestFilter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FirstName" Nullable="true" />
+          <Property Type="String" Name="LastName" Nullable="true" />
+          <Property Type="String" Name="MiddleName" Nullable="true" />
+          <Property Type="String" Name="PatientCodes" Nullable="true" />
+          <Property Type="DateTime" Name="BirthDate" Nullable="true" />
+          <Property Type="Int32" Name="Sex" Nullable="true" />
+          <Property Type="String" Name="RequestCodes" Nullable="true" />
+          <Property Type="DateTime" Name="DateFrom" Nullable="true" />
+          <Property Type="DateTime" Name="DateTill" Nullable="true" />
+          <Property Type="String" Name="States" Nullable="true" />
+          <Property Type="Int32" Name="Priority" Nullable="true" />
+          <Property Type="Int32" Name="DefectState" Nullable="true" />
+          <Property Type="String" Name="CustomStates" Nullable="true" />
+          <Property Type="String" Name="Targets" Nullable="true" />
+          <Property Type="String" Name="Departments" Nullable="true" />
+          <Property Type="String" Name="Hospitals" Nullable="true" />
+          <Property Type="String" Name="CustDepartments" Nullable="true" />
+          <Property Type="String" Name="Doctors" Nullable="true" />
+          <Property Type="DateTime" Name="EndDateFrom" Nullable="true" />
+          <Property Type="DateTime" Name="EndDateTill" Nullable="true" />
+        </EntityType>
+        <EntityType Name="RequestFilterStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="ModifyDate" Nullable="true" />
+          <Property Type="Byte" Name="Status" Nullable="false" />
+          <Property Type="String" Name="Comments" Nullable="true" />
+          <NavigationProperty Name="RequestFilter" Relationship="Mis_Exchange_ObjectsModel.RequestFilterStatusRequestFilter" FromRole="RequestFilterStatus" ToRole="RequestFilter" />
+        </EntityType>
+        <Association Name="RequestFilterStatusRequestFilter">
+          <End Type="Mis_Exchange_ObjectsModel.RequestFilterStatus" Role="RequestFilterStatus" Multiplicity="1" />
+          <End Type="Mis_Exchange_ObjectsModel.RequestFilter" Role="RequestFilter" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Sample">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Barcode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="BiomaterialCode" Nullable="false" MaxLength="16" />
+          <Property Type="Int32" Name="Priority" Nullable="false" DefaultValue="0" />
+          <NavigationProperty Name="Targets" Relationship="Mis_Exchange_ObjectsModel.SampleTarget" FromRole="Sample" ToRole="Target" />
+          <Property Type="Int32" Name="RequestId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Target">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="16" />
+          <Property Type="Int32" Name="Priority" Nullable="false" DefaultValue="0" />
+          <Property Type="Boolean" Name="ReadOnly" Nullable="true" />
+          <Property Type="Int32" Name="SampleId" Nullable="false" />
+          <NavigationProperty Name="Sample" Relationship="Mis_Exchange_ObjectsModel.SampleTarget" FromRole="Target" ToRole="Sample" />
+        </EntityType>
+        <Association Name="SampleTarget">
+          <End Type="Mis_Exchange_ObjectsModel.Sample" Role="Sample" Multiplicity="1" />
+          <End Type="Mis_Exchange_ObjectsModel.Target" Role="Target" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sample">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Target">
+              <PropertyRef Name="SampleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Request">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="RequestCode" Nullable="false" MaxLength="10" annotation:StoreGeneratedPattern="None" />
+          <Property Type="String" Name="HospitalCode" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="HospitalName" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="DepartmentCode" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="DoctorCode" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="DoctorName" Nullable="true" MaxLength="128" />
+          <Property Type="DateTime" Name="SamplingDate" Nullable="true" />
+          <Property Type="DateTime" Name="SampleDeliveryDate" Nullable="true" />
+          <Property Type="Int32" Name="PregnancyDuration" Nullable="true" />
+          <Property Type="Int32" Name="CyclePeriod" Nullable="true" />
+          <Property Type="Boolean" Name="ReadOnly" Nullable="true" />
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Patient" Relationship="Mis_Exchange_ObjectsModel.RequestPatient" FromRole="Request" ToRole="Patient" />
+          <Property Type="Int32" Name="PatientId" Nullable="false" />
+          <NavigationProperty Name="UserFields" Relationship="Mis_Exchange_ObjectsModel.RequestUserField" FromRole="Request" ToRole="UserField" />
+          <NavigationProperty Name="Samples" Relationship="Mis_Exchange_ObjectsModel.RequestSample" FromRole="Request" ToRole="Sample" />
+          <Property Type="String" Name="PayCategoryCode" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="64" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="64" />
+          <Property Type="String" Name="MiddleName" Nullable="false" MaxLength="64" />
+          <Property Type="Int32" Name="BirthDay" Nullable="false" />
+          <Property Type="Int32" Name="BirthMonth" Nullable="false" />
+          <Property Type="Int32" Name="BirthYear" Nullable="false" />
+          <Property Type="Int32" Name="Sex" Nullable="false" DefaultValue="0" />
+          <Property Type="String" Name="Country" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="City" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Street" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Building" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Flat" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="InsuranceCompany" Nullable="true" MaxLength="1024" />
+          <Property Type="String" Name="PolicySeries" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="PolicyNumber" Nullable="true" MaxLength="128" />
+          <NavigationProperty Name="PatientCard" Relationship="Mis_Exchange_ObjectsModel.PatientPatientCard" FromRole="Patient" ToRole="PatientCard" />
+          <NavigationProperty Name="UserFields" Relationship="Mis_Exchange_ObjectsModel.PatientUserField" FromRole="Patient" ToRole="UserField" />
+        </EntityType>
+        <EntityType Name="PatientCard">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CardNr" Nullable="false" MaxLength="128" />
+          <NavigationProperty Name="UserFields" Relationship="Mis_Exchange_ObjectsModel.PatientCardUserField" FromRole="PatientCard" ToRole="UserField" />
+        </EntityType>
+        <Association Name="RequestPatient">
+          <End Type="Mis_Exchange_ObjectsModel.Request" Role="Request" Multiplicity="*" />
+          <End Type="Mis_Exchange_ObjectsModel.Patient" Role="Patient" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Request">
+              <PropertyRef Name="PatientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PatientPatientCard">
+          <End Type="Mis_Exchange_ObjectsModel.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="Mis_Exchange_ObjectsModel.PatientCard" Role="PatientCard" Multiplicity="1" />
+        </Association>
+        <EntityType Name="UserField">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="64" />
+          <Property Type="String" Name="Value" Nullable="false" MaxLength="1024" />
+          <Property Type="Int32" Name="PatientCardId" Nullable="true" />
+          <Property Type="Int32" Name="PatientId" Nullable="true" />
+          <Property Type="Int32" Name="RequestId" Nullable="true" />
+          <Property Type="Int32" Name="ResultId" Nullable="true" />
+        </EntityType>
+        <Association Name="PatientCardUserField">
+          <End Type="Mis_Exchange_ObjectsModel.PatientCard" Role="PatientCard" Multiplicity="0..1" />
+          <End Type="Mis_Exchange_ObjectsModel.UserField" Role="UserField" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PatientCard">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserField">
+              <PropertyRef Name="PatientCardId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PatientUserField">
+          <End Type="Mis_Exchange_ObjectsModel.Patient" Role="Patient" Multiplicity="0..1" />
+          <End Type="Mis_Exchange_ObjectsModel.UserField" Role="UserField" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserField">
+              <PropertyRef Name="PatientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RequestUserField">
+          <End Type="Mis_Exchange_ObjectsModel.Request" Role="Request" Multiplicity="0..1" />
+          <End Type="Mis_Exchange_ObjectsModel.UserField" Role="UserField" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Request">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserField">
+              <PropertyRef Name="RequestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RequestSample">
+          <End Type="Mis_Exchange_ObjectsModel.Request" Role="Request" Multiplicity="1" />
+          <End Type="Mis_Exchange_ObjectsModel.Sample" Role="Sample" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Request">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sample">
+              <PropertyRef Name="RequestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="RequestStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="ModifyDate" Nullable="true" />
+          <Property Type="Byte" Name="Status" Nullable="false" />
+          <Property Type="String" Name="Comments" Nullable="true" />
+          <NavigationProperty Name="Request" Relationship="Mis_Exchange_ObjectsModel.RequestStatusRequest" FromRole="RequestStatus" ToRole="Request" />
+        </EntityType>
+        <Association Name="RequestStatusRequest">
+          <End Type="Mis_Exchange_ObjectsModel.RequestStatus" Role="RequestStatus" Multiplicity="1" />
+          <End Type="Mis_Exchange_ObjectsModel.Request" Role="Request" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Result">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="RequestCode" Nullable="false" MaxLength="16" />
+          <Property Type="Int32" Name="ResultStatusId" Nullable="false" />
+          <NavigationProperty Name="SampleResults" Relationship="Mis_Exchange_ObjectsModel.ResultSampleResult" FromRole="Result" ToRole="SampleResult" />
+          <NavigationProperty Name="Patient" Relationship="Mis_Exchange_ObjectsModel.PatientResult" FromRole="Result" ToRole="Patient" />
+          <Property Type="Int32" Name="PatientId" Nullable="false" />
+          <NavigationProperty Name="UserFields" Relationship="Mis_Exchange_ObjectsModel.ResultUserField" FromRole="Result" ToRole="UserField" />
+        </EntityType>
+        <EntityType Name="SampleResult">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="BiomaterialCode" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="Barcode" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="Comments" Nullable="true" MaxLength="1024" />
+          <Property Type="Int32" Name="ResultId" Nullable="false" />
+          <NavigationProperty Name="Result" Relationship="Mis_Exchange_ObjectsModel.ResultSampleResult" FromRole="SampleResult" ToRole="Result" />
+          <NavigationProperty Name="TargetResults" Relationship="Mis_Exchange_ObjectsModel.SampleResultTargetResult" FromRole="SampleResult" ToRole="TargetResult" />
+          <NavigationProperty Name="MicroResults" Relationship="Mis_Exchange_ObjectsModel.SampleResultMicroResult" FromRole="SampleResult" ToRole="MicroResult" />
+          <NavigationProperty Name="Defects" Relationship="Mis_Exchange_ObjectsModel.SampleResultDefect" FromRole="SampleResult" ToRole="Defect" />
+        </EntityType>
+        <EntityType Name="Defect">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="64" />
+          <Property Type="Int32" Name="WorkId" Nullable="true" />
+          <Property Type="Int32" Name="SampleResultId" Nullable="true" />
+        </EntityType>
+        <EntityType Name="TargetResult">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="1024" />
+          <Property Type="String" Name="Comments" Nullable="true" MaxLength="1024" />
+          <Property Type="Int32" Name="SampleResultId" Nullable="false" />
+          <NavigationProperty Name="SampleResult" Relationship="Mis_Exchange_ObjectsModel.SampleResultTargetResult" FromRole="TargetResult" ToRole="SampleResult" />
+          <NavigationProperty Name="Works" Relationship="Mis_Exchange_ObjectsModel.TargetResultWork" FromRole="TargetResult" ToRole="Work" />
+        </EntityType>
+        <EntityType Name="MicroResult">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="64" />
+          <Property Type="String" Name="Value" Nullable="false" MaxLength="1024" />
+          <Property Type="String" Name="Comments" Nullable="true" MaxLength="1024" />
+          <Property Type="Int32" Name="SampleResultId" Nullable="false" />
+          <NavigationProperty Name="SampleResult" Relationship="Mis_Exchange_ObjectsModel.SampleResultMicroResult" FromRole="MicroResult" ToRole="SampleResult" />
+          <NavigationProperty Name="Antibiotics" Relationship="Mis_Exchange_ObjectsModel.MicroResultWork" FromRole="MicroResult" ToRole="Work" />
+        </EntityType>
+        <EntityType Name="Work">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="1024" />
+          <Property Type="String" Name="Value" Nullable="false" MaxLength="1024" />
+          <Property Type="String" Name="UnitName" Nullable="true" MaxLength="64" />
+          <Property Type="Int32" Name="State" Nullable="false" />
+          <Property Type="String" Name="ApprovingDoctor" Nullable="true" MaxLength="1024" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="ApproveDate" Nullable="true" />
+          <Property Type="DateTime" Name="ModifyDate" Nullable="true" />
+          <Property Type="Int32" Name="GroupRank" Nullable="true" />
+          <Property Type="Int32" Name="RankInGroup" Nullable="true" />
+          <Property Type="Int32" Name="TestRank" Nullable="true" />
+          <Property Type="Int32" Name="Precision" Nullable="true" />
+          <Property Type="String" Name="Comments" Nullable="true" MaxLength="1024" />
+          <Property Type="Int32" Name="Normality" Nullable="false" />
+          <Property Type="Int32" Name="TargetResultId" Nullable="true" />
+          <Property Type="Int32" Name="MicroResultId" Nullable="true" />
+          <NavigationProperty Name="TargetResult" Relationship="Mis_Exchange_ObjectsModel.TargetResultWork" FromRole="Work" ToRole="TargetResult" />
+          <NavigationProperty Name="MicroResult" Relationship="Mis_Exchange_ObjectsModel.MicroResultWork" FromRole="Work" ToRole="MicroResult" />
+          <NavigationProperty Name="Norm" Relationship="Mis_Exchange_ObjectsModel.WorkNorm" FromRole="Work" ToRole="Norm" />
+          <NavigationProperty Name="Defects" Relationship="Mis_Exchange_ObjectsModel.WorkDefect" FromRole="Work" ToRole="Defect" />
+        </EntityType>
+        <EntityType Name="Norm">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Double" Name="CriticalLowLimit" Nullable="true" />
+          <Property Type="Double" Name="LowLimit" Nullable="true" />
+          <Property Type="Double" Name="CriticalHighLimit" Nullable="true" />
+          <Property Type="Double" Name="HighLimit" Nullable="true" />
+          <Property Type="String" Name="Norms" MaxLength="1024" DefaultValue="&quot;&quot;" Nullable="false" />
+          <Property Type="String" Name="NormComment" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="UnitName" Nullable="true" MaxLength="128" />
+          <NavigationProperty Name="Work" Relationship="Mis_Exchange_ObjectsModel.WorkNorm" FromRole="Norm" ToRole="Work" />
+        </EntityType>
+        <EntityType Name="ResultStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="ModifyDate" Nullable="true" />
+          <Property Type="Byte" Name="Status" Nullable="false" />
+          <Property Type="String" Name="Comments" Nullable="true" />
+          <NavigationProperty Name="Result" Relationship="Mis_Exchange_ObjectsModel.ResultStatusResult" FromRole="ResultStatus" ToRole="Result" />
+        </EntityType>
+        <Association Name="ResultSampleResult">
+          <End Type="Mis_Exchange_ObjectsModel.Result" Role="Result" Multiplicity="1" />
+          <End Type="Mis_Exchange_ObjectsModel.SampleResult" Role="SampleResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Result">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SampleResult">
+              <PropertyRef Name="ResultId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ResultStatusResult">
+          <End Type="Mis_Exchange_ObjectsModel.ResultStatus" Role="ResultStatus" Multiplicity="1" />
+          <End Type="Mis_Exchange_ObjectsModel.Result" Role="Result" Multiplicity="1" />
+        </Association>
+        <Association Name="SampleResultTargetResult">
+          <End Type="Mis_Exchange_ObjectsModel.SampleResult" Role="SampleResult" Multiplicity="1" />
+          <End Type="Mis_Exchange_ObjectsModel.TargetResult" Role="TargetResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SampleResult">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TargetResult">
+              <PropertyRef Name="SampleResultId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TargetResultWork">
+          <End Type="Mis_Exchange_ObjectsModel.TargetResult" Role="TargetResult" Multiplicity="0..1" />
+          <End Type="Mis_Exchange_ObjectsModel.Work" Role="Work" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TargetResult">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Work">
+              <PropertyRef Name="TargetResultId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SampleResultMicroResult">
+          <End Type="Mis_Exchange_ObjectsModel.SampleResult" Role="SampleResult" Multiplicity="1" />
+          <End Type="Mis_Exchange_ObjectsModel.MicroResult" Role="MicroResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SampleResult">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MicroResult">
+              <PropertyRef Name="SampleResultId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MicroResultWork">
+          <End Type="Mis_Exchange_ObjectsModel.MicroResult" Role="MicroResult" Multiplicity="0..1" />
+          <End Type="Mis_Exchange_ObjectsModel.Work" Role="Work" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MicroResult">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Work">
+              <PropertyRef Name="MicroResultId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="WorkNorm">
+          <End Type="Mis_Exchange_ObjectsModel.Work" Role="Work" Multiplicity="1" />
+          <End Type="Mis_Exchange_ObjectsModel.Norm" Role="Norm" Multiplicity="1" />
+        </Association>
+        <Association Name="PatientResult">
+          <End Type="Mis_Exchange_ObjectsModel.Result" Role="Result" Multiplicity="*" />
+          <End Type="Mis_Exchange_ObjectsModel.Patient" Role="Patient" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Result">
+              <PropertyRef Name="PatientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ResultUserField">
+          <End Type="Mis_Exchange_ObjectsModel.Result" Role="Result" Multiplicity="0..1" />
+          <End Type="Mis_Exchange_ObjectsModel.UserField" Role="UserField" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Result">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserField">
+              <PropertyRef Name="ResultId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="WorkDefect">
+          <End Type="Mis_Exchange_ObjectsModel.Work" Role="Work" Multiplicity="0..1" />
+          <End Type="Mis_Exchange_ObjectsModel.Defect" Role="Defect" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Work">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Defect">
+              <PropertyRef Name="WorkId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SampleResultDefect">
+          <End Type="Mis_Exchange_ObjectsModel.SampleResult" Role="SampleResult" Multiplicity="0..1" />
+          <End Type="Mis_Exchange_ObjectsModel.Defect" Role="Defect" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SampleResult">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Defect">
+              <PropertyRef Name="SampleResultId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Mis_Exchange_ObjectsModelStoreContainer" CdmEntityContainer="ExchangeContext">
+    <EntitySetMapping Name="RequestFilterSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.RequestFilter)">
+        <MappingFragment StoreEntitySet="RequestFilterSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="PatientCodes" ColumnName="PatientCodes" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="RequestCodes" ColumnName="RequestCodes" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="DateTill" ColumnName="DateTill" />
+          <ScalarProperty Name="States" ColumnName="States" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="DefectState" ColumnName="DefectState" />
+          <ScalarProperty Name="CustomStates" ColumnName="CustomStates" />
+          <ScalarProperty Name="Targets" ColumnName="Targets" />
+          <ScalarProperty Name="Departments" ColumnName="Departments" />
+          <ScalarProperty Name="Hospitals" ColumnName="Hospitals" />
+          <ScalarProperty Name="CustDepartments" ColumnName="CustDepartments" />
+          <ScalarProperty Name="Doctors" ColumnName="Doctors" />
+          <ScalarProperty Name="EndDateFrom" ColumnName="EndDateFrom" />
+          <ScalarProperty Name="EndDateTill" ColumnName="EndDateTill" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestFilterStatusSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.RequestFilterStatus)">
+        <MappingFragment StoreEntitySet="RequestFilterStatusSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SampleSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.Sample)">
+        <MappingFragment StoreEntitySet="SampleSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="BiomaterialCode" ColumnName="BiomaterialCode" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TargetSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.Target)">
+        <MappingFragment StoreEntitySet="TargetSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="ReadOnly" ColumnName="ReadOnly" />
+          <ScalarProperty Name="SampleId" ColumnName="SampleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.Request)">
+        <MappingFragment StoreEntitySet="RequestSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RequestCode" ColumnName="RequestCode" />
+          <ScalarProperty Name="HospitalCode" ColumnName="HospitalCode" />
+          <ScalarProperty Name="HospitalName" ColumnName="HospitalName" />
+          <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DoctorCode" ColumnName="DoctorCode" />
+          <ScalarProperty Name="DoctorName" ColumnName="DoctorName" />
+          <ScalarProperty Name="SamplingDate" ColumnName="SamplingDate" />
+          <ScalarProperty Name="SampleDeliveryDate" ColumnName="SampleDeliveryDate" />
+          <ScalarProperty Name="PregnancyDuration" ColumnName="PregnancyDuration" />
+          <ScalarProperty Name="CyclePeriod" ColumnName="CyclePeriod" />
+          <ScalarProperty Name="ReadOnly" ColumnName="ReadOnly" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="PayCategoryCode" ColumnName="PayCategoryCode" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.Patient)">
+        <MappingFragment StoreEntitySet="PatientSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+          <ScalarProperty Name="BirthMonth" ColumnName="BirthMonth" />
+          <ScalarProperty Name="BirthYear" ColumnName="BirthYear" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Building" ColumnName="Building" />
+          <ScalarProperty Name="Flat" ColumnName="Flat" />
+          <ScalarProperty Name="InsuranceCompany" ColumnName="InsuranceCompany" />
+          <ScalarProperty Name="PolicySeries" ColumnName="PolicySeries" />
+          <ScalarProperty Name="PolicyNumber" ColumnName="PolicyNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientCardSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.PatientCard)">
+        <MappingFragment StoreEntitySet="PatientCardSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CardNr" ColumnName="CardNr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserFieldSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.UserField)">
+        <MappingFragment StoreEntitySet="UserFieldSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="PatientCardId" ColumnName="PatientCardId" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="ResultId" ColumnName="ResultId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestStatusSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.RequestStatus)">
+        <MappingFragment StoreEntitySet="RequestStatusSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResultSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.Result)">
+        <MappingFragment StoreEntitySet="ResultSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RequestCode" ColumnName="RequestCode" />
+          <ScalarProperty Name="ResultStatusId" ColumnName="ResultStatusId" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SampleResultSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.SampleResult)">
+        <MappingFragment StoreEntitySet="SampleResultSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BiomaterialCode" ColumnName="BiomaterialCode" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ResultId" ColumnName="ResultId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DefectSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.Defect)">
+        <MappingFragment StoreEntitySet="DefectSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="WorkId" ColumnName="WorkId" />
+          <ScalarProperty Name="SampleResultId" ColumnName="SampleResultId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TargetResultSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.TargetResult)">
+        <MappingFragment StoreEntitySet="TargetResultSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="SampleResultId" ColumnName="SampleResultId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MicroResultSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.MicroResult)">
+        <MappingFragment StoreEntitySet="MicroResultSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="SampleResultId" ColumnName="SampleResultId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.Work)">
+        <MappingFragment StoreEntitySet="WorkSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ApprovingDoctor" ColumnName="ApprovingDoctor" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ApproveDate" ColumnName="ApproveDate" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="GroupRank" ColumnName="GroupRank" />
+          <ScalarProperty Name="RankInGroup" ColumnName="RankInGroup" />
+          <ScalarProperty Name="TestRank" ColumnName="TestRank" />
+          <ScalarProperty Name="Precision" ColumnName="Precision" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Normality" ColumnName="Normality" />
+          <ScalarProperty Name="TargetResultId" ColumnName="TargetResultId" />
+          <ScalarProperty Name="MicroResultId" ColumnName="MicroResultId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NormSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.Norm)">
+        <MappingFragment StoreEntitySet="NormSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CriticalLowLimit" ColumnName="CriticalLowLimit" />
+          <ScalarProperty Name="LowLimit" ColumnName="LowLimit" />
+          <ScalarProperty Name="CriticalHighLimit" ColumnName="CriticalHighLimit" />
+          <ScalarProperty Name="HighLimit" ColumnName="HighLimit" />
+          <ScalarProperty Name="Norms" ColumnName="Norms" />
+          <ScalarProperty Name="NormComment" ColumnName="NormComment" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResultStatusSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Mis_Exchange_ObjectsModel.ResultStatus)">
+        <MappingFragment StoreEntitySet="ResultStatusSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="RequestFilterStatusRequestFilter" TypeName="Mis_Exchange_ObjectsModel.RequestFilterStatusRequestFilter" StoreEntitySet="RequestFilterStatusSet">
+      <EndProperty Name="RequestFilter">
+        <ScalarProperty Name="Id" ColumnName="RequestFilter_Id" />
+      </EndProperty>
+      <EndProperty Name="RequestFilterStatus">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PatientPatientCard" TypeName="Mis_Exchange_ObjectsModel.PatientPatientCard" StoreEntitySet="PatientSet">
+      <EndProperty Name="PatientCard">
+        <ScalarProperty Name="Id" ColumnName="PatientCard_Id" />
+      </EndProperty>
+      <EndProperty Name="Patient">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RequestStatusRequest" TypeName="Mis_Exchange_ObjectsModel.RequestStatusRequest" StoreEntitySet="RequestStatusSet">
+      <EndProperty Name="Request">
+        <ScalarProperty Name="Id" ColumnName="Request_Id" />
+      </EndProperty>
+      <EndProperty Name="RequestStatus">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ResultStatusResult" TypeName="Mis_Exchange_ObjectsModel.ResultStatusResult" StoreEntitySet="ResultStatusSet">
+      <EndProperty Name="Result">
+        <ScalarProperty Name="Id" ColumnName="Result_Id" />
+      </EndProperty>
+      <EndProperty Name="ResultStatus">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="WorkNorm" TypeName="Mis_Exchange_ObjectsModel.WorkNorm" StoreEntitySet="WorkSet">
+      <EndProperty Name="Norm">
+        <ScalarProperty Name="Id" ColumnName="Norm_Id" />
+      </EndProperty>
+      <EndProperty Name="Work">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

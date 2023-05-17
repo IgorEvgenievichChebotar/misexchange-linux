@@ -1,0 +1,1553 @@
+﻿{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Dependency Analysis",
+          "semanticVersion": "0.4.410601",
+          "informationUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview",
+          "rules": [
+            {
+              "id": "UA103",
+              "name": "ReferenceToBeDeleted",
+              "fullDescription": {
+                "text": "References that need to be deleted in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            },
+            {
+              "id": "UA105",
+              "name": "PackageToBeDeleted",
+              "fullDescription": {
+                "text": "Packages that need to be deleted in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            },
+            {
+              "id": "UA106",
+              "name": "PackageToBeAdded",
+              "fullDescription": {
+                "text": "Packages that need to be added in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            },
+            {
+              "id": "UA108",
+              "name": "FrameworkReferenceToBeAdded",
+              "fullDescription": {
+                "text": "Framework Reference that need to be added in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.configuration needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.Net.Http.WebRequest needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.ServiceModel needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.Web.Extensions needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.Web.Services needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.Bcl, Version=1.1.10 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.Bcl.Async, Version=1.0.168 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.Bcl.Build, Version=1.0.14 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.Net.Http, Version=2.2.29 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package AutoMapper, Version=4.1.1 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Castle.Core, Version=3.2.0 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Ninject, Version=3.2.2.0 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Ninject.Extensions.ContextPreservation, Version=3.2.0.0 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Ninject.Extensions.Factory, Version=3.2.1.0 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.CodeAnalysis.VersionCheckAnalyzer, Version=2.9.7 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.CodeQuality.Analyzers, Version=2.9.7 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.NetCore.Analyzers, Version=2.9.7 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.NetFramework.Analyzers, Version=2.9.7 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package System.ComponentModel.Annotations, Version=4.7.0 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.Net.Http, Version=4.3.4 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.Configuration.ConfigurationManager, Version=5.0.0 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.ServiceModel.Primitives, Version=4.8.1 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.ServiceModel.Http, Version=4.8.1 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.ServiceModel.Duplex, Version=4.8.1 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.ServiceModel.NetTcp, Version=4.8.1 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.ServiceModel.Security, Version=4.8.1 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.ServiceModel.Federation, Version=4.8.1 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package AutoMapper, Version=5.2.0 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Castle.Core, Version=3.3.3 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Ninject, Version=3.3.6 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Ninject.Extensions.ContextPreservation, Version=3.3.1 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Ninject.Extensions.Factory, Version=3.3.3 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.Windows.Compatibility, Version=7.0.0 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA108",
+          "level": "note",
+          "message": {
+            "text": "Framework Reference to Microsoft.AspNetCore.App needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/Components/CheckBoxComboBox/CheckBoxComboBox.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.Windows.Compatibility, Version=7.0.0 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/Components/CheckBoxComboBox/CheckBoxComboBox.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.configuration needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/SuperCore/SuperCore.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.Net.Http.WebRequest needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/SuperCore/SuperCore.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.Web needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/SuperCore/SuperCore.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.Web.Extensions needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/SuperCore/SuperCore.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.Bcl, Version=1.1.10 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/SuperCore/SuperCore.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.Bcl.Build, Version=1.0.14 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/SuperCore/SuperCore.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.Net.Http, Version=2.2.29 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/SuperCore/SuperCore.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.Net.Http, Version=4.3.4 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/SuperCore/SuperCore.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.Configuration.ConfigurationManager, Version=5.0.0 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/SuperCore/SuperCore.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/SuperCore/SuperCore.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.Windows.Compatibility, Version=7.0.0 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/SuperCore/SuperCore.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA108",
+          "level": "note",
+          "message": {
+            "text": "Framework Reference to Microsoft.AspNetCore.App needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/SuperCore/SuperCore.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/TimeFileResponsibler/TimeFileSubject.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.ServiceModel needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/LisServiceClients/LisServiceClients.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.ServiceModel.Primitives, Version=4.8.1 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/LisServiceClients/LisServiceClients.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.ServiceModel.Http, Version=4.8.1 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/LisServiceClients/LisServiceClients.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.ServiceModel.Duplex, Version=4.8.1 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/LisServiceClients/LisServiceClients.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.ServiceModel.NetTcp, Version=4.8.1 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/LisServiceClients/LisServiceClients.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.ServiceModel.Security, Version=4.8.1 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/LisServiceClients/LisServiceClients.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.ServiceModel.Federation, Version=4.8.1 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/LisServiceClients/LisServiceClients.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/LisServiceClients/LisServiceClients.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeEntities/MisExchangeEntities.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeExternalDTOs/MisExchangeExternalDTOs.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.configuration needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangePublicClasses/MisExchangePublicClasses.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package EntityFramework, Version=6.1.3 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangePublicClasses/MisExchangePublicClasses.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.Configuration.ConfigurationManager, Version=5.0.0 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangePublicClasses/MisExchangePublicClasses.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package EntityFramework, Version=6.4.4 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangePublicClasses/MisExchangePublicClasses.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangePublicClasses/MisExchangePublicClasses.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.Windows.Compatibility, Version=7.0.0 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangePublicClasses/MisExchangePublicClasses.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeAdapters/MisExchangeAdapters.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "API Upgradability",
+          "semanticVersion": "0.4.410601",
+          "informationUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview",
+          "rules": [
+            {
+              "id": "UA0013_B",
+              "name": "Replace usage of System.ServiceModel.ServiceHost, System.ServiceModel.ServiceHostBase",
+              "fullDescription": {
+                "text": "Replace usage of System.ServiceModel.ServiceHost, System.ServiceModel.ServiceHostBase"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "UA0013_B",
+          "level": "note",
+          "message": {
+            "text": "WCF server APIs are unsupported on .NET Core. Consider rewriting to use gRPC (https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers), ASP.NET Core, or CoreWCF (https://github.com/CoreWCF/CoreWCF) instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/EMIAS/EmiasExchangeHelper3.cs"
+                },
+                "region": {
+                  "startLine": 39
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_B",
+          "level": "note",
+          "message": {
+            "text": "WCF server APIs are unsupported on .NET Core. Consider rewriting to use gRPC (https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers), ASP.NET Core, or CoreWCF (https://github.com/CoreWCF/CoreWCF) instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/EMIAS/EmiasExchangeHelper3.cs"
+                },
+                "region": {
+                  "startLine": 47
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_B",
+          "level": "note",
+          "message": {
+            "text": "WCF server APIs are unsupported on .NET Core. Consider rewriting to use gRPC (https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers), ASP.NET Core, or CoreWCF (https://github.com/CoreWCF/CoreWCF) instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/FTMIS/FTMISExchangeHelper3.cs"
+                },
+                "region": {
+                  "startLine": 21
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_B",
+          "level": "note",
+          "message": {
+            "text": "WCF server APIs are unsupported on .NET Core. Consider rewriting to use gRPC (https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers), ASP.NET Core, or CoreWCF (https://github.com/CoreWCF/CoreWCF) instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/FTMIS/FTMISExchangeHelper3.cs"
+                },
+                "region": {
+                  "startLine": 41
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_B",
+          "level": "note",
+          "message": {
+            "text": "WCF server APIs are unsupported on .NET Core. Consider rewriting to use gRPC (https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers), ASP.NET Core, or CoreWCF (https://github.com/CoreWCF/CoreWCF) instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/EMIAS_COVID19/ExchangeHelper3_EMIAS_COVID19.cs"
+                },
+                "region": {
+                  "startLine": 21
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_B",
+          "level": "note",
+          "message": {
+            "text": "WCF server APIs are unsupported on .NET Core. Consider rewriting to use gRPC (https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers), ASP.NET Core, or CoreWCF (https://github.com/CoreWCF/CoreWCF) instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/EMIAS_COVID19/ExchangeHelper3_EMIAS_COVID19.cs"
+                },
+                "region": {
+                  "startLine": 33
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_B",
+          "level": "note",
+          "message": {
+            "text": "WCF server APIs are unsupported on .NET Core. Consider rewriting to use gRPC (https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers), ASP.NET Core, or CoreWCF (https://github.com/CoreWCF/CoreWCF) instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/Classes/Communication/SoapServiceCommunicator.cs"
+                },
+                "region": {
+                  "startLine": 15
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_B",
+          "level": "note",
+          "message": {
+            "text": "WCF server APIs are unsupported on .NET Core. Consider rewriting to use gRPC (https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers), ASP.NET Core, or CoreWCF (https://github.com/CoreWCF/CoreWCF) instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/Classes/Communication/SoapServiceCommunicator.cs"
+                },
+                "region": {
+                  "startLine": 29
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_B",
+          "level": "note",
+          "message": {
+            "text": "WCF server APIs are unsupported on .NET Core. Consider rewriting to use gRPC (https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers), ASP.NET Core, or CoreWCF (https://github.com/CoreWCF/CoreWCF) instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/BARS/BarsDependencies/Implementation/BarsServiceRequest.cs"
+                },
+                "region": {
+                  "startLine": 17
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_B",
+          "level": "note",
+          "message": {
+            "text": "WCF server APIs are unsupported on .NET Core. Consider rewriting to use gRPC (https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers), ASP.NET Core, or CoreWCF (https://github.com/CoreWCF/CoreWCF) instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/BARS/BarsDependencies/Implementation/BarsServiceRequest.cs"
+                },
+                "region": {
+                  "startLine": 31
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_B",
+          "level": "note",
+          "message": {
+            "text": "WCF server APIs are unsupported on .NET Core. Consider rewriting to use gRPC (https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers), ASP.NET Core, or CoreWCF (https://github.com/CoreWCF/CoreWCF) instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/RedMine/RedMineExchangeHelper3.cs"
+                },
+                "region": {
+                  "startLine": 50
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_B",
+          "level": "note",
+          "message": {
+            "text": "WCF server APIs are unsupported on .NET Core. Consider rewriting to use gRPC (https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers), ASP.NET Core, or CoreWCF (https://github.com/CoreWCF/CoreWCF) instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/RedMine/RedMineExchangeHelper3.cs"
+                },
+                "region": {
+                  "startLine": 35
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "Component Analysis",
+          "semanticVersion": "0.4.410601",
+          "informationUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview",
+          "rules": [
+            {
+              "id": "UA209",
+              "name": "Microsoft.DotNet.UpgradeAssistant.Extensions.Windows.WinformsDefaultFontUpdater",
+              "fullDescription": {
+                "text": "Default Font API Alert"
+              }
+            },
+            {
+              "id": "UA202",
+              "name": "Microsoft.DotNet.UpgradeAssistant.Extensions.Windows.WinformsDpiSettingUpdater",
+              "fullDescription": {
+                "text": "Winforms Source Updater"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "UA209",
+          "level": "note",
+          "message": {
+            "text": "Default font in Windows Forms has been changed from Microsoft Sans Serif to Seg Segoe UI, in order to change the default font use the API - Application.SetDefaultFont(Font font). For more details see here - https://devblogs.microsoft.com/dotnet/whats-new-in-windows-forms-in-net-6-0-preview-5/#application-wide-default-font."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangeService.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA209",
+          "level": "note",
+          "message": {
+            "text": "Default font in Windows Forms has been changed from Microsoft Sans Serif to Seg Segoe UI, in order to change the default font use the API - Application.SetDefaultFont(Font font). For more details see here - https://devblogs.microsoft.com/dotnet/whats-new-in-windows-forms-in-net-6-0-preview-5/#application-wide-default-font."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/Components/CheckBoxComboBox/CheckBoxComboBox.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA209",
+          "level": "note",
+          "message": {
+            "text": "Default font in Windows Forms has been changed from Microsoft Sans Serif to Seg Segoe UI, in order to change the default font use the API - Application.SetDefaultFont(Font font). For more details see here - https://devblogs.microsoft.com/dotnet/whats-new-in-windows-forms-in-net-6-0-preview-5/#application-wide-default-font."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/SuperCore/SuperCore.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA209",
+          "level": "note",
+          "message": {
+            "text": "Default font in Windows Forms has been changed from Microsoft Sans Serif to Seg Segoe UI, in order to change the default font use the API - Application.SetDefaultFont(Font font). For more details see here - https://devblogs.microsoft.com/dotnet/whats-new-in-windows-forms-in-net-6-0-preview-5/#application-wide-default-font."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/MisExchangePublicClasses/MisExchangePublicClasses.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA202",
+          "level": "note",
+          "message": {
+            "text": "HighDpiMode needs to set in Main() instead of app.config or app.manifest - Application.SetHighDpiMode(HighDpiMode.<setting>). It is recommended to use SystemAware as the HighDpiMode option for better results."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Work/Innova/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8/%D0%9E%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B8%20%D0%BD%D0%B0%20NET6/dev_NLSdotNetProjects/MisExchangeService/Program.cs"
+                },
+                "region": {}
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

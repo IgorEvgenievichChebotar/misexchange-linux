@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--AlfaLab OutsourceIntegrationHelperSettings-->
+<MailSenderSettings>
+  <Host>mail.nic.ru</Host>
+  <Port>25</Port>
+  <Count>5</Count>
+
+  <DbInitialCatalog>MailSenderCache</DbInitialCatalog>
+  <DbDataSource>testserver1</DbDataSource>
+  <DbUserID>sa</DbUserID>
+  <DbPassword>sa</DbPassword>
+
+  <TimerInterval>5</TimerInterval>
+</MailSenderSettings>

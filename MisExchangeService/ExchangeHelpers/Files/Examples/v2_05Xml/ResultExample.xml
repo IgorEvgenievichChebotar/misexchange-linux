@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RequestCode>200012</RequestCode>
+  <Patient>
+    <Code>300003</Code>
+    <FirstName>ТЕСТ</FirstName>
+    <LastName>ИМПОРТ</LastName>
+    <MiddleName>ТЕСТОВИЧ</MiddleName>
+    <BirthDay>11</BirthDay>
+    <BirthMonth>11</BirthMonth>
+    <BirthYear>1990</BirthYear>
+    <Sex>1</Sex>
+    <PatientCard>
+      <CardNr>300003</CardNr>
+      <UserFields />
+    </PatientCard>
+    <UserFields />
+  </Patient>
+  <SampleResults>
+    <SampleResult>
+      <Barcode>200012</Barcode>
+      <BiomaterialCode>44</BiomaterialCode>
+      <Defects />
+      <TargetResults>
+        <TargetResult>
+          <Code>12.107</Code>
+          <Name>Посев на Listeria (листерии) с определением чувствительности к антибиотикам</Name>
+          <Works>
+            <Work>
+              <Code>БАК_ПосЛистерии</Code>
+              <Name>Посев на листерии с определением чувствительности к антибиотикам</Name>
+              <Value>Выполнено</Value>
+              <State>3</State>
+              <Norm>
+                <LowLimit>0</LowLimit>
+                <HighLimit>0</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms>роста нет</Norms>
+                <NormComment />
+              </Norm>
+              <Normality>2</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2018-02-02T13:33:51</CreateDate>
+              <ApproveDate>2018-02-05T12:14:45</ApproveDate>
+              <ModifyDate>2018-02-02T13:33:51</ModifyDate>
+              <Comments />
+            </Work>
+          </Works>
+        </TargetResult>
+      </TargetResults>
+      <MicroResults>
+        <MicroResult>
+          <Code>1438</Code>
+          <Name>Staphylococcus aureus</Name>
+          <Value />
+          <Antibiotics>
+            <Work>
+              <Code>a1</Code>
+              <Name>antibiotic1</Name>
+              <Value>не устойчив</Value>
+              <State>3</State>
+              <Norm>
+                <LowLimit>0</LowLimit>
+                <HighLimit>0</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms></Norms>
+                <NormComment />
+              </Norm>
+              <Normality>0</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2018-02-05T12:14:45</CreateDate>
+              <ApproveDate>2018-02-05T12:14:45</ApproveDate>
+              <ModifyDate>2018-02-05T12:14:45</ModifyDate>
+              <Comments>2</Comments>
+            </Work>
+            <Work>
+              <Code>a2</Code>
+              <Name>antibiotic2</Name>
+              <Value>да</Value>
+              <State>3</State>
+              <Norm>
+                <LowLimit>0</LowLimit>
+                <HighLimit>0</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms></Norms>
+                <NormComment />
+              </Norm>
+              <Normality>0</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2018-02-05T12:14:45</CreateDate>
+              <ApproveDate>2018-02-05T12:14:45</ApproveDate>
+              <ModifyDate>2018-02-05T12:14:45</ModifyDate>
+              <Comments>4</Comments>
+            </Work>
+          </Antibiotics>
+          <Found>true</Found>
+        </MicroResult>
+      </MicroResults>
+    </SampleResult>
+    <SampleResult>
+      <Barcode>200012</Barcode>
+      <BiomaterialCode>72</BiomaterialCode>
+      <Defects />
+      <TargetResults>
+        <TargetResult>
+          <Code>208</Code>
+          <Name>Лейкоцитарная формула</Name>
+          <Works>
+            <Work>
+              <Code>277</Code>
+              <Name>Лимфоциты</Name>
+              <Value>20</Value>
+              <UnitName>%</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>19</LowLimit>
+                <HighLimit>37</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms>19,00 - 37,00</Norms>
+                <NormComment />
+                <UnitName>%</UnitName>
+              </Norm>
+              <Normality>5</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:02:53</ApproveDate>
+              <ModifyDate>2017-05-22T13:02:53</ModifyDate>
+              <Comments />
+            </Work>
+            <Work>
+              <Code>362</Code>
+              <Name>Нейтрофилы</Name>
+              <Value>4</Value>
+              <UnitName>%</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>0</LowLimit>
+                <HighLimit>0</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms></Norms>
+                <NormComment />
+                <UnitName>%</UnitName>
+              </Norm>
+              <Normality>0</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:02:53</ApproveDate>
+              <ModifyDate>2017-05-22T13:02:53</ModifyDate>
+              <Comments />
+            </Work>
+            <Work>
+              <Code>377</Code>
+              <Name>Гранулоциты</Name>
+              <Value>5</Value>
+              <UnitName>%</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>0</LowLimit>
+                <HighLimit>0</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms></Norms>
+                <NormComment />
+                <UnitName>%</UnitName>
+              </Norm>
+              <Normality>0</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:05:18</ApproveDate>
+              <ModifyDate>2017-05-22T13:05:18</ModifyDate>
+              <Comments />
+            </Work>
+            <Work>
+              <Code>279</Code>
+              <Name>Эозинофилы</Name>
+              <Value>5</Value>
+              <UnitName>%</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>2</LowLimit>
+                <HighLimit>8</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms>2 - 8</Norms>
+                <NormComment />
+                <UnitName>%</UnitName>
+              </Norm>
+              <Normality>5</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:02:53</ApproveDate>
+              <ModifyDate>2017-05-22T13:02:53</ModifyDate>
+              <Comments />
+            </Work>
+            <Work>
+              <Code>305</Code>
+              <Name>Базофилы</Name>
+              <Value>4</Value>
+              <UnitName>%</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>1.2</LowLimit>
+                <HighLimit>5.4</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms>1,2 - 5,4</Norms>
+                <NormComment />
+                <UnitName>%</UnitName>
+              </Norm>
+              <Normality>5</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:02:53</ApproveDate>
+              <ModifyDate>2017-05-22T13:02:53</ModifyDate>
+              <Comments />
+            </Work>
+            <Work>
+              <Code>306</Code>
+              <Name>Моноциты</Name>
+              <Value>4</Value>
+              <UnitName>%</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>0</LowLimit>
+                <HighLimit>0</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms></Norms>
+                <NormComment />
+                <UnitName>%</UnitName>
+              </Norm>
+              <Normality>0</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:02:53</ApproveDate>
+              <ModifyDate>2017-05-22T13:02:53</ModifyDate>
+              <Comments />
+            </Work>
+          </Works>
+        </TargetResult>
+        <TargetResult>
+          <Code>147</Code>
+          <Name>Общий анализ крови</Name>
+          <Works>
+            <Work>
+              <Code>245</Code>
+              <Name>Средняя концентрация гемоглобина в эритроците</Name>
+              <Value>4</Value>
+              <UnitName>г/л</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>0</LowLimit>
+                <HighLimit>0</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms></Norms>
+                <NormComment />
+                <UnitName>г/л</UnitName>
+              </Norm>
+              <Normality>0</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:02:53</ApproveDate>
+              <ModifyDate>2017-05-22T13:02:53</ModifyDate>
+              <Comments />
+            </Work>
+            <Work>
+              <Code>243</Code>
+              <Name>Средний объем эритроцита</Name>
+              <Value>5</Value>
+              <UnitName>фл</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>0</LowLimit>
+                <HighLimit>0</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms></Norms>
+                <NormComment />
+                <UnitName>фл</UnitName>
+              </Norm>
+              <Normality>0</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:02:53</ApproveDate>
+              <ModifyDate>2017-05-22T13:02:53</ModifyDate>
+              <Comments />
+            </Work>
+            <Work>
+              <Code>242</Code>
+              <Name>Гематокрит</Name>
+              <Value>5</Value>
+              <UnitName>%</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>0</LowLimit>
+                <HighLimit>0</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms></Norms>
+                <NormComment />
+                <UnitName>%</UnitName>
+              </Norm>
+              <Normality>0</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:02:53</ApproveDate>
+              <ModifyDate>2017-05-22T13:02:53</ModifyDate>
+              <Comments />
+            </Work>
+            <Work>
+              <Code>240</Code>
+              <Name>Эритроциты</Name>
+              <Value>4</Value>
+              <UnitName>10^12/л</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>2</LowLimit>
+                <HighLimit>9</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms>2 - 9</Norms>
+                <NormComment />
+                <UnitName>10^12/л</UnitName>
+              </Norm>
+              <Normality>5</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:02:53</ApproveDate>
+              <ModifyDate>2017-05-22T13:02:53</ModifyDate>
+              <Comments />
+            </Work>
+            <Work>
+              <Code>244</Code>
+              <Name>Среднее содержание гемоглобина в эритроците</Name>
+              <Value>5</Value>
+              <UnitName>пг</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>3</LowLimit>
+                <HighLimit>9</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms>3 - 9</Norms>
+                <NormComment />
+                <UnitName>пг</UnitName>
+              </Norm>
+              <Normality>5</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:02:53</ApproveDate>
+              <ModifyDate>2017-05-22T13:02:53</ModifyDate>
+              <Comments />
+            </Work>
+            <Work>
+              <Code>241</Code>
+              <Name>Гемоглобин</Name>
+              <Value>34</Value>
+              <UnitName>г/л</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>23</LowLimit>
+                <HighLimit>34</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms>23 - 34</Norms>
+                <NormComment />
+                <UnitName>г/л</UnitName>
+              </Norm>
+              <Normality>5</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:02:53</ApproveDate>
+              <ModifyDate>2017-05-22T13:02:53</ModifyDate>
+              <Comments />
+            </Work>
+            <Work>
+              <Code>247</Code>
+              <Name>Лейкоциты</Name>
+              <Value>3</Value>
+              <UnitName>10^9/л</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>0</LowLimit>
+                <HighLimit>0</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms></Norms>
+                <NormComment />
+                <UnitName>10^9/л</UnitName>
+              </Norm>
+              <Normality>0</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:02:53</ApproveDate>
+              <ModifyDate>2017-05-22T13:02:53</ModifyDate>
+              <Comments />
+            </Work>
+            <Work>
+              <Code>246</Code>
+              <Name>Тромбоциты</Name>
+              <Value>5</Value>
+              <UnitName>10^9/л</UnitName>
+              <State>3</State>
+              <Norm>
+                <LowLimit>0</LowLimit>
+                <HighLimit>0</HighLimit>
+                <CriticalLowLimit>0</CriticalLowLimit>
+                <CriticalHighLimit>0</CriticalHighLimit>
+                <Norms></Norms>
+                <NormComment />
+                <UnitName>10^9/л</UnitName>
+              </Norm>
+              <Normality>0</Normality>
+              <Defects />
+              <ApprovingDoctor>admin A. A.</ApprovingDoctor>
+              <ApprovingDoctorCode>936</ApprovingDoctorCode>
+              <CreateDate>2017-05-22T13:01:59</CreateDate>
+              <ApproveDate>2017-05-22T13:02:53</ApproveDate>
+              <ModifyDate>2017-05-22T13:02:53</ModifyDate>
+              <Comments />
+            </Work>
+          </Works>
+        </TargetResult>
+      </TargetResults>
+      <MicroResults />
+    </SampleResult>
+  </SampleResults>
+  <UserFields />
+  <SampleDeliveryDate>2014-01-28T15:38:28</SampleDeliveryDate>
+  <HospitalCode>1</HospitalCode>
+  <HospitalName>ИКХ</HospitalName>
+  <State>3</State>
+</Result>

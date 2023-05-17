@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Request xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<RequestCode>9155</RequestCode>
+	<HospitalCode>10007</HospitalCode>
+	<HospitalName>mapo</HospitalName>
+	<DepartmentCode>002</DepartmentCode>
+	<DepartmentName>Травма</DepartmentName>
+	<DoctorCode>005</DoctorCode>
+	<DoctorName>Сидоров И. И.</DoctorName>
+	<!-- <RegistrationFormCode>3</RegistrationFormCode> -->
+	<!-- <SamplingDate>2011-05-17T00:00:00+04:00</SamplingDate> --> 
+	<!--SamplingDate>2011-06-28</SamplingDate--> 
+	<!--SampleDeliveryDate>2012-09-04T16:21:12.0000000+04:00</SampleDeliveryDate-->
+	<PregnancyDuration>0</PregnancyDuration>
+	<CyclePeriod>0</CyclePeriod>
+	<Readonly>false</Readonly>
+	<Patient>
+		<Code>MAPO</Code>
+		<FirstName>Петров</FirstName>
+		<LastName>Пётр</LastName>
+		<MiddleName>Петрович</MiddleName>
+		<BirthDay>1</BirthDay>
+		<BirthMonth>1</BirthMonth>
+		<BirthYear>1954</BirthYear>
+		<Sex>1</Sex>
+		<Country>Россия</Country>
+		<City>Пушкин, Лен. обл.</City>
+		<Street>Ленина</Street>
+		<Building>1/3</Building>
+		<Flat>10</Flat>
+		<InsuranceCompany>РГС</InsuranceCompany>
+		<PolicySeries>333</PolicySeries>
+		<PolicyNumber>100 200 300</PolicyNumber>
+		<PatientCard>
+			<CardNr>ZX10</CardNr>
+			<!--	<CardSuffix>-11</CardSuffix>
+			<Kind>1</Kind> -->
+			<!-- <ExternalId>string1</ExternalId> -->
+			<UserFields>
+				<UserField>
+					<Code>hospital_pc</Code>
+					<Value>Госпиталь №1</Value>
+				</UserField>
+				<UserField>
+					<Code>in_date</Code>
+					<Value>17.05.2011</Value>
+				</UserField>		
+			</UserFields>
+		</PatientCard>	
+		<UserFields>
+			<UserField>
+				<Code>uf_PatientDepartment_code_p</Code>
+				<Value>Отделение пациента 4</Value>
+			</UserField>
+			<UserField>
+				<Name>Поле 2</Name>
+				<Code>streetName_m</Code>
+				<Value>ул. им. Тарасова</Value>
+			</UserField>
+		</UserFields>
+	</Patient>
+	<Samples>
+		<Sample>
+			<!-- <Barcode>11111100012</Barcode>  -->
+			<BiomaterialCode>010</BiomaterialCode>
+			<Priority>1</Priority>
+			<Targets>
+				<Target>
+					<Code>45-100</Code>
+					<Cancel>false</Cancel>
+					<Priority>0</Priority>
+					<ReadOnly>false</ReadOnly>
+				</Target>     
+			</Targets>
+		</Sample> 
+	</Samples>
+	<UserFields>
+		<UserField>
+			<Code>insuranceCompany</Code>
+			<Value>РЕСО</Value>
+		</UserField>
+		<UserField>
+			<Name>Диагноз</Name>
+			<Code>Diagnosis2</Code>
+			<Value>мигрень</Value>
+		</UserField>
+	</UserFields>
+</Request>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="NLSdotNetProjects" default="all">
+
+	<property name="dotNetprojects.src.dir" value="{src.dir}\NLSdotNetProjects" />
+	<property name="dotNet_Reactor.path" value="C:\Program Files (x86)\Eziriz\.NET Reactor" />
+	<property name="root.dist.dir" value="D:\buildsystem\lims\2.0\dist" />
+
+	<target name="clear">
+	  	<delete dir="${dotNetprojects.src.dir}/SuperCore/bin/Release" />
+		<delete dir="${dotNetprojects.src.dir}/LisDriverWrapper/bin/Release" />
+		<delete dir="${dotNetprojects.src.dir}/DeviceDriversServer/bin/Release" />
+		<delete dir="${dotNetprojects.src.dir}/OutsourcerIntegrationService/bin/Release" />		
+		<delete dir="${dotNetprojects.src.dir}/HemRemote/bin/Release" />
+		<delete dir="${dotNetprojects.src.dir}/Lims.Net/bin/Release" />
+		<delete dir="${dotNetprojects.src.dir}/MisExchangeService/bin/Release" />
+	</target>
+	
+	<!--
+	<target name="inject.build.number">
+		<replace dir=".">
+			<include name="**/Consts.cs" />
+			<replacefilter token="@buildnumber@" value="${build.number}" />
+		</replace>
+	</target>
+	-->
+	
+	<target name="inject.build.number">
+		<echo>Injecting buildNumber to NLSdotNetProjects</echo>		
+        <exec executable="${dotNetprojects.src.dir}\InjectBuildNumber" >
+			<arg value='"-dir:${dotNetprojects.src.dir}"'/>
+			<arg value="-buildNumber:${build.number}"/>
+		</exec>
+	</target>
+	
+	<target name="compile" depends="inject.build.number">
+		<echo>Compiling NLSdotNetProjects</echo>		
+        <exec executable="MSBuild" output="build.log" resultproperty="buildresult">
+			<arg value="${dotNetprojects.src.dir}\NLSdotNetProjects.sln"/>
+			<arg value="/p:Configuration=Release"/>		
+		</exec>
+		<antcall target="evaluateCompilationResults"/>
+	</target>
+	
+	<target name="evaluateCompilationResults">
+		<condition property="buildsuccess">
+			<not>
+				<equals arg1="${buildresult}" arg2="1"/>
+			</not>
+		</condition>
+		<fail unless="buildsuccess">Compilation failed.</fail>
+	</target>	
+	
+	<target name="net.projects.protection" >
+		<echo>protection of NLSdotNetProjects</echo>
+		<antcall target="protection.MisExchange"/>
+		<antcall target="protection.OutsourcerIntegrationService"/>		
+		<antcall target="protection.Lims.Net" />		
+		<antcall target="protection.HemRemote"/>
+	</target>
+	
+	<target name="protection.MisExchange">
+		<exec executable='"${dotNet_Reactor.path}\dotNET_Reactor.exe"' resultproperty="obfMisExchangeResult" >
+			<arg value="-project" />
+			<arg value='"${dotNetprojects.src.dir}\MisExchangeService\bin\Release\MisExchange_obf.nrproj"' />
+		</exec>
+	</target>
+	
+	<target name="protection.OutsourcerIntegrationService">
+		<exec executable='"${dotNet_Reactor.path}\dotNET_Reactor.exe"' resultproperty="obfOutsourcerIntegrationResult" >
+			<arg value="-project" />
+			<arg value='"${dotNetprojects.src.dir}\OutsourcerIntegrationService\bin\Release\OutsourcerIntegrationService_obf.nrproj"' />
+		</exec>
+	</target>
+	
+	<target name="protection.Lims.Net">
+		<exec executable='"${dotNet_Reactor.path}\dotNET_Reactor.exe"' resultproperty="obf.Lims.Net.Result" >
+			<arg value="-project" />
+			<arg value='"${dotNetprojects.src.dir}\Lims.Net\bin\Release\Lims.Net_obf.nrproj"' />
+		</exec>
+	<!--
+		<condition property="protection.Lims.Net.successful">
+			<not>
+				<equals arg1="${obf.Lims.Net.Result}" arg2="1"/>
+			</not>	
+		</condition>		
+		<fail unless="protection.Lims.Net.successful">Lims.Net protection failed.</fail>
+		-->
+	</target>
+
+	<target name="protection.HemRemote">
+		<exec executable='"${dotNet_Reactor.path}\dotNET_Reactor.exe"' resultproperty="obfHemRemoteResult" >
+			<arg value="-project" />
+			<arg value='"${dotNetprojects.src.dir}\HemRemote\bin\Release\HemRemote_obf.nrproj"' />
+		</exec>
+	</target>
+	
+	<target name="net.projects.make.distribs" depends="net.projects.protection">
+		
+		<property name="device.drivers.server.build.dir" value="${dotNetprojects.src.dir}/DeviceDriversServer/bin/Release" />
+		<property name="device.drivers.server.dist.dir" value="${root.dist.dir}/builds/${build.number}/DeviceDriversServer" />
+		<mkdir dir="${device.drivers.server.dist.dir}" />
+		<copy todir="${device.drivers.server.dist.dir}" failonerror="false">
+			<filelist dir="${device.drivers.server.build.dir}">
+				<file name="nlscorlib.dll" />
+				<file name="log4net.dll" />
+				<file name="LisDriverWrapper.dll" />
+				<file name="DeviceDriversServer.exe" />
+				<file name="settings.xml" />
+			</filelist>
+		</copy>
+		
+		<property name="mis.exchange.build.dir" value="${dotNetprojects.src.dir}/MisExchangeService/bin/Release" />
+		<property name="mis.exchange.dist.dir" value="${root.dist.dir}/builds/${build.number}/MisExchange" />		
+		<mkdir dir="${mis.exchange.dist.dir}" />
+		<copy todir="${mis.exchange.dist.dir}" failonerror="false">
+			<fileset dir="${mis.exchange.build.dir}/protected" />
+			<filelist dir="${mis.exchange.build.dir}">
+				<file name="apcl.dll" />
+				<file name="LimsDTOs.dll" />
+				<file name="LisServiceClients.dll" />
+				<file name="log4net.dll" />
+				<file name="LimsStaticDictionary.xml" />
+				<file name="exchangeHelperSettings.xml" />
+				<file name="settings.xml" />
+			</filelist>			
+		</copy>
+		
+		<property name="outsourcer.integration.build.dir" value="${dotNetprojects.src.dir}/OutsourcerIntegrationService/bin/Release" />
+		<property name="outsourcer.integration.dist.dir" value="${root.dist.dir}/builds/${build.number}/OutsourcerIntegrationService" />		
+		<mkdir dir="${outsourcer.integration.dist.dir}" />
+		<copy todir="${outsourcer.integration.dist.dir}" failonerror="false">
+			<fileset dir="${outsourcer.integration.build.dir}/protected" />
+			<filelist dir="${outsourcer.integration.build.dir}">
+				<file name="LimsDTOs.dll" />
+				<file name="log4net.dll" />
+				<file name="LimsStaticDictionary.xml" />
+				<file name="settings.xml" />
+			</filelist>			
+		</copy>
+		
+	</target>
+	
+	<target name="all" depends="clear, compile, net.projects.protection, net.projects.make.distribs" />
+	
+</project>

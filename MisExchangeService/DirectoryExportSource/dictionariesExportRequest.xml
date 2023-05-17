@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectoryExportRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Directories>
+    <string>bioMaterial</string>
+    <string>doctor</string>
+    <string>hospital</string>
+    <string>microOrganism</string>
+    <string>payCategory</string>
+    <string>test</string>
+    <string>userDirectory</string>
+    <string>userField</string>
+    <string>target</string>
+    <string>defectType</string>
+  </Directories>
+</DirectoryExportRequest>

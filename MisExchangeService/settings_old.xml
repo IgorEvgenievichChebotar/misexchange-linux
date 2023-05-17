@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE request>
+<request type="" version="2.0">
+  <content>
+    <o>
+      <!--  
+      <s n="defaultUserFieldValues" item-class="ru.novolabs.MisExchangeService.Classes.DefaultUserFieldValue">
+        <o>
+          <f t="s" n="userObjectType" v="Request" />
+          <f t="s" n="userFieldCode" v="1" />
+          <f t="s" n="defaultValue" v="www" />
+        </o>
+        <o>
+          <f t="s" n="userObjectType" v="Patient" />
+          <f t="s" n="userFieldCode" v="2" />
+          <f t="s" n="defaultValue" v="rrr" />
+        </o>
+      </s> -->
+      <f t="s" n="defaultSampleBlankCode" v="1" />
+      <f t="b" n="useUniqueSampleBarcoding" v="false" />
+      <!-- <f t="s" n="registrationFormCode" v="10012" /> -->
+      <f t="s" n="registrationFormCode" v="1" />
+      <f t="s" n="versionAfter129" v="true" />
+      <!-- Костыль, добавленный для обратной совместимости .NET-приложений со старыми серверами ЛИС. После внедрения версий ЛИС старше 2.21.23.0
+      у всех заказчиков костыль можно ликвидировать-->
+      <!--<f t="b" n="enableCitoPropertyForTargetAndSampleInfo" v="true" />-->
+      <f t="s" n="appServerListenerURI" v="http://*:9507/" />
+      <f t="i" n="taskManagerWaitInterval" v="26000" />
+      <!--<f t="s" n="serverAddress" v="http://lis50:8073/lims/" /> -->
+      <!--<f t="s" n="serverAddress" v="http://mskbuild:8070/lims/" />-->
+      <!--<f t="s" n="serverAddress" v="http://PAS:8095/lims/" />--> <!-- Сервер Алины -->
+      <!--<f t="s" n="serverAddress" v="http://appserv1:65060/lims/" />--> <!-- сервер Витакора - копия -->
+      <!--<f t="s" n="serverAddress" v="http://appserv1:65070/lims/" />--> <!-- сервер Витакора - копия -->
+      <!--<f t="s" n="serverAddress" v="http://appserv1:65064/lims/" />--> <!-- обменка Димитровград - копия -->
+      <!--<f t="s" n="serverAddress" v="http://appserv1:65044/lims/" />--> <!-- обменка Курган МИАЦ - копия -->
+      <!--<f t="s" n="serverAddress" v="http://192.168.110.194:65034/lims/" />--> <!-- обменка Medialog - копия -->
+      <f t="s" n="serverAddress" v="http://appserv1:65067/lims/" /> <!-- обменка INVITRO - копия -->
+
+      <f t="s" n="reportServerAddress" v="http://192.168.110.194:9552/" />
+      <!-- <f t="s" n="serverAddress" v="tag16:8090/lims/" /> -->
+      <f t="s" n="rotateLogs" v="true" />
+      <f t="s" n="patientCodePrefix" v="" />
+      <!--<f t="b" n="resetSampleDeliveryDate" v="true" />-->
+      <!--<f t="b" n="resetPatientCode" v="true" />-->
+      <f t="b" n="copyMicroorganismCFUResultToValue" v="true" />
+
+       <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_MIS_RTLabs" />-->
+       <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_BARS_2020" />-->
+       <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_UniGateBregis" />-->
+       <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_SEMDIngush" />-->
+       <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_SEMD" />-->
+       <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_CGM_NETRAADFiles" />-->
+       <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_CGM_NETRAAD" />-->
+       <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_Vitacore" />-->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_Niarmedic" /> -->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_Files" /> -->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_FilesNew" /> -->
+   <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_FTMIS" />--> 
+   <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_RosPotrebNadzor" /> -->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_HL7Files" /> -->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_Infonom" /> -->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_INOVUS" /> -->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_BARS" /> -->
+       <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_SOAP" /> -->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_INTERIN" /> -->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_CSM" /> -->
+
+<!--     <f t="s" n="exchangeMode" v="ExchangeHelper3_FederalServiceDLI" /> -->
+      
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_Medwork" /> -->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_v2_05Xml_SKLIF" /> -->
+   <f t="s" n="exchangeMode" v="FilesExchangeHelper3_v2_05+_Xml" /> 
+<!--   <f t="s" n="exchangeMode" v="FilesExchangeHelper3_Nexadia" /> -->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_MIS_Statistics" /> -->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_MIS_VitaCore+MIR" /> -->
+<!--        <f t="s" n="exchangeMode" v="ExchangeHelper3_MIS_RTLabs" /> -->
+       <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_INVITRO" /> -->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_YandexAPI" /> -->
+   <!--<f t="s" n="exchangeMode" v="ExchangeHelper3_Medialog" /> -->
+<!--   <f t="s" n="exchangeMode" v="ExchangeHelper3_UniGateBregis" /> -->
+      <!--    <f t="s" n="exchangeMode" v="ExchangeHelper3_PersonalTreatment_Innovasystem" />-->
+
+<!--   <f t="s" n="exportDictionaryMode" v="ExportDictionaries_KAZAN" /> -->
+<!--   <f t="s" n="exportDictionaryMode" v="ExportDictionariesHelper_Interin" /> -->
+<!--   <f t="s" n="exportDictionaryMode" v="ExportDictionaries_ENC" /> -->
+<!--   <f t="s" n="exportDictionaryMode" v="ExportDictionaries_Bars" /> -->
+<!--   <f t="s" n="exportDictionaryMode" v="ExportDictionaries_KAZAN" /> -->
+<!--   <f t="s" n="exportDictionaryMode" v="ExportDictionaries_ENC_NEW" /> -->	  
+<!--   <f t="s" n="exportDictionaryMode" v="ExportDictionaries_Medwork" /> -->
+<!--   <f t="s" n="exportDictionaryMode" v="ExportDictionaries_v2_05+_Xml" /> -->
+<!--   <f t="s" n="exportDictionaryMode" v="ExportDictionaries_RTLabs" /> -->
+      
+
+<!--   <f t="s" n="processStorageOperationsMode" v="ProcessStorageOperations_SKLIF" /> -->
+      
+      
+      <f t="s" n="loggingLevel" v="DEBUG" />
+      <!--<f t="s" n="serviceDBConnectionString" v="Driver={SQL Server};Server=testserver1\sql2016;Database=MIS_Exchange_developer;Uid=sa;Pwd=sa;" />-->
+      <f t="s" n="serviceDBConnectionString" v="Driver={SQL Server};Server=DBSERV\DEV2019;Database=MisExchange2;Uid=sa;Pwd=Sqlserver;" /> <!-- Димитровград -->
+      <!--<f t="s" n="externalSystemCode" v="MisExchange" />--> <!-- lis50 -->
+      <!--<f t="s" n="externalSystemCode" v="MisExchangeTEST" />--> <!-- Серв Алины -->
+      <f t="s" n="externalSystemCode" v="1" /> <!-- сервер Витакора - копия -->
+      <f t="s" n="logFile" v="MisExchange.log" />
+      <f t="s" n="serviceAddress" v="http://localhost:9999" />
+      <f t="s" n="requestsCacherSettings" v="CacherSet.xml" />
+
+	  <!--<f t="b" n="replaceResultFileDotsToCommas" v="true" />-->
+	  <!--<f t="b" n="isAllowedToAddUserValues" v="true" />-->
+      <!--<f t="b" n="isCryptedCredentialsAndConnStrs" v="true" />-->
+      <!--<f t="b" n="isFullConnectionStringCrypted" v="true" />-->
+      <f t="b" n="issue_Result_OrganizationCode" v="true" />
+      <f t="b" n="issue_Result_OrganizationName" v="true" />
+      <!--<f t="b" n="issue_Result_Work_PatientGroupCode" v="true" />-->
+      <f t="b" n="issue_Result_Images" v="true" />
+      <!--<f t="b" n="issue_Result_DepartmentNr" v="true" />-->
+      <f t="b" n="issue_Result_EndDate" v="true" />
+      <!--<f t="b" n="issue_Result_Work_Diameter" v="true" />-->
+      <f t="b" n="issue_Result_Department_Code" v="true" />
+      <!--<f t="b" n="issue_Result_Department_Name" v="true" />-->
+      <f t="b" n="issue_Result_Doctor_Code" v="true" />
+      <f t="b" n="issue_Result_Doctor_Name" v="true" />
+      <f t="b" n="issue_Result_Sampling_Date" v="true" />
+      <!--<f t="b" n="issue_Result_Priority" v="true" />-->
+      <f t="b" n="issue_Result_PayCategory_Code" v="true" />
+      <f t="b" n="issue_Result_PayCategory_Name" v="true" />
+      <f t="b" n="issue_Result_Registration_Date" v="true" />
+      
+      <!-- Синхронизация справочников -->
+      <f t="b" n="isSynchronizeDictionary" v="false" />
+      <!-- Интервал синхронизации справочников в СЕКУНДАХ -->
+      <f t="i" n="synchronizeDictionaryInterval" v="60" />
+
+      <!-- Цифровая подпись документов -->
+      <!-- Полный путь к утилите для подписания документов cryptcp.exe -->
+      <f t="s" n="cryptcpFullPath" v="C:\CPPDF\cryptcp.x64" />
+      <!-- Полный путь к исполняемому файлу для подписи документов -->
+      <f t="s" n="pdfSignerFullPath" v="C:\LIMSServer\MISExchangeODLI\CryptoPRO\pdfSigner.bat" />
+      <!-- Нужна ли подпись организации -->
+      <f t="b" n="organizationSignatureRequired" v="true" />
+      <!-- Путь к папке с документами для подписания -->
+      <f t="s" n="documentsInDirPath" v="C:\DocumentsForSignature" />
+      <!-- Путь к папке с подписями документов -->
+      <f t="s" n="signaturesOutDirPath" v="C:\Signatures" />
+      <!-- Критерий поиска сертификата сотрудника в личном хранилище -->
+      <f t="s" n="employeeCertificateSearchCriterion" v="INN=007730661623" />
+      <!-- Pin-код закрытого ключа сертификата сотрудника -->
+      <f t="s" n="employeeCertificatePin" v="12345678" />
+      <!-- Критерий поиска сертификата организации в личном хранилище -->
+      <f t="s" n="organizationCertificateSearchCriterion" v="INN=007730661623" />
+      <!-- Pin-код закрытого ключа сертификата организации -->
+      <f t="s" n="organizationCertificatePin" v="12345678" />
+    </o>
+  </content>
+</request>

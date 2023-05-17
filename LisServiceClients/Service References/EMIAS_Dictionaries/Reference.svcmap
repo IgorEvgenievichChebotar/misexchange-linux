@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="87145b66-9190-4a1d-84a1-29df9f69cf70" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="D:\Work\dev_NLSdotNetProjects\MisExchangeService\ExchangeHelpers\EMIAS\Examples\Выгрузка справочников\LaboratoryNsiService.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="emiasTypes.xsd" MetadataType="Schema" ID="4b174b18-f32f-4526-9061-e2777831767b" SourceId="1" SourceUrl="file:///D:/Work/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/EMIAS/Examples/Выгрузка справочников/emiasTypes.xsd" />
+    <MetadataFile FileName="LaboratoryNsiService.wsdl" MetadataType="Wsdl" ID="0564f06b-000a-4b8e-ae0d-019664977b69" SourceId="1" SourceUrl="file:///D:/Work/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/EMIAS/Examples/Выгрузка справочников/LaboratoryNsiService.wsdl" />
+    <MetadataFile FileName="commonServiceTypes.xsd" MetadataType="Schema" ID="ca3fc93d-054b-4af8-8cd1-dc3658026677" SourceId="1" SourceUrl="file:///D:/Work/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/EMIAS/Examples/Выгрузка справочников/commonServiceTypes.xsd" />
+    <MetadataFile FileName="LaboratoryNsiServiceTypes.xsd" MetadataType="Schema" ID="9605aa6b-1728-4f87-8400-7c0b87fbe013" SourceId="1" SourceUrl="file:///D:/Work/dev_NLSdotNetProjects/MisExchangeService/ExchangeHelpers/EMIAS/Examples/Выгрузка справочников/LaboratoryNsiServiceTypes.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

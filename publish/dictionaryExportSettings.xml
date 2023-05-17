@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExportDirectoryHelperSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Output>C:\DirectoryExport</Output>
+  <!--<SourcePath>DirectoryExportSource</SourcePath>-->
+  <!--<Archive>Archive</Archive>-->
+  <!--<Errors>Errors</Errors>-->
+  
+  
+  <!-- Настройки для экспорта справочной информации в режиме <f t="s" n="exportDictionaryMode" v="ExportDictionaries_Bars" />-->
+  <!-- **************** -->
+  <!-- код мед. учреждения-->
+  <HospitalCode>62</HospitalCode>
+  <!-- **************** -->
+  <!-- путь к директории, в которой должны храниться файлы dictionariesVersion.txt, synchronizedTargets.txt, synchronizedDepartments.txt, synchronizedDefaultTests.txt, synchronizedDefaultBiomaterials.txt  -->
+  <!-- эти файлы содержат Id, коды и версию справочных элементов, ранее выгруженных в МИС. Если версия объекта повышается, то обновлённая информация повторно выгружается в МИС -->
+  <!-- если параметр отсутствует, файлы будут находиться в рабочей директории приложения -->
+  <SynchronizedPath>Synchronized</SynchronizedPath>
+  <!-- **************** -->
+  <!-- Параметр активирует первичную выгрузку справочников в МИС. При этом формируются необходимые для дальнейшей синхронизации файлы (dictionariesVersion.txt, synchronizedTargets.txt и т.п.) -->
+  <!-- Далее, в режиме промышленной эксплуатации, данный параметр должен быть установлен в false, при этом будет осуществляться выгрузка только изменённых данных -->
+  <!--<InitialNomenclatureExport>false</InitialNomenclatureExport>-->
+  <!-- **************** -->
+  <!-- Параметр активирует режим восстановления файлов синхронизации справочников (без обращения к внешнему сервису). В этом режиме обменная служба должна запускаться однократно для формирования файлов синхронизации -->
+  <!--<RepairSynchronizationFiles>false</RepairSynchronizationFiles>-->
+</ExportDirectoryHelperSettings>

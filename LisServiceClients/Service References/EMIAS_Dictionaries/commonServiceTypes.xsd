@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:emiassv="http://emias.gov.ru/servicetypes/1" xmlns="http://emias.gov.ru/servicetypes/1" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://emias.gov.ru/servicetypes/1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="packetIdType">
+    <xs:annotation>
+      <xs:documentation>Тип идентификатора пакета</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:length value="36" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="idType">
+    <xs:annotation>
+      <xs:documentation>Тип идентификаторов принятый в ЕМИАС</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="descriptionType">
+    <xs:annotation>
+      <xs:documentation>Описание чего-либо</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="errorCodeType">
+    <xs:annotation>
+      <xs:documentation>Варианты результата</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="success" />
+      <xs:enumeration value="error" />
+      <xs:enumeration value="other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="exceptionType">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий исключение</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="resultStatusType">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий статус выполнения запроса - успех или неудача</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="success" />
+      <xs:enumeration value="failure" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="errorType">
+    <xs:annotation>
+      <xs:documentation>Ошибка выполнения запроса</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="errorCode" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Код ошибки</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="resultDescription" type="emiassv:descriptionType">
+        <xs:annotation>
+          <xs:documentation>Описание ошибки</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="exception" type="emiassv:exceptionType">
+        <xs:annotation>
+          <xs:documentation>Описание исключения, если  не удаётся идентифицировать ошибку</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="requesterType">
+    <xs:annotation>
+      <xs:documentation>Карточка запроса</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="requestId" type="emiassv:packetIdType">
+        <xs:annotation>
+          <xs:documentation>Глобальный идентификатор информационного пакета</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sender" type="emiassv:sourceType">
+        <xs:annotation>
+          <xs:documentation>Отправитель</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="createDateTime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Дата и время формирования информационного пакета</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="mode">
+        <xs:annotation>
+          <xs:documentation>Режим передачи информации
+PROD - промышленная эксплуатация
+TEST - тестовые данные</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="PROD" />
+            <xs:enumeration value="TEST" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="testCase">
+        <xs:simpleType>
+          <xs:restriction base="xs:int" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:documentation>Информация о пользователе ЕМИАС от имени которого происходит операция на основании переданного запроса</xs:documentation>
+        </xs:annotation>
+        <xs:element name="userLogin">
+          <xs:annotation>
+            <xs:documentation>Логин</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="userPassword">
+          <xs:annotation>
+            <xs:documentation>Пароль</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resultType">
+    <xs:annotation>
+      <xs:documentation>Результат операции</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="status" type="emiassv:resultStatusType">
+        <xs:annotation>
+          <xs:documentation>Статус результата - успех или неудача</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="description" type="emiassv:descriptionType">
+        <xs:annotation>
+          <xs:documentation>Дополнительное описание </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sourceType">
+    <xs:annotation>
+      <xs:documentation>Информация об источнике пакета</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="systemCode" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Код системы, являющейся источником запроса</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:documentation>Информация о пользователе, от имени которого выполняется операция, инициировавшая запрос</xs:documentation>
+        </xs:annotation>
+        <xs:element name="Login" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Логин пользователя</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="OMS" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>номер и серия полиса ОМС</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="SNILS" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>СНИЛС</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="actionName" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Наименование действия, выполняемого пользователем</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

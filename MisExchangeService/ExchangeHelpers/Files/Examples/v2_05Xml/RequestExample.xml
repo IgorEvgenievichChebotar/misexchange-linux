@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Request>
+  <RequestCode>200012</RequestCode>
+  <HospitalCode>1</HospitalCode>
+  <HospitalName>ИКХ</HospitalName>
+  <DepartmentCode>49</DepartmentCode>
+  <DepartmentName>ОХЛИП</DepartmentName>
+  <DoctorCode>1916</DoctorCode>
+  <DoctorName>Иванов Н.Ю.</DoctorName>
+  <SampleDeliveryDate>2014-01-28T15:38:28</SampleDeliveryDate>
+  <Patient>
+    <Code>300003</Code>
+    <FirstName>Тест</FirstName>
+    <LastName>Тестов</LastName>
+    <MiddleName>Тестович</MiddleName>
+    <BirthDay>11</BirthDay>
+    <BirthMonth>11</BirthMonth>
+    <BirthYear>1990</BirthYear>
+    <Sex>1</Sex>
+  </Patient>
+  <Samples>
+    <Sample>
+      <Barcode>200012</Barcode>
+      <BiomaterialCode>72</BiomaterialCode>
+      <Targets>
+        <Target>
+          <Code>147</Code>
+        </Target>
+        <Target>
+          <Code>208</Code>
+        </Target>
+      </Targets>
+    </Sample>
+    <Sample>
+      <Barcode>200012</Barcode>
+      <BiomaterialCode>44</BiomaterialCode>
+      <Targets>
+        <Target>
+          <Code>12.107</Code>
+        </Target>
+      </Targets>
+    </Sample>
+  </Samples>
+</Request>

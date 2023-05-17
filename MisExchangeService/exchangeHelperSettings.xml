@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HelperSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- Настройки "помощника обмена данными" FilesExchangeHelper3_v2_05+_Xml -->
+ 
+  <!-- Директория, в которую должны помещаться заявки для ЛИС -->
+  <SourcePath>/home/NOVOLABS/eremenko/ExchangeFolder/Requests</SourcePath>
+  <!-- Директория, в которую будут перемещаться файлы заявок после успешной обработки -->
+  <ArchivePath>/home/NOVOLABS/eremenko/ExchangeFolder/Archive</ArchivePath>
+  <!-- Директория, в которую будут перемещаться файлы заявок при возникновении ошибок -->
+  <ErrorPath>/home/NOVOLABS/eremenko/ExchangeFolder/Errors</ErrorPath>
+  <!-- Директория, в которую будут помещаться файлы подтверждения обработки заявки -->
+  <RequestAcknowledgmentPath>/home/NOVOLABS/eremenko/ExchangeFolder/RequestAcknowledgment</RequestAcknowledgmentPath>
+  <!-- Директория, в которую будут помещаться результаты (ответы по заявкам) -->
+  <ResultsPath>/home/NOVOLABS/eremenko/ExchangeFolder/Results</ResultsPath>
+  <!-- Директория, в которую должны помещаться файлы подтверждения обработки результатов -->
+  <ResultAcknowledgmentPath>/home/NOVOLABS/eremenko/ExchangeFolder/ResultAcknowledgment</ResultAcknowledgmentPath>
+</HelperSettings>

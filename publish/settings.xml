@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<!DOCTYPE request SYSTEM "lims.dtd">
+<request type="" version="2.0">
+  <content>
+    <o>
+      <f t="s" n="serviceDBConnectionString" v="Driver={ODBC Driver 17 for SQL Server};Server=DBSERV\DEV2017;Database=MisExchangeBurdenko;Uid=Sa;Pwd=Sqlserver;" />
+      <f t="b" n="useUniqueSampleBarcoding" v="true" />
+      <f t="i" n="taskManagerWaitInterval" v="60" />
+      <f t="b" n="issue_Result_Images" v="true" />
+      <f t="s" n="externalSystemCode" v="2" />
+      <f t="s" n="requestsCacherSettings" v="CacherSet.xml" />
+      <f t="s" n="serverAddress" v="192.168.110.194:65070/lims/" />
+      <f t="s" n="rotateLogs" v="true" />
+      <f t="s" n="appServerListenerURI" v="http://*:65073/" />
+      <f t="s" n="loggingLevel" v="DEBUG" />
+      <f t="s" n="exchangeMode" v="FilesExchangeHelper3_v2_05+_Xml" />
+      <f t="s" n="registrationFormCode" v="33" />
+      <f t="s" n="logFile" v="logs\MisExchange.log" />
+      <f t="s" n="versionAfter129" v="true" />
+      <f t="s" n="serviceAddress" v="http://192.168.110.194:9991" />
+      <f t="b" n="resetSampleDeliveryDate" v="false" />
+      <f t="s" n="patientCodePrefix" v="" />
+      <f t="s" n="defaultSampleBlankCode" v="003" />
+    </o>
+  </content>
+</request>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="580fdad9-bd7a-4d86-bf17-099558d47b76" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://fmba.test.sportlogic.ru/services/LisService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LisService.xsd" MetadataType="Schema" ID="8b07fd82-0fcc-4ed9-95a8-34213527eb60" SourceId="1" SourceUrl="http://fmba.test.sportlogic.ru/services/LisService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LisService1.xsd" MetadataType="Schema" ID="631424b0-53a8-45dd-95d4-997a87cadb85" SourceId="1" SourceUrl="http://fmba.test.sportlogic.ru/services/LisService.svc?xsd=xsd3" />
+    <MetadataFile FileName="LisService.wsdl" MetadataType="Wsdl" ID="aeaeb53c-83a4-47a0-b505-6e28fd7d58b5" SourceId="1" SourceUrl="http://fmba.test.sportlogic.ru/services/LisService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="LisService2.xsd" MetadataType="Schema" ID="8e035244-ea3d-4249-818a-e1a85943b230" SourceId="1" SourceUrl="http://fmba.test.sportlogic.ru/services/LisService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LisService1.wsdl" MetadataType="Wsdl" ID="dca79aac-8de4-4f98-ae1c-846628d4c50c" SourceId="1" SourceUrl="http://fmba.test.sportlogic.ru/services/LisService.svc?wsdl" />
+    <MetadataFile FileName="LisService3.xsd" MetadataType="Schema" ID="1b4334fe-34bb-4b4a-897e-aaafa717a934" SourceId="1" SourceUrl="http://fmba.test.sportlogic.ru/services/LisService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Request xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<RequestCode>synchro1</RequestCode>
+	<SampleDeliveryDate>1900-01-01</SampleDeliveryDate>
+    <RegistrationFormCode>3</RegistrationFormCode>
+ 	<HospitalCode>10007</HospitalCode>
+	<Patient>
+		<Code>И010</Code>
+		<FirstName>Нина</FirstName>
+		<LastName>Тестовая пациентка</LastName>
+		<MiddleName>Александровна</MiddleName>
+		<BirthDay>09</BirthDay>
+		<BirthMonth>05</BirthMonth>
+		<BirthYear>1954</BirthYear>
+		<Sex>2</Sex>
+		<Country>Россия</Country>
+		<City>г. Санкт-Петербург</City>
+		<Street>Вымышленная ул.</Street>
+		<Building>д.30 к2 ,кв.48</Building>
+		<Flat></Flat>
+		<InsuranceCompany>РЕСО</InsuranceCompany>
+		<PolicySeries></PolicySeries>
+		<PolicyNumber>11LM0246</PolicyNumber>
+		<PatientCard>
+			<CardNr>007</CardNr>
+			<UserFields />			
+		</PatientCard>		
+		<UserFields />
+	</Patient>  
+</Request>

@@ -1,0 +1,329 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ru.novolabs.MisExchange</RootNamespace>
+    <AssemblyName>MisExchange</AssemblyName>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>false</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CryptoPro.Sharpei.Base, Version=1.4.0.10, Culture=neutral, PublicKeyToken=473b8c5086e795f5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExchangeHelpers\SEMD_Ingush\SoapService\CryptoPro\CryptoPro.Sharpei.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="CryptoPro.Sharpei.ServiceModel45, Version=1.4.0.1, Culture=neutral, PublicKeyToken=473b8c5086e795f5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExchangeHelpers\SEMD_Ingush\SoapService\CryptoPro\CryptoPro.Sharpei.ServiceModel45.dll</HintPath>
+    </Reference>
+    <Reference Include="CryptoPro.Sharpei.Xml, Version=1.4.0.10, Culture=neutral, PublicKeyToken=473b8c5086e795f5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExchangeHelpers\SEMD_Ingush\SoapService\CryptoPro\CryptoPro.Sharpei.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="nlscorlib">
+      <HintPath>..\SuperCore\bin\Debug\net7.0\nlscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MisExchange_obf.nrproj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LisServiceClients\LisServiceClients.csproj" />
+    <ProjectReference Include="..\MisExchangeAdapters\MisExchangeAdapters.csproj" />
+    <ProjectReference Include="..\MisExchangeEntities\MisExchangeEntities.csproj" />
+    <ProjectReference Include="..\MisExchangeExternalDTOs\MisExchangeExternalDTOs.csproj" />
+    <ProjectReference Include="..\MisExchangePublicClasses\MisExchangePublicClasses.csproj" />
+    <ProjectReference Include="..\SuperCore\SuperCore.csproj" />
+    <ProjectReference Include="..\TimeFileResponsibler\TimeFileSubject.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="4.1.1" />
+    <PackageReference Include="Castle.Core" Version="5.1.1" />
+    <PackageReference Include="LiteDB" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Bcl" Version="1.1.10" />
+    <PackageReference Include="Microsoft.Bcl.Async" Version="1.0.168" />
+    <PackageReference Include="Microsoft.Bcl.Build" Version="1.0.14" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.7" />
+    <PackageReference Include="Microsoft.CodeAnalysis.VersionCheckAnalyzer" Version="2.9.7" />
+    <PackageReference Include="Microsoft.CodeQuality.Analyzers" Version="2.9.7" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
+    <PackageReference Include="Microsoft.NetCore.Analyzers" Version="2.9.7" />
+    <PackageReference Include="Microsoft.NetFramework.Analyzers" Version="2.9.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Ninject" Version="3.3.6" />
+    <PackageReference Include="Ninject.Extensions.ContextPreservation" Version="3.3.1" />
+    <PackageReference Include="Ninject.Extensions.Factory" Version="3.3.3" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.0.0" />
+    <PackageReference Include="System.Buffers" Version="4.5.1" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.IO.Hashing" Version="7.0.0" />
+    <PackageReference Include="System.Memory" Version="4.5.5" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.410601">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.410601">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Classes\DbExchangeProvider.cs" />
+    <Compile Remove="Classes\GeneralRequestValidator.cs" />
+    <Compile Remove="Classes\NotifierLis.cs" />
+    <Compile Remove="ExchangeHelpers\Processors\ImportDictionariesProcessor.cs" />
+    <Compile Remove="ExchangeHelpers\Processors\RequestsClosedProcessor.cs" />
+    <Compile Remove="ExchangeHelpers\Processors\SamplesSavedProcessor.cs" />
+    <Compile Remove="ExchangeHelpers\Processors\WorksApprovedProcessor.cs" />
+    <Compile Remove="ExchangeHelpers\Processors\WorksCancelledProcessor.cs" />
+    <Compile Remove="ExchangeHelpers\Processors\_РазрабатываемыйProcessor.cs" />
+    <Compile Remove="LisServiceClients\obj\Debug\.NETFramework,Version=v4.0.AssemblyAttributes.cs" />
+    <Compile Remove="LisServiceClients\Properties\AssemblyInfo.cs" />
+    <Compile Remove="LisServiceClients\Service References\BarsNomenclature\Reference.cs" />
+    <Compile Remove="LisServiceClients\Service References\EMIAS\Reference.cs" />
+    <Compile Remove="LisServiceClients\Service References\EMIAS_Dictionaries\Reference.cs" />
+    <Compile Remove="LisServiceClients\Service References\LisServiceReference\Reference.cs" />
+    <Compile Remove="MisExchangeAdapters\CreateRequest3Adapter.cs" />
+    <Compile Remove="MisExchangeAdapters\CustomDataCheckException.cs" />
+    <Compile Remove="MisExchangeAdapters\obj\Debug\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" />
+    <Compile Remove="MisExchangeAdapters\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Remove="MisExchangeAdapters\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Remove="MisExchangeAdapters\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Remove="MisExchangeAdapters\OutsourceAdapter.cs" />
+    <Compile Remove="MisExchangeAdapters\Parser\HL7\Classes\EventType.cs" />
+    <Compile Remove="MisExchangeAdapters\Parser\HL7\Classes\MessageHeader.cs" />
+    <Compile Remove="MisExchangeAdapters\Parser\HL7\Classes\PatientInfo.cs" />
+    <Compile Remove="MisExchangeAdapters\Parser\HL7\Classes\PatientVisit.cs" />
+    <Compile Remove="MisExchangeAdapters\Parser\HL7\Classes\TargetRequest.cs" />
+    <Compile Remove="MisExchangeAdapters\Parser\HL7\Classes\TargetResult.cs" />
+    <Compile Remove="MisExchangeAdapters\Parser\HL7\Classes\TaskBlock.cs" />
+    <Compile Remove="MisExchangeAdapters\Parser\HL7\HL7Const.cs" />
+    <Compile Remove="MisExchangeAdapters\Parser\HL7\HL7MessageParser.cs" />
+    <Compile Remove="MisExchangeAdapters\Properties\AssemblyInfo.cs" />
+    <Compile Remove="MisExchangeAdapters\RequestFilter\EntitiesRequestFilterAdapter.cs" />
+    <Compile Remove="MisExchangeAdapters\RequestFilter\RequestFilterAdapter.cs" />
+    <Compile Remove="MisExchangeAdapters\Request\EntitiesRequest3Adapter.cs" />
+    <Compile Remove="MisExchangeAdapters\Request\EntitiesRequestAdapter.cs" />
+    <Compile Remove="MisExchangeAdapters\Request\FilesRequestAdapter.cs" />
+    <Compile Remove="MisExchangeAdapters\Request\RequestAdapter.cs" />
+    <Compile Remove="MisExchangeAdapters\Result\EntitiesResult3Adapter.cs" />
+    <Compile Remove="MisExchangeAdapters\Result\EntitiesResultAdapter.cs" />
+    <Compile Remove="MisExchangeAdapters\Result\ExternalResultAdapterBase.cs" />
+    <Compile Remove="MisExchangeAdapters\Result\ResultAdapter.cs" />
+    <Compile Remove="MisExchangeEntities\Defect.cs" />
+    <Compile Remove="MisExchangeEntities\ExchangeModel.Context.cs" />
+    <Compile Remove="MisExchangeEntities\ExchangeModel.cs" />
+    <Compile Remove="MisExchangeEntities\ExchangeModel.Designer.cs" />
+    <Compile Remove="MisExchangeEntities\MicroResult.cs" />
+    <Compile Remove="MisExchangeEntities\Norm.cs" />
+    <Compile Remove="MisExchangeEntities\obj\Release\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" />
+    <Compile Remove="MisExchangeEntities\obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Remove="MisExchangeEntities\obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Remove="MisExchangeEntities\obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Remove="MisExchangeEntities\Patient.cs" />
+    <Compile Remove="MisExchangeEntities\PatientCard.cs" />
+    <Compile Remove="MisExchangeEntities\Properties\AssemblyInfo.cs" />
+    <Compile Remove="MisExchangeEntities\Request.cs" />
+    <Compile Remove="MisExchangeEntities\RequestFilter.cs" />
+    <Compile Remove="MisExchangeEntities\RequestFilterStatus.cs" />
+    <Compile Remove="MisExchangeEntities\RequestStatus.cs" />
+    <Compile Remove="MisExchangeEntities\Result.cs" />
+    <Compile Remove="MisExchangeEntities\ResultStatus.cs" />
+    <Compile Remove="MisExchangeEntities\Sample.cs" />
+    <Compile Remove="MisExchangeEntities\SampleResult.cs" />
+    <Compile Remove="MisExchangeEntities\Target.cs" />
+    <Compile Remove="MisExchangeEntities\TargetResult.cs" />
+    <Compile Remove="MisExchangeEntities\UserField.cs" />
+    <Compile Remove="MisExchangeEntities\Work.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Common\Event.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Common\FieldPropsAttribute.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Common\MaxLengthAttribute.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Common\Patient.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Common\PatientCard.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Common\RequestFilter.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Common\UserField.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Directory\DirectoryExportRequest.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\DTOInitializer.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\IDefect.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\IEvent.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\IMicroResult.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\INorm.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\IPatient.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\IPatientCard.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\IRequest.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\IResult.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\ISample.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\ISampleResult.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\ITarget.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\ITargetResult.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\IUserField.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Interfaces\IWork.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\obj\Release\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Properties\AssemblyInfo.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Request\Request.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Request\Sample.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Request\Target.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Request\Test.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Result\Defect.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Result\FileInfo.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Result\MicroResult.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Result\Norm.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Result\Result.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Result\SampleResult.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Result\TargetResult.cs" />
+    <Compile Remove="MisExchangeExternalDTOs\Result\Work.cs" />
+    <Compile Remove="MisExchangePublicClasses\Bars\BarsExtraData.cs" />
+    <Compile Remove="MisExchangePublicClasses\Bars\HelperSettings.cs" />
+    <Compile Remove="MisExchangePublicClasses\Common\Cache2DbManager.cs" />
+    <Compile Remove="MisExchangePublicClasses\Common\Cache2DbManagerExtended.cs" />
+    <Compile Remove="MisExchangePublicClasses\Common\CacheContext.cs" />
+    <Compile Remove="MisExchangePublicClasses\Common\CacheRemastered\CacheContextRemastered.cs" />
+    <Compile Remove="MisExchangePublicClasses\Common\CacheRemastered\CacheManagerRemastered.cs" />
+    <Compile Remove="MisExchangePublicClasses\Common\CommonDbMapperProvider.cs" />
+    <Compile Remove="MisExchangePublicClasses\Common\CommonXmlMapperProvider.cs" />
+    <Compile Remove="MisExchangePublicClasses\Common\DBQueryGenerator.cs" />
+    <Compile Remove="MisExchangePublicClasses\Common\DictionaryMapperClassses.cs" />
+    <Compile Remove="MisExchangePublicClasses\Common\MapperContext.cs" />
+    <Compile Remove="MisExchangePublicClasses\Common\ObjectStatus.cs" />
+    <Compile Remove="MisExchangePublicClasses\Common\RequestWasAlreadyAcceptedException.cs" />
+    <Compile Remove="MisExchangePublicClasses\Common\SimpleMapper.cs" />
+    <Compile Remove="MisExchangePublicClasses\CSM\HelperSettings.cs" />
+    <Compile Remove="MisExchangePublicClasses\Files\HelperSettings.cs" />
+    <Compile Remove="MisExchangePublicClasses\FTMIS\HelperSettings.cs" />
+    <Compile Remove="MisExchangePublicClasses\HL7\FileHelperSettings.cs" />
+    <Compile Remove="MisExchangePublicClasses\HL7\HelperSettings.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\Company.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\Insurance.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\Item.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\LisObservationReport.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\LisObservationRequest.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\MessageAcknowledgement.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\Observation.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\ObservationReport.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\ObservationResult.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\OrderingInstitution.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\Patient.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\ReportGroup.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\Results.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\ServiceGroup.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\ServiceInfonom.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\ServiceList.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\DTOs\SpecimenType.cs" />
+    <Compile Remove="MisExchangePublicClasses\Infonom\HelperSettings.cs" />
+    <Compile Remove="MisExchangePublicClasses\Inovus\HelperSettings.cs" />
+    <Compile Remove="MisExchangePublicClasses\Inovus\InovusExtraData.cs" />
+    <Compile Remove="MisExchangePublicClasses\Interfaces\IMapperProvider.cs" />
+    <Compile Remove="MisExchangePublicClasses\Interin\HelperSettings.cs" />
+    <Compile Remove="MisExchangePublicClasses\Medwork\HelperSettings.cs" />
+    <Compile Remove="MisExchangePublicClasses\Migrations\Configuration.cs" />
+    <Compile Remove="MisExchangePublicClasses\Migrations\ConfigurationRemastered.cs" />
+    <Compile Remove="MisExchangePublicClasses\Niarmedic\HelperSettings.cs" />
+    <Compile Remove="MisExchangePublicClasses\obj\Debug\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" />
+    <Compile Remove="MisExchangePublicClasses\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Remove="MisExchangePublicClasses\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Remove="MisExchangePublicClasses\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Remove="MisExchangePublicClasses\Properties\AssemblyInfo.cs" />
+    <Compile Remove="MisExchangePublicClasses\REGIZ_Spb\HelperSettings.cs" />
+    <Compile Remove="MisExchangePublicClasses\SOAP\HelperSettings.cs" />
+    <Compile Remove="MisExchangePublicClasses\Vitacore\RequestDTO.cs" />
+    <Compile Remove="ServiceClasses\MessageSimpleLoggingBehavior.cs" />
+    <Compile Remove="ServiceClasses\MessageSimpleLoggingBehaviorExtension.cs" />
+    <Compile Remove="ServiceClasses\MessageSimpleLoggingInspector.cs" />
+    <Compile Remove="ServiceClasses\MessageSimpleSchemaValidationBehavior.cs" />
+    <Compile Remove="ServiceClasses\MessageSimpleSchemaValidationExtension.cs" />
+    <Compile Remove="ServiceClasses\MessageSimpleSchemaValidationInspector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="dictionaryExportSettings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="exchangeHelperSettings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="InstallFiles\CreateLinuxService.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="InstallFiles\DeleteLinuxService.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="InstallFiles\dotnet-install.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="settings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

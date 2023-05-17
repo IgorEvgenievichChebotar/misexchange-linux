@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A91260C5-FA6C-4D8C-ADB1-D51068563EA3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ru.novolabs.SuperCore</RootNamespace>
+    <AssemblyName>nlscorlib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CheckBoxComboBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\CheckBoxComboBox.dll</HintPath>
+    </Reference>
+    <Reference Include="eWorld.UI">
+      <HintPath>.\eWorld.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>.\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zlib.net">
+      <HintPath>.\zlib.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseLimsUI\BaseEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseLimsUI\BaseEditor.Designer.cs">
+      <DependentUpon>BaseEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseLimsUI\JournalGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseLimsUI\JournalGrid.Designer.cs">
+      <DependentUpon>JournalGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseLimsUI\BaseJournal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseLimsUI\BaseJournal.Designer.cs">
+      <DependentUpon>BaseJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseLimsUI\JournalFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseLimsUI\JournalFilter.Designer.cs">
+      <DependentUpon>JournalFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodBusinessObjects\ProductTransactions.cs" />
+    <Compile Include="BloodBusinessObjects\Recipient.cs" />
+    <Compile Include="BloodBusinessObjects\RequestBloodParameter.cs" />
+    <Compile Include="BloodBusinessObjects\SaveResult.cs" />
+    <Compile Include="BloodDictionary\Storage.cs" />
+    <Compile Include="BloodBusinessObjects\Transfusion.cs" />
+    <Compile Include="BloodDictionary\BloodDictionaryCache.cs" />
+    <Compile Include="BloodBusinessObjects\Address.cs" />
+    <Compile Include="BloodBusinessObjects\AistTargetsMap.cs" />
+    <Compile Include="BloodBusinessObjects\Batch.cs" />
+    <Compile Include="BloodBusinessObjects\BloodParameter.cs" />
+    <Compile Include="BloodBusinessObjects\DenyInfo.cs" />
+    <Compile Include="BloodBusinessObjects\DenyJournal.cs" />
+    <Compile Include="BloodBusinessObjects\DoctorResults.cs" />
+    <Compile Include="BloodBusinessObjects\Donation.cs" />
+    <Compile Include="BloodBusinessObjects\Donor.cs" />
+    <Compile Include="BloodBusinessObjects\DonorDeny.cs" />
+    <Compile Include="BloodBusinessObjects\DonorHeader.cs" />
+    <Compile Include="BloodBusinessObjects\ExpressLabResults.cs" />
+    <Compile Include="BloodBusinessObjects\Login.cs" />
+    <Compile Include="BloodBusinessObjects\MainLabResults.cs" />
+    <Compile Include="BloodBusinessObjects\ParameterValue.cs" />
+    <Compile Include="BloodBusinessObjects\ProcessInfo.cs" />
+    <Compile Include="BloodBusinessObjects\Product.cs" />
+    <Compile Include="BloodBusinessObjects\ProductDefect.cs" />
+    <Compile Include="BloodBusinessObjects\ProductGroup.cs" />
+    <Compile Include="BloodBusinessObjects\Stage.cs" />
+    <Compile Include="BloodBusinessObjects\StageResults.cs" />
+    <Compile Include="BloodBusinessObjects\Visit.cs" />
+    <Compile Include="BloodBusinessObjects\WebDenyJournal.cs" />
+    <Compile Include="BloodDictionary\ProductType.cs" />
+    <Compile Include="CommonBusinesObjects\BusinessObjectsDescription.cs" />
+    <Compile Include="CommonBusinesObjects\DictionaryItemIdCaptionPair.cs" />
+    <Compile Include="CommonBusinesObjects\JournalFilterSettings.cs" />
+    <Compile Include="Controls\BusinessObjectPropertySelector.cs" />
+    <Compile Include="Controls\BusinessObjectSelector.cs" />
+    <Compile Include="Controls\ComboCollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomEvents.cs" />
+    <Compile Include="Controls\DictionaryComboCollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DictionaryNameSelector.cs" />
+    <Compile Include="Core\FieldsReader.cs" />
+    <Compile Include="Core\ControlReader.cs" />
+    <Compile Include="Core\ControlWriter.cs" />
+    <Compile Include="Core\IObjectEditor.cs" />
+    <Compile Include="Core\JSONSerializeHelper.cs" />
+    <Compile Include="Core\LimsUserSession.cs" />
+    <Compile Include="Core\PropertyComparer.cs" />
+    <Compile Include="Core\ReportServerCommunicator.cs" />
+    <Compile Include="Core\SortableBindingList.cs" />
+    <Compile Include="Core\XmlRequestListener.cs" />
+    <Compile Include="Core\NlsControlKinds.cs" />
+    <Compile Include="Core\XmlRequestResponce.cs" />
+    <Compile Include="Crypto\Compresser.cs" />
+    <Compile Include="Crypto\Cryptor.cs" />
+    <Compile Include="Data\SqlQueryExecuter.cs" />
+    <Compile Include="DictionaryCore\DictionaryNamesMapping.cs" />
+    <Compile Include="LisBusinessObjects\ControlsForm.cs" />
+    <Compile Include="LisBusinessObjects\ControlsFormLayout.cs" />
+    <Compile Include="LisBusinessObjects\OrderForm.cs" />
+    <Compile Include="Core\CloneHelper.cs" />
+    <Compile Include="Core\ColorHelper.cs" />
+    <Compile Include="Core\NlsSession.cs" />
+    <Compile Include="Core\NlsWMIProvider.cs" />
+    <Compile Include="LisBusinessObjects\RowsAndColumnsEditor.cs" />
+    <Compile Include="Core\SimpleCodec.cs" />
+    <Compile Include="LimsBusinessObjects\BaseFilter.cs" />
+    <Compile Include="LimsBusinessObjects\EquipmentData.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\DictionariesExportHelper.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\DictionarySynchro.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalDefect.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalEvent.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalMicroResult.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalNorm.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalRequest.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalRequestFilter.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalRequestPatient.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalRequestPatientCard.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalRequestSample.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalRequestTarget.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalResult.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalSampleResult.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalTargetDictionaryInfo.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalTargetResult.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ExternalWork.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\FileHelper.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\RequestPrepareHelper.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ResultPrepareHelper.cs" />
+    <Compile Include="LimsBusinessObjects\Exchange\ResultSaver.cs" />
+    <Compile Include="LimsBusinessObjects\Login.cs" />
+    <Compile Include="LimsBusinessObjects\Operation.cs" />
+    <Compile Include="LimsBusinessObjects\OperationArrivalTemplate.cs" />
+    <Compile Include="LimsBusinessObjects\OutsourceRequestJournalFilter.cs" />
+    <Compile Include="LimsBusinessObjects\Outsource\OutsourceDefectInfo.cs" />
+    <Compile Include="LimsBusinessObjects\Outsource\OutsourceNorm.cs" />
+    <Compile Include="LimsBusinessObjects\Outsource\OutsourcePatient.cs" />
+    <Compile Include="LimsBusinessObjects\Outsource\OutsourcePatientCard.cs" />
+    <Compile Include="LimsBusinessObjects\Outsource\OutsourceRequest.cs" />
+    <Compile Include="LimsBusinessObjects\Outsource\OutsourceSample.cs" />
+    <Compile Include="LimsBusinessObjects\Outsource\OutsourceTarget.cs" />
+    <Compile Include="LimsBusinessObjects\Outsource\OutsourceUserField.cs" />
+    <Compile Include="LimsBusinessObjects\Outsource\OutsourceWork.cs" />
+    <Compile Include="LimsBusinessObjects\Patient.cs" />
+    <Compile Include="LimsBusinessObjects\PcrWorklist.cs" />
+    <Compile Include="LimsBusinessObjects\RegistrationJournalFilter.cs" />
+    <Compile Include="LimsBusinessObjects\Request.cs" />
+    <Compile Include="LimsBusinessObjects\RequestFormGroup.cs" />
+    <Compile Include="LimsBusinessObjects\ResponseMessage.cs" />
+    <Compile Include="LimsBusinessObjects\Sample.cs" />
+    <Compile Include="LimsBusinessObjects\ServicePrice.cs" />
+    <Compile Include="LimsBusinessObjects\SystemOperation.cs" />
+    <Compile Include="LimsBusinessObjects\TableForm.cs" />
+    <Compile Include="LimsBusinessObjects\TargetRank.cs" />
+    <Compile Include="LimsBusinessObjects\Team.cs" />
+    <Compile Include="LimsBusinessObjects\TeamJournalFilter.cs" />
+    <Compile Include="LimsBusinessObjects\UserValue.cs" />
+    <Compile Include="LimsBusinessObjects\Work.cs" />
+    <Compile Include="LimsBusinessObjects\WorkJournalFilter.cs" />
+    <Compile Include="LimsBusinessObjects\WorkList.cs" />
+    <Compile Include="LimsBusinessObjects\WorklistJournalFilter.cs" />
+    <Compile Include="LimsBusinessObjects\WorkListQuery.cs" />
+    <Compile Include="Core\Attributes.cs" />
+    <Compile Include="Core\BaseClasses.cs" />
+    <Compile Include="Core\BloodCommunicator.cs" />
+    <Compile Include="Core\Consts.cs" />
+    <Compile Include="Core\Hash.cs" />
+    <Compile Include="Core\LisCommunicator.cs" />
+    <Compile Include="Core\DateTimeHelper.cs" />
+    <Compile Include="BloodDictionary\AdditiveType.cs" />
+    <Compile Include="BloodDictionary\ContainerType.cs" />
+    <Compile Include="BloodDictionary\Parameter.cs" />
+    <Compile Include="Core\BaseCommunicator.cs" />
+    <Compile Include="Core\BloodClient.cs" />
+    <Compile Include="Core\DatasetBuilder.cs" />
+    <Compile Include="Core\LisIntegrationService.cs" />
+    <Compile Include="Core\LisClient.cs" />
+    <Compile Include="Core\ProgramSettings.cs" />
+    <Compile Include="Core\UserFieldHelper.cs" />
+    <Compile Include="DictionaryCore\BaseDictionaryCache.cs" />
+    <Compile Include="BloodDictionary\BloodParameter.cs" />
+    <Compile Include="BloodDictionary\Defect.cs" />
+    <Compile Include="BloodDictionary\Deny.cs" />
+    <Compile Include="BloodDictionary\DenyDurationUnits.cs" />
+    <Compile Include="BloodDictionary\DenySource.cs" />
+    <Compile Include="BloodDictionary\Department.cs" />
+    <Compile Include="DictionaryCore\Dictionary.cs" />
+    <Compile Include="DictionaryCore\DictionaryRequest.cs" />
+    <Compile Include="BloodDictionary\DocumentType.cs" />
+    <Compile Include="BloodDictionary\DonationTemplate.cs" />
+    <Compile Include="BloodDictionary\DonationType.cs" />
+    <Compile Include="BloodDictionary\DonorCategory.cs" />
+    <Compile Include="BloodDictionary\DonorStatus.cs" />
+    <Compile Include="BloodDictionary\EdcRecordType.cs" />
+    <Compile Include="BloodDictionary\Employee.cs" />
+    <Compile Include="BloodDictionary\ExpressDonationResult.cs" />
+    <Compile Include="BloodDictionary\Hospital.cs" />
+    <Compile Include="BloodDictionary\ParameterGroup.cs" />
+    <Compile Include="BloodDictionary\PaymentCategory.cs" />
+    <Compile Include="BloodDictionary\ProductClassification.cs" />
+    <Compile Include="BloodDictionary\ProductJournal.cs" />
+    <Compile Include="BloodDictionary\SaveDictionaryRequest.cs" />
+    <Compile Include="BloodDictionary\Sex.cs" />
+    <Compile Include="DictionaryCore\LinkedDictionary.cs" />
+    <Compile Include="DictionaryCore\StaticDictionary.cs" />
+    <Compile Include="DictionaryCore\UserDictionary.cs" />
+    <Compile Include="BloodDictionary\UserGroup.cs" />
+    <Compile Include="BloodDictionary\VisitReserveType.cs" />
+    <Compile Include="Core\ExportLog.cs" />
+    <Compile Include="LimsBusinessObjects\WorkListShortInfo.cs" />
+    <Compile Include="LimsDictionary\Billed.cs" />
+    <Compile Include="LimsDictionary\Biomaterial.cs" />
+    <Compile Include="LimsDictionary\DefectType.cs" />
+    <Compile Include="LimsDictionary\EmployeeRole.cs" />
+    <Compile Include="LimsDictionary\TeamTemplate.cs" />
+    <Compile Include="LimsDictionary\CustDepartment.cs" />
+    <Compile Include="LimsDictionary\Department.cs" />
+    <Compile Include="LimsDictionary\ContainerType.cs" />
+    <Compile Include="LimsDictionary\Equipment.cs" />
+    <Compile Include="LimsDictionary\GuiElementReportExecutor.cs" />
+    <Compile Include="LimsDictionary\IncomingMaterialType.cs" />
+    <Compile Include="LimsDictionary\LimsObjectTypeDictionaryItem.cs" />
+    <Compile Include="LimsDictionary\LisDictionaryCache.cs" />
+    <Compile Include="LimsDictionary\DictionaryRequest.cs" />
+    <Compile Include="LimsDictionary\Doctor.cs" />
+    <Compile Include="LimsDictionary\Employee.cs" />
+    <Compile Include="LimsDictionary\ExternalSystem.cs" />
+    <Compile Include="LimsDictionary\Hospital.cs" />
+    <Compile Include="LimsDictionary\Material.cs" />
+    <Compile Include="LimsDictionary\Microorganism.cs" />
+    <Compile Include="LimsDictionary\Organization.cs" />
+    <Compile Include="LimsDictionary\Outsourcer.cs" />
+    <Compile Include="LimsDictionary\PatientGroup.cs" />
+    <Compile Include="LimsDictionary\PayCategory.cs" />
+    <Compile Include="LimsDictionary\Pricelist.cs" />
+    <Compile Include="LimsDictionary\RequestCustomState.cs" />
+    <Compile Include="LimsDictionary\RequestForm.cs" />
+    <Compile Include="LimsDictionary\RequestState.cs" />
+    <Compile Include="LimsDictionary\SampleBlank.cs" />
+    <Compile Include="LimsDictionary\SampleState.cs" />
+    <Compile Include="LimsDictionary\ServerReport.cs" />
+    <Compile Include="LimsDictionary\Service.cs" />
+    <Compile Include="LimsDictionary\Sex.cs" />
+    <Compile Include="LimsDictionary\Target.cs" />
+    <Compile Include="LimsDictionary\Test.cs" />
+    <Compile Include="LimsDictionary\TestProfile.cs" />
+    <Compile Include="LimsDictionary\TreeViewLayout.cs" />
+    <Compile Include="LimsDictionary\Unit.cs" />
+    <Compile Include="LimsDictionary\UserDictionary.cs" />
+    <Compile Include="LimsDictionary\UserFields.cs" />
+    <Compile Include="LimsDictionary\UserGroup.cs" />
+    <Compile Include="LimsDictionary\UserProfile.cs" />
+    <Compile Include="LimsDictionary\WorkListDef.cs" />
+    <Compile Include="LimsDictionary\WorkPlace.cs" />
+    <Compile Include="LimsDictionary\WorkState.cs" />
+    <Compile Include="LimsDictionary\YesNoIgnore.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Listener.cs" />
+    <Compile Include="Core\Processor.cs" />
+    <Compile Include="Reporting\GetDictionaryParams.cs" />
+    <Compile Include="Reporting\GetDictionaryResponse.cs" />
+    <Compile Include="Reporting\GetReportListParams.cs" />
+    <Compile Include="Reporting\ExecuteReportResponse.cs" />
+    <Compile Include="Reporting\GetReportDescriptionResponse.cs" />
+    <Compile Include="Reporting\ExecuteReportParams.cs" />
+    <Compile Include="Reporting\GetReportDescriptionParams.cs" />
+    <Compile Include="Reporting\GetReportListResponse.cs" />
+    <Compile Include="Reporting\ReportDescription.cs" />
+    <Compile Include="Reporting\ReportEvent.cs" />
+    <Compile Include="Reporting\ReportingHelper.cs" />
+    <Compile Include="Reporting\ReportParamValue.cs" />
+    <Compile Include="Reporting\ReportTreeNodeInfo.cs" />
+    <Compile Include="Reporting\TaskDescriptionInfo.cs" />
+    <Compile Include="Reporting\TaskDescriptionList.cs" />
+    <Compile Include="Core\XmlRequest.cs" />
+    <Compile Include="Tasks\RequestErrorCompensation.cs" />
+    <Compile Include="Core\TaskManager.cs" />
+    <Compile Include="Tasks\RequestErrorCompensationTask.cs" />
+    <Compile Include="Core\SerializeHelper.cs" />
+    <Compile Include="Core\ExchangeDB.cs" />
+    <Compile Include="Core\ObjectReader.cs" />
+    <Compile Include="Core\ObjectWriter.cs" />
+    <Compile Include="Core\ProgramContext.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="WebCore\BootStrapFilterHelper.cs" />
+    <Compile Include="WebCore\OrderFormBuilder.cs" />
+    <Compile Include="WebCore\RequestFormBuilder.cs" />
+    <Compile Include="WebCore\TableFormBuilder.cs" />
+    <Compile Include="WebCore\WebControlsReader.cs" />
+    <Compile Include="WebCore\WebControlWriter.cs" />
+    <Compile Include="WebCore\WebJournalFilterBuilder.cs" />
+    <Compile Include="WebCore\WebJournalGridBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseLimsUI\BaseEditor.resx">
+      <DependentUpon>BaseEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseLimsUI\JournalGrid.resx">
+      <DependentUpon>JournalGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseLimsUI\BaseJournal.resx">
+      <DependentUpon>BaseJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseLimsUI\JournalFilter.resx">
+      <DependentUpon>JournalFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HemStaticDictionary.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LimsStaticDictionary.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\refresh_ena.png" />
+    <None Include="Resources\lastic.png" />
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CommunicatorsHierarchy.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

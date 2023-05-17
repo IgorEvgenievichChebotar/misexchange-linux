@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N0:definitions xmlns:WL5G3N2="http://new.webservice.namespace" xmlns:WL5G3N1="urn:hl7-org:v2xml" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://new.webservice.namespace" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:types>
+    <xs:schema xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://new.webservice.namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns="urn:hl7-org:v2xml" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FOML_O21" namespace="urn:hl7-org:v2xml" />
+      <xs:import schemaLocation="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FORL_O22" namespace="urn:hl7-org:v2xml" />
+      <xs:import schemaLocation="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FOML_O33" namespace="urn:hl7-org:v2xml" />
+      <xs:import schemaLocation="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FORL_O34" namespace="urn:hl7-org:v2xml" />
+      <xs:import schemaLocation="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FORU_R01" namespace="urn:hl7-org:v2xml" />
+      <xs:import schemaLocation="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FOUL_R22" namespace="urn:hl7-org:v2xml" />
+      <xs:import schemaLocation="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2FACK" namespace="urn:hl7-org:v2xml" />
+    </xs:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="iheMessage_ORL_O22">
+    <WL5G3N0:part name="parameter" element="WL5G3N1:ORL_O22">
+      <WL5G3N0:documentation>Ответ в формате ORL_O22</WL5G3N0:documentation>
+    </WL5G3N0:part>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="iheMessage_ORL_O34">
+    <WL5G3N0:part name="parameter" element="WL5G3N1:ORL_O34">
+      <WL5G3N0:documentation>Ответ в формате ORL_O34</WL5G3N0:documentation>
+    </WL5G3N0:part>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="iheMessage_OML_O33">
+    <WL5G3N0:part name="parameter" element="WL5G3N1:OML_O33">
+      <WL5G3N0:documentation>Запрос в формате OML_O33</WL5G3N0:documentation>
+    </WL5G3N0:part>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="iheMessage_OML_O21">
+    <WL5G3N0:part name="parameter" element="WL5G3N1:OML_O21">
+      <WL5G3N0:documentation>Запрос в формате OML_O21</WL5G3N0:documentation>
+    </WL5G3N0:part>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="iheMessage_ORU_R01">
+    <WL5G3N0:part name="parameter" element="WL5G3N1:ORU_R01">
+      <WL5G3N0:documentation>Получение результатов в формате ORU_R01</WL5G3N0:documentation>
+    </WL5G3N0:part>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="iheMessage_OUL_R22">
+    <WL5G3N0:part name="parameter" element="WL5G3N1:OUL_R22">
+      <WL5G3N0:documentation>Получение результатов в формате OUL_R22</WL5G3N0:documentation>
+    </WL5G3N0:part>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="iheMessage_ACK">
+    <WL5G3N0:part name="parameter" element="WL5G3N1:ACK">
+      <WL5G3N0:documentation>Ответ в формате ACK о том, что входящее сообщение принято</WL5G3N0:documentation>
+    </WL5G3N0:part>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="laboratoryResearchResultsPortType">
+    <WL5G3N0:documentation>Получение информации о статусе заказа и результатах из ЛИС</WL5G3N0:documentation>
+    <WL5G3N0:operation name="setLaboratoryResearchOrderStatus_OML_O21">
+      <WL5G3N0:documentation>Прием информации об изменении статуса заказа на ЛИ сделанного в формате OML^O21</WL5G3N0:documentation>
+      <WL5G3N0:input message="WL5G3N2:iheMessage_OML_O21" />
+      <WL5G3N0:output message="WL5G3N2:iheMessage_ORL_O22" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="setLaboratoryResearchOrderStatus_OML_O33">
+      <WL5G3N0:documentation>Прием информации об изменении статуса заказа на ЛИ сделанного в формате OML^O33</WL5G3N0:documentation>
+      <WL5G3N0:input message="WL5G3N2:iheMessage_OML_O33" />
+      <WL5G3N0:output message="WL5G3N2:iheMessage_ORL_O34" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="setLaboratoryResearchOrderResults_ORU_R01">
+      <WL5G3N0:documentation>Прием результатов исследования в формате ORU_R01</WL5G3N0:documentation>
+      <WL5G3N0:input message="WL5G3N2:iheMessage_ORU_R01" />
+      <WL5G3N0:output message="WL5G3N2:iheMessage_ACK" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="setLaboratoryResearchOrderResults_OUL_R22">
+      <WL5G3N0:documentation>Прием результатов исследования в формате OUL_R22</WL5G3N0:documentation>
+      <WL5G3N0:input message="WL5G3N2:iheMessage_OUL_R22" />
+      <WL5G3N0:output message="WL5G3N2:iheMessage_ACK" />
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="laboratoryResearchResultsBinding" type="WL5G3N2:laboratoryResearchResultsPortType">
+    <WL5G3N3:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WL5G3N0:operation name="setLaboratoryResearchOrderStatus_OML_O21">
+      <WL5G3N3:operation soapAction="urn:#setLaboratoryResearchOrderStatus_OML_O21" />
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="setLaboratoryResearchOrderStatus_OML_O33">
+      <WL5G3N3:operation soapAction="urn:#setLaboratoryResearchOrderStatus_OML_O33" />
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="setLaboratoryResearchOrderResults_ORU_R01">
+      <WL5G3N3:operation soapAction="urn:#setLaboratoryResearchOrderResults_ORU_R01" />
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="setLaboratoryResearchOrderResults_OUL_R22">
+      <WL5G3N3:operation soapAction="urn:#setLaboratoryResearchOrderResults_OUL_R22" />
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="laboratoryResearchResultsService">
+    <WL5G3N0:documentation>Сервис для получения резульатов ЛИ. На стороне ЕМИАС</WL5G3N0:documentation>
+    <WL5G3N0:port name="laboratoryResearchResultsPort" binding="WL5G3N2:laboratoryResearchResultsBinding">
+      <WL5G3N3:address location="http://10.0.48.8:8001/LIS/ProxyService/LaboratoryResearchResultsProxyService" />
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

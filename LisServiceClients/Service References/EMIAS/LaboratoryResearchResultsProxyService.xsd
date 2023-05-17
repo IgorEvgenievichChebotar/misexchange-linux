@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="urn:hl7-org:v2xml" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:hl7="urn:com.sun:encoder-hl7-1.0" targetNamespace="urn:hl7-org:v2xml" jaxb:version="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2Fsegments" />
+  <xsd:annotation>
+    <xsd:appinfo source="urn:com.sun:encoder">
+      <encoding name="HL7 v2 Encoding" namespace="urn:com.sun:encoder-hl7-1.0" style="hl7encoder-1.0" xmlns="urn:com.sun:encoder" />
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:complexType name="ACK.CONTENT">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" ref="MSH" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" ref="SFT" />
+      <xsd:element minOccurs="1" maxOccurs="1" ref="MSA" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" ref="ERR" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ACK" type="ACK.CONTENT">
+    <xsd:annotation>
+      <xsd:appinfo source="urn:com.sun:encoder">
+        <top xmlns="urn:com.sun:encoder">true</top>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>

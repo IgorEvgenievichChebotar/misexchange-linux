@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SportsReference.Facade.Lis" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SportsReference.Facade.Lis" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="RequestQueryData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaxResults" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestQueryData" nillable="true" type="tns:RequestQueryData" />
+  <xs:complexType name="ArrayOfRequestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RequestData" nillable="true" type="tns:RequestData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRequestData" nillable="true" type="tns:ArrayOfRequestData" />
+  <xs:complexType name="RequestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CyclePeriod" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HospitalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HospitalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patient" nillable="true" type="tns:PatientData" />
+      <xs:element minOccurs="0" name="PregnancyDuration" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RequestCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Samples" nillable="true" type="tns:ArrayOfSampleData" />
+      <xs:element minOccurs="0" name="UserFields" nillable="true" type="tns:ArrayOfUserFieldData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestData" nillable="true" type="tns:RequestData" />
+  <xs:complexType name="PatientData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BirthDay" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BirthMonth" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BirthYear" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UserFields" nillable="true" type="tns:ArrayOfUserFieldData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PatientData" nillable="true" type="tns:PatientData" />
+  <xs:complexType name="ArrayOfUserFieldData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserFieldData" nillable="true" type="tns:UserFieldData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserFieldData" nillable="true" type="tns:ArrayOfUserFieldData" />
+  <xs:complexType name="UserFieldData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserFieldData" nillable="true" type="tns:UserFieldData" />
+  <xs:complexType name="ArrayOfSampleData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SampleData" nillable="true" type="tns:SampleData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSampleData" nillable="true" type="tns:ArrayOfSampleData" />
+  <xs:complexType name="SampleData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BiomaterialCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Targets" nillable="true" type="tns:ArrayOfTargetData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SampleData" nillable="true" type="tns:SampleData" />
+  <xs:complexType name="ArrayOfTargetData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TargetData" nillable="true" type="tns:TargetData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTargetData" nillable="true" type="tns:ArrayOfTargetData" />
+  <xs:complexType name="TargetData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TargetData" nillable="true" type="tns:TargetData" />
+  <xs:complexType name="ResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BiomaterialCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="RequestCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tests" nillable="true" type="tns:ArrayOfTestData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseData" nillable="true" type="tns:ResponseData" />
+  <xs:complexType name="ArrayOfTestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TestData" nillable="true" type="tns:TestData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTestData" nillable="true" type="tns:ArrayOfTestData" />
+  <xs:complexType name="TestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Device" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="NormComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NormHigh" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NormLow" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TestStatus" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TestTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TestData" nillable="true" type="tns:TestData" />
+</xs:schema>

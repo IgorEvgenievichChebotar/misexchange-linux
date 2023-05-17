@@ -1,0 +1,4699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://emias.gov.ru/types/1" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://emias.gov.ru/types/1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="agencyOrgCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, опредляющий код ведомственной принадлежности.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="appointmentTypeCodeType">
+    <xs:annotation>
+      <xs:documentation>Код вида приёма</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="appointmentTypeType">
+    <xs:annotation>
+      <xs:documentation>код вида записи на приём (к врачу, на ЛДП и т.п)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="appointmentNumberType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий номер записи на приём</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="areaCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий район</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="categoryCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код категории врача</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="cabinetNumber">
+    <xs:annotation>
+      <xs:documentation>номер кабинета</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="contextRoleCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код контекстной роли</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="clinicOrgCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код клинического учреждения.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="dataType">
+    <xs:annotation>
+      <xs:documentation>Тип данных, выгружаемых в файл</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="districtCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код территориального округа в ОМК ТЕ</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="districtTypeCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код типа участка</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="doctorSpecialityCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код специальность врача</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FERIDType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий идентификатор в ФЭР</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="houseType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий номер дома</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="housingType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий номер корпуса</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="buildingType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий номер строения</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="birthdayType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий дату рождения</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date" />
+  </xs:simpleType>
+  <xs:simpleType name="eMailType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий e-mail</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="emiasIdType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий идентифакторы в ЕМИАС</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="FIOasStringType">
+    <xs:annotation>
+      <xs:documentation>ФИО одной строкой</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="flatType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий квартиру</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="INNType">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий ИНН</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer">
+      <xs:totalDigits value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="sequenceNumberType">
+    <xs:annotation>
+      <xs:documentation>порядковый номер</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="loginType">
+    <xs:annotation>
+      <xs:documentation>логин пользователя</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="LDPCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код вида ЛДП</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="LDPTypeCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код типа ЛДП</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="muCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код МУ.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="muHierarchyLevelCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код иерархии МУ.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MUNumber">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий номер МУ</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="muSpecializationCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код специализации МУ.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="muDepartmenCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код подразделения</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MUTypeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий тип МУ</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="medicalCareTypeCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код вида оказания медицинской помощи</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="medicalCareConditionCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код условий оказания медицинской помощи</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nomenclatureCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код номенклатуры.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nsiCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код записи НСИ</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="nsiName">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий значение записи НСИ</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="numberOfSmthType">
+    <xs:annotation>
+      <xs:documentation>Количество чего-либо</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:long" />
+  </xs:simpleType>
+  <xs:simpleType name="numberType">
+    <xs:annotation>
+      <xs:documentation>Номер чего-либо</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="operationCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код операции или функции ЕМИАС</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="OMSPolicyStatusType">
+    <xs:annotation>
+      <xs:documentation>Статус полиса ОМС</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="OKPOType">
+    <xs:annotation>
+      <xs:documentation>Типисывающий ОКПО</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer">
+      <xs:totalDigits value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="patientAgeGroupCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код возрастного контингента.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="phoneType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий телефон</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="positionCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определеяющий код должности</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="positionOccupationTypeCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код типа занятия должности</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="positionTypeCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код вида должности</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="profileCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код специализации (профиля) врача</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="sexType">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий пол человека</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="streetCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий улицу</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="SNILSType">
+    <xs:annotation>
+      <xs:documentation>СНИЛС</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="smartCardIdType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий идентификатор смарт-карты</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="timeConsumingCU">
+    <xs:annotation>
+      <xs:documentation>Условная единица трудоемкости (CU - conventional unit)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="titleType">
+    <xs:annotation>
+      <xs:documentation>Название какого-либо неодушевлённой сущности</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="UIZLType">
+    <xs:annotation>
+      <xs:documentation>Уникальный идентификатор застрахованного лица</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="UETCode">
+    <xs:annotation>
+      <xs:documentation>УЕТ Код</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="workTimeStatusType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий статус рабочего времени</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="workScheduleCodeType">
+    <xs:annotation>
+      <xs:documentation>Тип, определяющий код режима работы медицинского работника</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="availableResourceBaseShortType">
+    <xs:annotation>
+      <xs:documentation>Доступный ресурс (краткое описание)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="availableResourceUID" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Уникальный идентификатор доступного ресурса</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="availableResourceTitle">
+        <xs:annotation>
+          <xs:documentation>Название доступного ресурса </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="doctorSpecialityTitle" type="titleType">
+        <xs:annotation>
+          <xs:documentation>Название специальности врача</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="doctorFIO" type="FIOasStringType">
+        <xs:annotation>
+          <xs:documentation>ФИО Врача</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="appointmentTypeCode" type="appointmentTypeCodeType">
+        <xs:annotation>
+          <xs:documentation>Код вида приёма</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LDPTypeCode" type="LDPCodeType">
+        <xs:annotation>
+          <xs:documentation>Код вида ЛДП</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="cabinetNumber" type="numberType">
+        <xs:annotation>
+          <xs:documentation>Номер кабинета</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="attachedDocument">
+    <xs:annotation>
+      <xs:documentation>Прикрепленные файлы</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Filename">
+        <xs:annotation>
+          <xs:documentation>Имя файла</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="200" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="Description">
+        <xs:annotation>
+          <xs:documentation>Описание</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="500" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Content" type="xs:base64Binary">
+        <xs:annotation>
+          <xs:documentation>Данные</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AddedDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата добавления</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="attachment">
+    <xs:annotation>
+      <xs:documentation>Неструкутрированный контент</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Content" type="xs:base64Binary">
+        <xs:annotation>
+          <xs:documentation>Данные</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="fileName" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Имя файла</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="addDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата добавления</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="description" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Описание</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="attachmentType" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Тип вложения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contextRoleIdentificationDataType">
+    <xs:annotation>
+      <xs:documentation>Информация, идентифицирующая контестную роль пользователя</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="contextRoleCode" type="contextRoleCodeType">
+        <xs:annotation>
+          <xs:documentation>Код котекстной роли</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="contextRoleId" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор контектсной роли</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="IdentificationDocument">
+    <xs:annotation>
+      <xs:documentation>Документ удостоверяющий личность</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DocKind" type="nsiShortType" />
+      <xs:element name="Series" type="xs:string" />
+      <xs:element name="Number" type="xs:string" />
+      <xs:element name="IssueDate" type="xs:date" />
+      <xs:element name="IssuingOrg" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="districtType">
+    <xs:annotation>
+      <xs:documentation>Участок обслуживания</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="districtNumber" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Номер участка</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="districtAddress" type="moscowOfficeAddressRestrict">
+        <xs:annotation>
+          <xs:documentation>Адрес участка</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="emiasFunctionType">
+    <xs:annotation>
+      <xs:documentation>Функция ЕМИАС, заданая для той или иной роли пользователя</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="functionId" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор функции</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="functionTitle" type="titleType">
+        <xs:annotation>
+          <xs:documentation>Название функции</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fileDescriptionType">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий информацию о файле выгрузки</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="exportDataType" type="dataType">
+        <xs:annotation>
+          <xs:documentation>Тип хранящихся в файле данных</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="exportPeriod" type="periodType">
+        <xs:annotation>
+          <xs:documentation>Период выгрузки</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="indexNumber" type="sequenceNumberType">
+        <xs:annotation>
+          <xs:documentation>Порядковый номер сформированного файла</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FIOType">
+    <xs:annotation>
+      <xs:documentation>ФИО</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Name">
+        <xs:annotation>
+          <xs:documentation>Имя</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="SecondName">
+        <xs:annotation>
+          <xs:documentation>Отчество</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="LastName">
+        <xs:annotation>
+          <xs:documentation>Фмилия</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fuctionsGroupType">
+    <xs:annotation>
+      <xs:documentation>Группа функций ЕМИАС для той или иной роли ЕМИАС</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="groupTitle" type="titleType">
+        <xs:annotation>
+          <xs:documentation>Название группы</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="function" type="emiasFunctionType">
+        <xs:annotation>
+          <xs:documentation>функция ЕМИАС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IdentificationDoc">
+    <xs:annotation>
+      <xs:documentation>Документ удостоверяющий личность</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DocType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Тип документа</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Serias">
+        <xs:annotation>
+          <xs:documentation>Серия</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Number">
+        <xs:annotation>
+          <xs:documentation>Номер</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="30" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="IssueOrg" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Орагн, выдавший документ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IssueDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата выдачи</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="locationType">
+    <xs:annotation>
+      <xs:documentation>Адрес проживания</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="city">
+        <xs:annotation>
+          <xs:documentation>Город</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="street" type="streetCodeType">
+        <xs:annotation>
+          <xs:documentation>Улица </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OMKUMStreetCode" type="emiasIdType" />
+      <xs:element name="house" type="houseType">
+        <xs:annotation>
+          <xs:documentation>Дом</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="building">
+        <xs:annotation>
+          <xs:documentation>Корпус</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="structure">
+        <xs:annotation>
+          <xs:documentation>Строение</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="flat" type="flatType">
+        <xs:annotation>
+          <xs:documentation>Квартира</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BTICode">
+        <xs:annotation>
+          <xs:documentation>Код БTИ для адресов Москвы</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicalEmployeeType">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий характеристики мед. работника, общие для всех МУ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FIO" type="FIOType">
+        <xs:annotation>
+          <xs:documentation>ФИО врача</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="sex" type="sexType">
+        <xs:annotation>
+          <xs:documentation>Пол </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="birthday" type="birthdayType">
+        <xs:annotation>
+          <xs:documentation>Дата рождения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="phone" type="phoneType">
+        <xs:annotation>
+          <xs:documentation>телефон</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="e-mail" type="eMailType">
+        <xs:annotation>
+          <xs:documentation>адрес электронной почты</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicalEmployeeMUType">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий характеристики медицинского работника в конкретном учреждении, только коды</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SNILS" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Снилс</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="muDepartmentCode" type="muDepartmenCodeType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор подраздаления МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="specialityCode" type="doctorSpecialityCodeType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор специальности</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="positionCode" type="positionCodeType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор должности</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="positionTypeCode" type="positionTypeCodeType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор вида должности</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="positionOccupationTypeCode" type="positionOccupationTypeCodeType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор типа занятия должности</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="medicalCareTypeCode" type="medicalCareTypeCodeType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор вида оказания медицинской помощи</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="medicalCareConditionCode" type="medicalCareConditionCodeType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор условия оказания медицинского помощи</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="workScheduleCode" type="workScheduleCodeType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор режима работы медицинского работника</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="profileCode" type="profileCodeType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор специализиации (профиля)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="categoryCode" type="categoryCodeType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор категории врача</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="startWorkingDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата приема на работу</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="endWorkingDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата уволнения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicalEmployeeMUWithNamesType">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий характеристики медицинского работника в конкретном учреждении, коды и значения</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SNILS" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Снилс</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="muDepartment" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Подраздаление МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="position" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Должность МР</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="positionType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Вид должности</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="positionOccupationType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Тип занятия должности</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="medicalCareType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Вид оказания медицинской помощи</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="medicalCareCondition" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Условия оказания медицинского помощи</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="workSchedule" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Режим работы медицинского работника</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="profile" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Специализиация (профиля)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="category" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Категория врача</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="startWorkingDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата приема на работу</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="endWorkingDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата уволнения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="laborRelationsDuration " type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Продолжительность трудовых отношений, (в годах)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicalEmployeeFull">
+    <xs:annotation>
+      <xs:documentation>Тип, подробно описывающий все характеристики медицинского работника (карточка медработника)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Info" type="medicalEmployeeInfo">
+        <xs:annotation>
+          <xs:documentation>Общая информация + контактные данные</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Registration">
+        <xs:annotation>
+          <xs:documentation>Места жительства/регистрации</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ID" type="emiasIdType">
+              <xs:annotation>
+                <xs:documentation>Идентификатор записи</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="Location" type="KLADRLocationType">
+              <xs:annotation>
+                <xs:documentation>Адрес КЛАДР</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="RegDate" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Дата регисрации</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="RegType" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Тип регистрации</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="Actual" type="xs:boolean">
+              <xs:annotation>
+                <xs:documentation>Признак актуальности</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Job">
+        <xs:annotation>
+          <xs:documentation>Места работы</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ID" type="emiasIdType">
+              <xs:annotation>
+                <xs:documentation>Идентификатор записи</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="JobEntry" type="medicalEmployeeJob">
+              <xs:annotation>
+                <xs:documentation>Запись о местах работы</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Education">
+        <xs:annotation>
+          <xs:documentation>Образование</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ID" type="emiasIdType">
+              <xs:annotation>
+                <xs:documentation>Идентификатор записи</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="EducationEntry" type="medicalEmployeeEducation">
+              <xs:annotation>
+                <xs:documentation>Запись об образовании</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Qualification">
+        <xs:annotation>
+          <xs:documentation>Квалификационная категория</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ID" type="emiasIdType">
+              <xs:annotation>
+                <xs:documentation>Идентификатор записи</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="QualificationEntry" type="medicalEmployeeQualification">
+              <xs:annotation>
+                <xs:documentation>Запись о квалификации</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Awards">
+        <xs:annotation>
+          <xs:documentation>Награды</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ID" type="emiasIdType">
+              <xs:annotation>
+                <xs:documentation>Идентификатор записи</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="AwardsEntry" type="medicalEmployeeAwards">
+              <xs:annotation>
+                <xs:documentation>Запись о наградах</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Documents">
+        <xs:annotation>
+          <xs:documentation>Прикрепляемые документы</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ID" type="emiasIdType">
+              <xs:annotation>
+                <xs:documentation>Идентификатор записи</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="DocumentsEntry" type="attachedDocument">
+              <xs:annotation>
+                <xs:documentation>Запись о прикрепленных файлах</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicalEmployeeList">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий медицинского работника для выдачи списка результатов поиска</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="employeeID" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор МР</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Info">
+        <xs:annotation>
+          <xs:documentation>Общая информация </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SNILS" type="SNILSType">
+              <xs:annotation>
+                <xs:documentation>Снилс</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="FIO" type="FIOType">
+              <xs:annotation>
+                <xs:documentation>ФИО</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="gender" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Пол</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="update" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Дата обновления</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="Login" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Логин медработника</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Job">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="healthOrg" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Медицинская организация</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="healthOrgDep" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Подрезделение МУ</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="workPosition" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Должность</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="workPositionKind" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Вид должности</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="workPositionType" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Тип занятия должности</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="speciality" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Специальность МР</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="startDate" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Дата приема на работу</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="endDate" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Дата увольнения</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="TAPCode">
+              <xs:annotation>
+                <xs:documentation>Код медицинского работника для ТАП</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="10" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicalEmployeeInfo">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий общую информацию в карточке мед. работника</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SNILS" type="SNILSType">
+        <xs:annotation>
+          <xs:documentation>СНИЛС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FIO">
+        <xs:annotation>
+          <xs:documentation>ФИО</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:extension base="FIOType" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Gender" type="sexType">
+        <xs:annotation>
+          <xs:documentation>Пол</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BirthDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата рождения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DeathDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата смерти</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Citizenship" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Гражданство</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MartialStatus" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Семейное положение</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="HavingCar" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Наличие личного автомобиля</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="HasChildren" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Наличие детей до 16 лет</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="INN" type="INNType">
+        <xs:annotation>
+          <xs:documentation>ИНН</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IdentificationDocument" type="IdentificationDoc">
+        <xs:annotation>
+          <xs:documentation>Документ удостоверяющий личность</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TelNumber" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Номер телефона</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="professionalInterests" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Область профессиональных интересов</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="update" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата обновления</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="eMail" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Электронная почта</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Login" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Логин Медработника</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OMSPolicy" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Серия и номер полиса ОМС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicalEmployeeInfoShort">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий краткую основную информацию медработника</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SNILS" type="SNILSType">
+        <xs:annotation>
+          <xs:documentation>СНИЛС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FIO">
+        <xs:annotation>
+          <xs:documentation>ФИО</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:extension base="FIOType" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Gender" type="sexType">
+        <xs:annotation>
+          <xs:documentation>Пол</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BirthDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата рождения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="INN" type="INNType">
+        <xs:annotation>
+          <xs:documentation>ИНН</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IdentificationDocument" type="IdentificationDoc">
+        <xs:annotation>
+          <xs:documentation>Документ удостоверяющий личность</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicalEmployeeAwards">
+    <xs:annotation>
+      <xs:documentation>Награды медицинского работника</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="IdAward" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AwardNumber">
+        <xs:annotation>
+          <xs:documentation>Номер награды</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="AwardName">
+        <xs:annotation>
+          <xs:documentation>Название награды</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="200" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="AwardDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата награждения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicalEmployeeQualification">
+    <xs:annotation>
+      <xs:documentation>Квалификация медицинского работника</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Category" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Квалификационная категория</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Speciality" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Специализация</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="QalifyDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата присвоения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicalEmployeeEducation">
+    <xs:annotation>
+      <xs:documentation>Образование медицинского работника</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="EducationKind" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Вид образования</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Agency" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Образовательное учреждение</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FirstEduType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Тип высшего образования</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SecondEduType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Тип послевузовского образования</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Speciality" type="profileCodeType">
+        <xs:annotation>
+          <xs:documentation>Специальность</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DiplomaSeries">
+        <xs:annotation>
+          <xs:documentation>Серия документа</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="DiplomaNumber">
+        <xs:annotation>
+          <xs:documentation>Номер документа</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="DiplomaDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата получения документа</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="StartDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата начала обучения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="EndDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата окончания обучения/год окончения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Degree" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Ученая степень</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Сycle">
+        <xs:annotation>
+          <xs:documentation>Цикл</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="200" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="Hours">
+        <xs:annotation>
+          <xs:documentation>Количество часов</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="5" />
+            <xs:minInclusive value="0" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicalEmployeeJob">
+    <xs:annotation>
+      <xs:documentation>Место работы медицинского работника</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="healthOrg" type="organizationSimpleType">
+        <xs:annotation>
+          <xs:documentation>Медицинское учреждения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="healthOrgDep" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Подразделение медицинского учреждения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="assistanceType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Вид оказания помощи</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="assistanceCondition" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Условия оказания медицинской помощи</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="workPosition" type="positionSimpleType">
+        <xs:annotation>
+          <xs:documentation>Должность</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="workPositionKind" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Вид должности</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="workPositionType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Тип занятия должности</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="speciality" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Специальность МР</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="startOrder">
+        <xs:annotation>
+          <xs:documentation>Номер приказа о назначении на должность</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="startDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата приема на работу</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="rate">
+        <xs:annotation>
+          <xs:documentation>Ставка</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:int">
+            <xs:totalDigits value="4" />
+            <xs:minInclusive value="0" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="workMode" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Режим работы</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="militaryRecord" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Отношение к военной службе</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TAPCode">
+        <xs:annotation>
+          <xs:documentation>Код медицинского работника для ТАП</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="preferentialCode">
+        <xs:annotation>
+          <xs:documentation>Код медицинского работника для льготных рецептов</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="workerCode">
+        <xs:annotation>
+          <xs:documentation>Табельный номер</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="isDismiss" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>«Медицинский работник уволен»</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="stopOrder">
+        <xs:annotation>
+          <xs:documentation>Номер приказа о снятии с должности</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="dismissalDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата увольнения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="workPeriod">
+        <xs:annotation>
+          <xs:documentation>Длительность трудовых отношений, лет</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicalEmployeeLink">
+    <xs:annotation>
+      <xs:documentation>Ссылочный тип с ФИО</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SNILS" type="SNILSType" />
+      <xs:element minOccurs="0" name="FIO">
+        <xs:annotation>
+          <xs:documentation>ФИО</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:extension base="FIOType" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="WorkPosition" type="nsiShortType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUList">
+    <xs:annotation>
+      <xs:documentation>Медицинское учреждение для выдачи списка и результатов поиска</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MUId" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FullName" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Полное наименование</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MUType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Тип мед. учреждения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="3" name="PatientAgeGroup" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Возрастной контингент</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AgencyAccessory" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Ведомственная принадлежность</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LocationMsk" type="moscowOfficeAddressRestrict">
+        <xs:annotation>
+          <xs:documentation>Адрес</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Branch" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Филиалы МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUFull">
+    <xs:annotation>
+      <xs:documentation>Медицинское учреждение подробно</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MUId" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="InfoMain" type="MUInfoMain">
+        <xs:annotation>
+          <xs:documentation>Основная информация</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InfoAdditional" type="MUInfoAddition">
+        <xs:annotation>
+          <xs:documentation>Дополнительная информация</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Departments">
+        <xs:annotation>
+          <xs:documentation>Подразделения</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ID" type="emiasIdType">
+              <xs:annotation>
+                <xs:documentation>Идентификатор</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="DepartmentsEntry" type="MUDepartment">
+              <xs:annotation>
+                <xs:documentation>Подразделение</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceArea">
+        <xs:annotation>
+          <xs:documentation>Участки обслуживания</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ID" type="emiasIdType">
+              <xs:annotation>
+                <xs:documentation>Идентификатор</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="ServiceAreaEntry" type="MUServiceArea">
+              <xs:annotation>
+                <xs:documentation>Участок обслуживания</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Quota">
+        <xs:annotation>
+          <xs:documentation>Квоты</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ID" type="emiasIdType">
+              <xs:annotation>
+                <xs:documentation>Идентификатор</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="QuotaEntry" type="MUQuota">
+              <xs:annotation>
+                <xs:documentation>Квота</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUInfoMain">
+    <xs:annotation>
+      <xs:documentation>Основная информация МУ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MUNumber" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Номер медицинского учреждения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MUType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Тип учреждения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MUFullName">
+        <xs:annotation>
+          <xs:documentation>Наименование полное</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="255" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="MUShortname">
+        <xs:annotation>
+          <xs:documentation>Наименование сокращенное</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="MUNomenclature" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Номенклатура МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MUSpecialty" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Специализация МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsClinic" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Принадлежность к клиническим учреждениям</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MUHierarchyLevel" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Уровень МУ в иерархии сети лечебных учреждений</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AgencyAccessory" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Ведомственная принадлежность</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InternalOrg" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Принадлежность к входящим учреждениям</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="3" name="PatientAgeGroup" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Возрастной контингент</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MUCapacity" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>Мощность медицинского учреждения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExternalShare" type="xs:byte">
+        <xs:annotation>
+          <xs:documentation>Доступ к МУ через интерфейсы внешних приложений</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LocationMsk" type="moscowOfficeAddressRestrict">
+        <xs:annotation>
+          <xs:documentation>Адрес</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUInfoAddition">
+    <xs:annotation>
+      <xs:documentation>Дополнительная информация МУ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MUSpecialtyDescription" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Описание специализации МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AttachmentNormInternal" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>Норма прикрепления живущих в рамках адресов МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AttachmentNormExternal" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>Норма прикрепления живущих за рамками адресов МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OGRN" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>ОГРН</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="INN" type="INNType">
+        <xs:annotation>
+          <xs:documentation>ИНН</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OKPO" type="OKPOType">
+        <xs:annotation>
+          <xs:documentation>ОПКО</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Pharmacy" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>В здании медицинского учреждения расположен аптечный пункт
+</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Fasade" type="attachedDocument">
+        <xs:annotation>
+          <xs:documentation>Файл фасада здания</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="HeadDoctor" type="medicalEmployeeLink">
+        <xs:annotation>
+          <xs:documentation>Главный врач</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="HistoricalInfo" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Краткая историческая справка</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Subway" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Метро</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="EMail">
+        <xs:annotation>
+          <xs:documentation>Электронная почта</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:length value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="LocationMap" type="attachedDocument">
+        <xs:annotation>
+          <xs:documentation>Схема проезда</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="LocationMapDescr" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Описание схемы проезда</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Phone">
+        <xs:annotation>
+          <xs:documentation>Телефоны</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PhoneType" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Тип телефона</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="PhoneNumber">
+              <xs:annotation>
+                <xs:documentation>Номер телефона</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:length value="10" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element maxOccurs="7" name="Schedule">
+        <xs:annotation>
+          <xs:documentation>Режим работы</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="WeekDay" type="xs:byte">
+              <xs:annotation>
+                <xs:documentation>День недели</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="TimeFrom" type="xs:time">
+              <xs:annotation>
+                <xs:documentation>Время с</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="TimeTo" type="xs:time">
+              <xs:annotation>
+                <xs:documentation>Время по</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="Description" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Примечание	</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Photo" type="attachedDocument">
+        <xs:annotation>
+          <xs:documentation>Фотографии</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUDepartment">
+    <xs:annotation>
+      <xs:documentation>Подразделение МУ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DepCode">
+        <xs:annotation>
+          <xs:documentation>Код подразделения</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="5" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="DepName">
+        <xs:annotation>
+          <xs:documentation>Наименование подразделения</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="250" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="DepKind" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Вид подразделения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="HeadDep" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Вышестоящее подразделение</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="services" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Услуги подразделения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DepPower" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>Количество коек в отделении/ Расчётное количество приёмов в смену</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUServiceArea">
+    <xs:annotation>
+      <xs:documentation>Участок обслуживания МУ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="AreaNumber">
+        <xs:annotation>
+          <xs:documentation>Номер зоны</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="5" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="AreaName">
+        <xs:annotation>
+          <xs:documentation>Наименование зоны</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="255" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="AreaType" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Тип зоны обслуживания</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AttachmentNormInternal" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>Норма прикрепления живущих в рамках адресов МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AttachmentNormExternal" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>Норма прикрепления живущих за рамками адресов МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AreaDoctor" type="medicalEmployeeLink">
+        <xs:annotation>
+          <xs:documentation>Лечащие врачи зоны</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AreaSubstitutionalDoctor" type="medicalEmployeeLink">
+        <xs:annotation>
+          <xs:documentation>Замещающие врачи</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AreaLocation">
+        <xs:annotation>
+          <xs:documentation>Адреса зоны</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="district" type="districtCodeType">
+              <xs:annotation>
+                <xs:documentation>Код округа в ОМК ТЕ</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="street" type="streetCodeType">
+              <xs:annotation>
+                <xs:documentation>Код улицы в ОМК УМ</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="house" type="houseType">
+              <xs:annotation>
+                <xs:documentation>Дом/строение/корпус по справочнику БТИ</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUServiceAreaType">
+    <xs:annotation>
+      <xs:documentation>Тип участка обслуживания</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="AreaType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Тип участка</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="MUDep" type="MUDepartment">
+        <xs:annotation>
+          <xs:documentation>Подразделения МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUQuota">
+    <xs:annotation>
+      <xs:documentation>Квота МУ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="QuotaType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Тип квоты</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="QuotaKind" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Относительная/фиксированная квота</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="QuotaMin">
+        <xs:annotation>
+          <xs:documentation>Минимальная квота</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="QuotaMax">
+        <xs:annotation>
+          <xs:documentation>Максимальная квота</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="QuotaNormaMin">
+        <xs:annotation>
+          <xs:documentation>Норма городская</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="QuotaNormaMax">
+        <xs:annotation>
+          <xs:documentation>Норма городская</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUCabinet">
+    <xs:annotation>
+      <xs:documentation>Кабинеты МУ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CabinetCode">
+        <xs:annotation>
+          <xs:documentation>Код кабинета</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CabinetType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Вид кабинета</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CabinetNumber">
+        <xs:annotation>
+          <xs:documentation>Номер кабинета</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="MU">
+        <xs:annotation>
+          <xs:documentation>Медицинское учреждение</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:restriction base="nsiShortType">
+              <xs:sequence>
+                <xs:element name="nsiCode" type="nsiCodeType">
+                  <xs:annotation>
+                    <xs:documentation>код позиции</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="nsiName" type="xs:string">
+                  <xs:annotation>
+                    <xs:documentation>значение позиции</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MUDepartment" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Подразделение</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUEquipment">
+    <xs:annotation>
+      <xs:documentation>Оборудование МУ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Id" type="emiasIdType" />
+      <xs:element name="Info">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="EquipmentSerialNumber">
+              <xs:annotation>
+                <xs:documentation>Серийный номер</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="50" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="MU" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Медицинское учреждение</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="MUDepartment" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Подразделение</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="EquipmentModel">
+              <xs:annotation>
+                <xs:documentation>Модель</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="50" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="EquipmentInventoryNumber">
+              <xs:annotation>
+                <xs:documentation>Инвентарный номер</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="50" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="EquipmentReleaseYear">
+              <xs:annotation>
+                <xs:documentation>Год выпуска</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:int">
+                  <xs:totalDigits value="4" />
+                  <xs:minInclusive value="1900" />
+                  <xs:maxInclusive value="2100" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="EquipmentMAC">
+              <xs:annotation>
+                <xs:documentation>МАС адрес</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="50" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="EquipmentCode">
+              <xs:annotation>
+                <xs:documentation>Код оборудования</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="10" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EquipmentType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Вид оборудования</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MedicalProcedure" type="MUMedicalProcedure">
+        <xs:annotation>
+          <xs:documentation>Лечебно-диагностическая процедура</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EquipmentState" type="MUEquipmentState">
+        <xs:annotation>
+          <xs:documentation>Статус оборудования</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUEquipmentList">
+    <xs:annotation>
+      <xs:documentation>Список оборудования</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Id" type="emiasIdType" />
+      <xs:element name="MU" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Медицинское учреждение</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MUDepartment" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Подразделение</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EquipmentInventoryNumber">
+        <xs:annotation>
+          <xs:documentation>Инвентарный номер</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="EquipmentLastState" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Последний статус оборудования</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUEquipmentState">
+    <xs:annotation>
+      <xs:documentation>Статус оборудования</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="State" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Статус оборудования</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Description" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Комментарий к изменению статуса</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ChangeDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>дата изменения статуса</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="NextChangeDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Планируемая дата следующего изменения статуса</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUMedicalProcedure">
+    <xs:annotation>
+      <xs:documentation>ЛДП</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Id" type="emiasIdType" />
+      <xs:element name="MedicalProcedureCode" type="LDPCodeType">
+        <xs:annotation>
+          <xs:documentation>Код</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MedicalProcedureName" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Наименование</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MedicalProcedureUET" type="UETCode">
+        <xs:annotation>
+          <xs:documentation>УЕТ (для врачей)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MedicalProcedureAvailability" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Доступность</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUComplexResource">
+    <xs:annotation>
+      <xs:documentation>Комплексный ресурс</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Id" type="emiasIdType" />
+      <xs:element name="Info">
+        <xs:annotation>
+          <xs:documentation>Общие сведения</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResourceName">
+              <xs:annotation>
+                <xs:documentation>Наименование ресурса</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="MU" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Медицинское учреждение</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="MUDepartment" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Подразделение</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="ResourceCode">
+              <xs:annotation>
+                <xs:documentation>Код комплексного ресурса</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="50" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MUCabinet">
+        <xs:annotation>
+          <xs:documentation>Кабинет</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:extension base="MUCabinet" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MUEquipment" type="MUEquipmentList">
+        <xs:annotation>
+          <xs:documentation>Оборудование</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MedicalProcedure" type="MUMedicalProcedure">
+        <xs:annotation>
+          <xs:documentation>ЛДП</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUAvailableResource">
+    <xs:annotation>
+      <xs:documentation>Достпный ресурс</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Id" type="emiasIdType" />
+      <xs:element name="Info">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="EquipmentCode">
+              <xs:annotation>
+                <xs:documentation>Код оборудования</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="50" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="MU" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Медицинское учреждение</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="MUDepartment" type="nsiShortType">
+              <xs:annotation>
+                <xs:documentation>Подразделение</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="EquipmentName">
+              <xs:annotation>
+                <xs:documentation>Наименование</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="100" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MedicalProcedure" type="MUMedicalProcedure">
+        <xs:annotation>
+          <xs:documentation>Лечебно-диагностическая процедура</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="MedicalEmployee">
+        <xs:annotation>
+          <xs:documentation>Мед. работник</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MainWorker" type="xs:boolean" />
+            <xs:element name="MedicalEmployeeEntry" type="medicalEmployeeLink" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReceptionKind" type="ReceptionKind">
+        <xs:annotation>
+          <xs:documentation>Виды приема</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReceptionKind">
+    <xs:annotation>
+      <xs:documentation>Виды приема</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Id" type="emiasIdType" />
+      <xs:element name="ReceptionKindCode" type="LDPCodeType">
+        <xs:annotation>
+          <xs:documentation>Код</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ReceptionKindName" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Наименование</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReceptionKindUET" type="UETCode">
+        <xs:annotation>
+          <xs:documentation>УЕТ (для врачей)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MedicalEmployeeSpeciality" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Специальность</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MOPollInfoType">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий информацию об опросе в МО</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MOID">
+        <xs:annotation>
+          <xs:documentation>идентификатор МО</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MOCode">
+        <xs:annotation>
+          <xs:documentation>код МО</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="pollInfo" type="pollInfoType">
+        <xs:annotation>
+          <xs:documentation>информация об опросе</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="moscowAddressType">
+    <xs:annotation>
+      <xs:documentation>Московский адрес</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="district" type="districtCodeType">
+        <xs:annotation>
+          <xs:documentation>Код округа в ОМК ТЕ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="street" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Улица</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="house" type="houseType">
+        <xs:annotation>
+          <xs:documentation>Дом</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="flat" type="flatType">
+        <xs:annotation>
+          <xs:documentation>Квартира</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="building" type="buildingType">
+        <xs:annotation>
+          <xs:documentation>Корпус</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="construction" type="housingType">
+        <xs:annotation>
+          <xs:documentation>Строение</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BTICode" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Код дом/строение/корпус</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OMKUMStreetCode" type="streetCodeType">
+        <xs:annotation>
+          <xs:documentation>Код улицы в ОМК УМ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SchemeDescription" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Описание схемы проезда</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Coordinates" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Географические координаты</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUTypesType">
+    <xs:annotation>
+      <xs:documentation>Описание типа мед. учреждения (полный)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MUType" type="MUTypeType">
+        <xs:annotation>
+          <xs:documentation>Тип МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="isAmbulatorMU">
+        <xs:annotation>
+          <xs:documentation>Призанка амбулаторного МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="isIndependentlyAttachmentPossible" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Признак возможности самостоятельного прикрепления пациента</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MUType">
+    <xs:annotation>
+      <xs:documentation>Описание МУ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MUType" type="MUTypeType">
+        <xs:annotation>
+          <xs:documentation>Тип МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="muName">
+        <xs:annotation>
+          <xs:documentation>Наименование полное МУ. VIEWNAME=name</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="65" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="shortName">
+        <xs:annotation>
+          <xs:documentation>Наименование сокращенное МУ. VIEWNAME=nameShort</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="27" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="districtCode" type="districtCodeType">
+        <xs:annotation>
+          <xs:documentation>Ссылка на справочник «Территориальный округ». VIEWNAME=district</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="address">
+        <xs:annotation>
+          <xs:documentation>Адрес. Почтовый индекс МУ, наименование улицы, номер дома, корпуса</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="250" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="capacity">
+        <xs:annotation>
+          <xs:documentation>Мощность МУ. Штатный коечный фонд для стационарных МУ или число посещений в смену для амбулаторно-поликлинических МУ. VIEWNAME=power</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="internalOrg" type="muCodeType">
+        <xs:annotation>
+          <xs:documentation>Принадлежность МУ к входящим учреждениям. Код МУ (Un), Ссылка на справочник МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="nomenclatureCode" type="nomenclatureCodeType">
+        <xs:annotation>
+          <xs:documentation>Номенклатура. Ссылка на справочник «Номенклатура МУ»</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="muSpecializationCode" type="muSpecializationCodeType">
+        <xs:annotation>
+          <xs:documentation>Специализация. Ссылка на справочник «Специализация МУ». VIEWNAME=specialization</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="patientAgeGroupCode" type="patientAgeGroupCodeType">
+        <xs:annotation>
+          <xs:documentation>Возраст контингента. Ссылка на справочник «Возрастные контингенты». VIEWNAME=patientAge</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="agencyOrgCode" type="agencyOrgCodeType">
+        <xs:annotation>
+          <xs:documentation>Ведомственная принадлежность. Ссылка на справочник «Ведомственная принадлежность МУ». VIEWNAME=agency</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="clinicOrgCode" type="clinicOrgCodeType">
+        <xs:annotation>
+          <xs:documentation>Клиническое учреждение. Ссылка на справочник «Принадлежность к клиническим учреждениям». VIEWNAME=clinicOrg</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="muHierarchyLevelCode" type="muHierarchyLevelCodeType">
+        <xs:annotation>
+          <xs:documentation>Иерархия МУ. Ссылка на справочник «Уровень МУ в иерархии сети лечебных учреждений». VIEWNAME=hierarchy</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nsiGeneralType">
+    <xs:annotation>
+      <xs:documentation>Запись в справочнике с минимальной информацией</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="actual" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Признак актуальности записи. VIEWNAME=urgency</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="lastUpdateDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Дата и время последнего изменения записи</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="code" type="nsiCodeType">
+        <xs:annotation>
+          <xs:documentation>идентификатор записи. VIEWNAME=code (для тех справочников, что использутся через view)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nsiShortType">
+    <xs:annotation>
+      <xs:documentation>Запись справочника - код-значение</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="nsiCode" type="nsiCodeType">
+        <xs:annotation>
+          <xs:documentation>код позиции</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="nsiName" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>значение позиции</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OMSPolicyNumberType">
+    <xs:annotation>
+      <xs:documentation>Номер полиса ОМС</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:documentation>Отдельно серия, отдельно номер</xs:documentation>
+        </xs:annotation>
+        <xs:element name="number">
+          <xs:annotation>
+            <xs:documentation>Номер</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="series">
+          <xs:annotation>
+            <xs:documentation>Серия. Для старого полиса ОМС - обязательное поле</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="OMSPolicyType">
+    <xs:annotation>
+      <xs:documentation>данные полиса ОМС застрахованного</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FIO" type="FIOType">
+        <xs:annotation>
+          <xs:documentation>ФИО застрахованного</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OMS" type="OMSPolicyNumberType">
+        <xs:annotation>
+          <xs:documentation>Номер и серия полиса ОМС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="birthday" type="birthdayType">
+        <xs:annotation>
+          <xs:documentation>Дата рождения застрахованного</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OMSPolicyStatus" type="OMSPolicyStatusType">
+        <xs:annotation>
+          <xs:documentation>Статус полиса ОМС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ensuranceCompanyCode" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Код страховой компании, выдавшей полис</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="issuanceDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата выдачи полиса</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OMSPolicy">
+    <xs:sequence>
+      <xs:element name="PolicyType" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Вид полиса</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PolicyNumber" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Серия и номер одной строкой (без разделения пробелами)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="OMSPolicyStatus" type="OMSPolicyStatusType">
+        <xs:annotation>
+          <xs:documentation>Статус полиса ОМС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ensuranceCompanyCode" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Код страховой компании, выдавшей полис</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PolicyEndDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата окончания действия полиса</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MoscowPolicy" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="organizationSimpleType">
+    <xs:annotation>
+      <xs:documentation>Краткий вариант описания организации</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="organizationId" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор организации </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="organizationName" type="titleType">
+        <xs:annotation>
+          <xs:documentation>Наименование организации</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="outOfMoscowRegistrationAddressType">
+    <xs:annotation>
+      <xs:documentation>Адрес немосковской регистрации</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="city" type="titleType">
+        <xs:annotation>
+          <xs:documentation>Город регистрации</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="street" type="titleType">
+        <xs:annotation>
+          <xs:documentation>Улица регистрации</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="KLADRLocationType">
+    <xs:annotation>
+      <xs:documentation>Адрес по КЛАДР</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="IdKLADR">
+        <xs:annotation>
+          <xs:documentation>Идентификатор КЛАДР адреса вплоть до населенного пункта</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:totalDigits value="13" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="street" type="streetCodeType">
+        <xs:annotation>
+          <xs:documentation>Улица</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="house" type="houseType">
+        <xs:annotation>
+          <xs:documentation>Дом</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="building" type="housingType">
+        <xs:annotation>
+          <xs:documentation>Корпус</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="structure" type="buildingType">
+        <xs:annotation>
+          <xs:documentation>Строение</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="flat" type="flatType">
+        <xs:annotation>
+          <xs:documentation>Квартира</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pollInfoType">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий информацию об опросе</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="pollID" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор голосования (всегда один так как идентификатор имеют только голоса)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="pollName" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Название голосование</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="pollType" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Тип голосования</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="votesFullPeriod" type="pollVotesInfoType">
+        <xs:annotation>
+          <xs:documentation>информация о голосах опроса за весь период опроса</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="votesOnDate">
+        <xs:annotation>
+          <xs:documentation>информация о голосах опроса за конкретную дату</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="votesInfo" type="pollVotesInfoType">
+              <xs:annotation>
+                <xs:documentation>информация о голосах опроса</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="date" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>дата, на которую необходимо вернуть информацию о голосах опроса</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pollVotesInfoType">
+    <xs:annotation>
+      <xs:documentation>Тип, описыващий информацию о голосах опроса</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="wellVotesCount">
+        <xs:annotation>
+          <xs:documentation>количество пациентов, ответивших "Хорошо"</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="commonVotesCount">
+        <xs:annotation>
+          <xs:documentation>общее число пациентов, участвовавших в опросе</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="badVotesCount">
+        <xs:annotation>
+          <xs:documentation>количество пациентов, ответивших "Плохо"</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="referralDoctorInfoType">
+    <xs:annotation>
+      <xs:documentation>информация о враче, к которому направлен пациент</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="doctorSpecialityCode">
+        <xs:annotation>
+          <xs:documentation>Код специальности врача</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="doctorSpecialityTitle" type="doctorSpecialityCodeType">
+        <xs:annotation>
+          <xs:documentation>Наименование специальности врача</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="doctorFIO" type="FIOasStringType">
+        <xs:annotation>
+          <xs:documentation>ФИО врача</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="appointmentTypeCode" type="appointmentTypeCodeType">
+        <xs:annotation>
+          <xs:documentation>Код вида приёма</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="cabinetNumber" type="cabinetNumber" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="referralLDPInfoType">
+    <xs:annotation>
+      <xs:documentation>информация о ЛДП, на которую направлен пациент</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="LDPTypeCode" type="LDPCodeType">
+        <xs:annotation>
+          <xs:documentation>Код вида ЛДП</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LDPTypeTitle" type="titleType">
+        <xs:annotation>
+          <xs:documentation>Наименование вида ЛДП</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="availableResourceTitle" type="titleType">
+        <xs:annotation>
+          <xs:documentation>Наименование доступного ресурса</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="futureProcedureCount" type="numberOfSmthType">
+        <xs:annotation>
+          <xs:documentation>Количество назначенных  по направлению процедур. Указывается, если ЛДП является регулярным</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="pastProcedureCount" type="numberOfSmthType">
+        <xs:annotation>
+          <xs:documentation>Количество произведенных записей на процедуры по данному направлению. Указывается, если ЛДП является регулярным</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="cabinetNumber" type="cabinetNumber">
+        <xs:annotation>
+          <xs:documentation>Номер кабинета</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="referralType">
+    <xs:annotation>
+      <xs:documentation>Направление к врачу, на ЛДП и т.п.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="referralUID" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Уникальный идентификатор направления</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="referralNumber">
+        <xs:annotation>
+          <xs:documentation>Номер направления</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment">
+        <xs:annotation>
+          <xs:documentation>Комментарий к направлению</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="period" type="periodType">
+        <xs:annotation>
+          <xs:documentation>Период действия направления</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="refferalType" type="appointmentTypeType">
+        <xs:annotation>
+          <xs:documentation>Вид направления (на приём к врачу, на исследования, на процедуры)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MUCode" type="muCodeType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MUType" type="MUTypeType">
+        <xs:annotation>
+          <xs:documentation>Тип МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MUshortName" type="titleType">
+        <xs:annotation>
+          <xs:documentation>краткое наименование МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="availableResourceUID" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Уникальный идентификатор доступного ресурса</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Информация о том, к кому направлен пациент</xs:documentation>
+        </xs:annotation>
+        <xs:element name="doctorReferral" type="referralDoctorInfoType">
+          <xs:annotation>
+            <xs:documentation>Направление к врачу</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="LDPReferral" type="referralLDPInfoType">
+          <xs:annotation>
+            <xs:documentation>Направление на ЛДП</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element minOccurs="0" name="appointmentNumber" type="numberType">
+        <xs:annotation>
+          <xs:documentation>Номер записи на приём, если по направлению осуществлена запись</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RequesterType">
+    <xs:annotation>
+      <xs:documentation>Запрашивающий пользователь (!!!!удалить операцию?!!!)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="userIdentificationdata" type="userIndentificationDataType" />
+      <xs:element name="operationIdentificationdata" type="operationIdentificationDataType" />
+      <xs:element minOccurs="0" name="userContextRole" type="contextRoleIdentificationDataType" />
+      <xs:element name="userLocation" type="userLocationInfoType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="timeIntervalType">
+    <xs:annotation>
+      <xs:documentation>Временной интервал</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="timeInterval" type="periodForTimeType">
+        <xs:annotation>
+          <xs:documentation>Временной интервал</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="isAvailableForAppointment">
+        <xs:annotation>
+          <xs:documentation>Статус временного интервала, показывающий доступен он для записи или нет</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="timetableMUForDayType">
+    <xs:annotation>
+      <xs:documentation>Расписание работы МУ на один день</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="weekDay">
+        <xs:annotation>
+          <xs:documentation>день недели</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="workTimeBegin">
+        <xs:annotation>
+          <xs:documentation>Время начала работы</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="workTimeEnd">
+        <xs:annotation>
+          <xs:documentation>Время окончания работы</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment">
+        <xs:annotation>
+          <xs:documentation>комментарий</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="timetableARForDayType">
+    <xs:annotation>
+      <xs:documentation>Расписание доступного ресурса на один день (AR - available resource)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date">
+        <xs:annotation>
+          <xs:documentation>Дата расписания</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="workTime" type="workTimeType">
+        <xs:annotation>
+          <xs:documentation>Рабочее время</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="timeInterval" type="timeIntervalType">
+        <xs:annotation>
+          <xs:documentation>Временные интервал в рамках рабочего времени</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="operationIdentificationDataType">
+    <xs:annotation>
+      <xs:documentation>Информация для идентификации операции (функции) ЕМИАС</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="operationCode" type="operationCodeType">
+        <xs:annotation>
+          <xs:documentation>код операции</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="operationId" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>идентификатор операции</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="PatientInfo">
+    <xs:annotation>
+      <xs:documentation>Пациент (незакончен!!!!)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="UKL" type="UIZLType">
+        <xs:annotation>
+          <xs:documentation>Уникальный идентификатор застрахованного лица</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FIO" type="FIOType">
+        <xs:annotation>
+          <xs:documentation>ФИО</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="BirthDate">
+        <xs:annotation>
+          <xs:documentation>Дата рождения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Gender">
+        <xs:annotation>
+          <xs:documentation>Пол</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="OMSPolicy" type="OMSPolicy">
+        <xs:annotation>
+          <xs:documentation>Полис ОМС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="PatientLocation">
+        <xs:annotation>
+          <xs:documentation>Адрес</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="modeAddress" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Тип источника</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="okrugCode" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Код в ОМК ТЕ</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="districtCode" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Код в ОМК МО</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="streetCode" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Код в ОМК УМ</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="dom" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Номер дома</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="korpus" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Номер корпуса дома (при его наличии)</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="stroenie" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Номер строения (при его наличии)</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="kvartira" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Номер квартиры</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="tempRegistry">
+              <xs:annotation>
+                <xs:documentation>Указывается в случае временной регистрации по указанному адресу.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dateFromRegistry" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>начало</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="dateToRegistry" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>окончание</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="nonMoscowAddr" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="phoneContact" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Контактный телефон</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="phoneMobile" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Мобильный телефон</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="eMail" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Адрес электронной почты</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Attachments">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="idAttach" type="xs:int">
+              <xs:annotation>
+                <xs:documentation>Идентификатор прикрепления</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="NumAttach" type="xs:string" />
+            <xs:element name="lpuIdAttach" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Идентификатор МУ</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="uchastokIdAttach" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Идентификатор участка</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="doctorIdAttach" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Идентификатор врача</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="doctorProfIdAttach" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Идентификатор специальности врача</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="vidAttachId" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Идентификатор вида прикрепления</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="typeChangeAttach" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Идентификатор типа изменения прикрепления</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="dateFromdAttach" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Дата начала прикрепления</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="dateToAttach" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Дата окончания прикрепления</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="patientRegistrationInfoType">
+    <xs:annotation>
+      <xs:documentation>Информация о регистрации пациента</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="LocationType" type="nsiShortType">
+        <xs:annotation>
+          <xs:documentation>Постоянная регистрация/временная регистрация/фактический адрес</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Location" type="locationType">
+        <xs:annotation>
+          <xs:documentation>Адрес</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="temporaryRegistrationEnd" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата окончания временной регистрации</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="periodForTimeType">
+    <xs:annotation>
+      <xs:documentation>Временной период (начало и конец)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="periodBegin" type="xs:time">
+        <xs:annotation>
+          <xs:documentation>время начала периода</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="periodEnd" type="xs:time">
+        <xs:annotation>
+          <xs:documentation>время окончания периода</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="periodForTimeTypeOptional">
+    <xs:annotation>
+      <xs:documentation>Временной период (начало и конец) c необязательными параметрами</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="periodBegin" type="xs:time">
+        <xs:annotation>
+          <xs:documentation>время начала периода</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="periodEnd" type="xs:time">
+        <xs:annotation>
+          <xs:documentation>время окончания периода</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="periodType">
+    <xs:annotation>
+      <xs:documentation>Календарный период, включая и время(начало и конец)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="periodBegin" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Дата и время начала периода</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="periodEnd" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Дата и время окончания периода</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="periodTypeOptional">
+    <xs:annotation>
+      <xs:documentation>Календарный период, включая и время(начало и конец) с необязательными параметрами</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="periodBegin" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Дата и время начала периода</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="periodEnd" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Дата и время окончания периода</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="positionSimpleType">
+    <xs:annotation>
+      <xs:documentation>Краткий вариант описания должности</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="positionCode" type="positionTypeCodeType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор должности</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="positionTitle" type="titleType">
+        <xs:annotation>
+          <xs:documentation>Наименование должности</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="patientMedicalCard">
+    <xs:annotation>
+      <xs:documentation>Медицинская карта пациента</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MUID" type="emiasIdType" />
+      <xs:element name="cardNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="cardType" type="emiasIdType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="patientType">
+    <xs:annotation>
+      <xs:documentation>Информация о пациенте</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ensuredPersonUID" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Уникальный код застрахованного лица</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OMS" type="OMSPolicyType">
+        <xs:annotation>
+          <xs:documentation>Информация о полисе ОМС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="patientCreationDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата создания записи пациента в ЕМИАС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FIO" type="FIOType">
+        <xs:annotation>
+          <xs:documentation>ФИО</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="birthDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата рождения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="sex" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Пол</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="contactPhone" type="phoneType">
+        <xs:annotation>
+          <xs:documentation>Контактный телефон</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="mobilePhone" type="phoneType">
+        <xs:annotation>
+          <xs:documentation>Мобильный телефон</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="eMail" type="eMailType">
+        <xs:annotation>
+          <xs:documentation>адрес электронной почты</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="additionalInfo" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Дополнительная информация</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="registrationInfo" type="patientRegistrationInfoType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PatientShortInfo">
+    <xs:complexContent mixed="false">
+      <xs:restriction base="patientType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ensuredPersonUID" type="emiasIdType">
+            <xs:annotation>
+              <xs:documentation>Уникальный код застрахованного лица</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="patientCreationDate" type="xs:date">
+            <xs:annotation>
+              <xs:documentation>Дата создания записи пациента в ЕМИАС</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="FIO" type="FIOType">
+            <xs:annotation>
+              <xs:documentation>ФИО</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="birthDate" type="xs:date">
+            <xs:annotation>
+              <xs:documentation>Дата рождения</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="sex" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Пол</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="contactPhone" type="phoneType">
+            <xs:annotation>
+              <xs:documentation>Контактный телефон</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="mobilePhone" type="phoneType">
+            <xs:annotation>
+              <xs:documentation>Мобильный телефон</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="eMail" type="eMailType">
+            <xs:annotation>
+              <xs:documentation>адрес электронной почты</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="additionalInfo" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Дополнительная информация</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="registrationInfo" type="patientRegistrationInfoType" />
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="userPositionsSimpleType">
+    <xs:annotation>
+      <xs:documentation>Краткий вариант описания должности, занимаемой пользователем в организации</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="organization" type="organizationSimpleType">
+        <xs:annotation>
+          <xs:documentation>Организация, в которой числится сотрудник</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="position" type="positionSimpleType">
+        <xs:annotation>
+          <xs:documentation>Должность, которую сотрудник занимает в организации</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userProfileType">
+    <xs:annotation>
+      <xs:documentation>Профиль пользователя ЕМИАС</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="userFIO" type="FIOType">
+        <xs:annotation>
+          <xs:documentation>ФИО пользователя</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="userAccountStatus">
+        <xs:annotation>
+          <xs:documentation>Статус учётной записи пользователя</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="userRole" type="userRoleType">
+        <xs:annotation>
+          <xs:documentation>Роль пользователя в ЕМИАС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="userPosition" type="userPositionsSimpleType">
+        <xs:annotation>
+          <xs:documentation>Должность, занимаемая пользователем</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userIndentificationDataType">
+    <xs:annotation>
+      <xs:documentation>Информация об идентификации пользователя</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="userLogin" type="loginType">
+        <xs:annotation>
+          <xs:documentation>Логин пользователя</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="userId" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор пользователя</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="userLocationInfoType">
+    <xs:annotation>
+      <xs:documentation>информация о местонахождении пользователя</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="MUCode">
+        <xs:annotation>
+          <xs:documentation>Код МУ в ЕМИАС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MUId">
+        <xs:annotation>
+          <xs:documentation>Идентификатор МУ в ЕМИАС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="BMIMUCode">
+        <xs:annotation>
+          <xs:documentation>Код МУ, "зашитый" в имя хоста</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hostName">
+        <xs:annotation>
+          <xs:documentation>имя хоста, за которым силит пользователь</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="userRoleType">
+    <xs:annotation>
+      <xs:documentation>Роль пользователя в ЕМИАС</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="roleId">
+        <xs:annotation>
+          <xs:documentation>Идентификатор роли пользователя</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="roleTitle">
+        <xs:annotation>
+          <xs:documentation>Название роли пользователя</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="roleStatus">
+        <xs:annotation>
+          <xs:documentation>Стату роли</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="roleType">
+        <xs:annotation>
+          <xs:documentation>Вид роли</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="functionsGroup" type="fuctionsGroupType">
+        <xs:annotation>
+          <xs:documentation>Группа функций, доступная в рамках конкретно роли </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="weeklyShedule">
+    <xs:annotation>
+      <xs:documentation>Суточное расписание</xs:documentation>
+    </xs:annotation>
+  </xs:complexType>
+  <xs:complexType name="workTimeType">
+    <xs:annotation>
+      <xs:documentation>Рабочее время доступного ресурса</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="workTimePeriod" type="periodForTimeType">
+        <xs:annotation>
+          <xs:documentation>Период рабочего времени. Если данный элемент не указан, то при отображении расписания на указанный день необходимо выводить статус рабочего времени. Иначе – выводить начало и окончание рабочего времени.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="workTimeStatus" type="workTimeStatusType">
+        <xs:annotation>
+          <xs:documentation>Статус рабочего времени</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="appointmentDoctorInfoType">
+    <xs:annotation>
+      <xs:documentation>информация о враче, к которому записан пациент</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:restriction base="referralDoctorInfoType">
+        <xs:sequence>
+          <xs:element name="doctorSpecialityCode">
+            <xs:annotation>
+              <xs:documentation>Код специальности врача</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="doctorSpecialityTitle" type="doctorSpecialityCodeType">
+            <xs:annotation>
+              <xs:documentation>Наименование специальности врача</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="doctorFIO" type="FIOasStringType">
+            <xs:annotation>
+              <xs:documentation>ФИО врача</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="appointmentTypeCode" type="appointmentTypeCodeType">
+            <xs:annotation>
+              <xs:documentation>Код вида приёма</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="cabinetNumber" type="cabinetNumber" />
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="appointmentLDPInfoType">
+    <xs:annotation>
+      <xs:documentation>информация о ЛДП, на которую записан пациент</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:restriction base="referralLDPInfoType">
+        <xs:sequence>
+          <xs:element name="LDPTypeCode" type="LDPCodeType">
+            <xs:annotation>
+              <xs:documentation>Код вида ЛДП</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="LDPTypeTitle" type="titleType">
+            <xs:annotation>
+              <xs:documentation>Наименование вида ЛДП</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="availableResourceTitle" type="titleType">
+            <xs:annotation>
+              <xs:documentation>Наименование доступного ресурса</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="futureProcedureCount" type="numberOfSmthType">
+            <xs:annotation>
+              <xs:documentation>Количество назначенных  по направлению процедур. Указывается, если ЛДП является регулярным</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="pastProcedureCount" type="numberOfSmthType">
+            <xs:annotation>
+              <xs:documentation>Количество произведенных записей на процедуры по данному направлению. Указывается, если ЛДП является регулярным</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="cabinetNumber" type="cabinetNumber">
+            <xs:annotation>
+              <xs:documentation>Номер кабинета</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="appointmentType">
+    <xs:annotation>
+      <xs:documentation>Запись на приём к врачу, на ЛДП и т.п.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UID" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Уникальный идентификатор записи на приём</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="number" type="numberType">
+        <xs:annotation>
+          <xs:documentation>Номер записи на приём</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MUType" type="MUTypeType">
+        <xs:annotation>
+          <xs:documentation>Тип МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MUAddress" type="moscowOfficeAddressRestrict" />
+      <xs:element minOccurs="0" name="comment">
+        <xs:annotation>
+          <xs:documentation>Комментарий к направлению</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="appointmentPeriod" type="periodType">
+        <xs:annotation>
+          <xs:documentation>Начало и окончание приёма</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="appointmentlType" type="appointmentTypeType">
+        <xs:annotation>
+          <xs:documentation>Вид направления (на приём к врачу, на исследования, на процедуры)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MUCode" type="muCodeType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MUTitle" type="titleType">
+        <xs:annotation>
+          <xs:documentation>Наименование МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="availableResourceUID" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Уникальный идентификатор доступного ресурса</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:annotation>
+          <xs:documentation>Информация о том, к кому  записан пациент</xs:documentation>
+        </xs:annotation>
+        <xs:element minOccurs="0" name="doctorAppointment" type="appointmentDoctorInfoType">
+          <xs:annotation>
+            <xs:documentation>Запись к врачу</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="LDPAppointment" type="appointmentLDPInfoType">
+          <xs:annotation>
+            <xs:documentation>Запись на ЛДП</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="availableResourceForTimetableType">
+    <xs:annotation>
+      <xs:documentation>Доступный ресурс (краткое описание) для предоставления информации в расписании</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:restriction base="availableResourceBaseShortType">
+        <xs:sequence>
+          <xs:element name="availableResourceUID" type="emiasIdType">
+            <xs:annotation>
+              <xs:documentation>Уникальный идентификатор доступного ресурса</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="availableResourceTitle">
+            <xs:annotation>
+              <xs:documentation>Название доступного ресурса </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="doctorSpecialityTitle" type="titleType">
+            <xs:annotation>
+              <xs:documentation>Название специальности врача</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="LDPTypeCode" type="LDPCodeType">
+            <xs:annotation>
+              <xs:documentation>Код вида ЛДП</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="cabinetNumber" type="numberType">
+            <xs:annotation>
+              <xs:documentation>Номер кабинета</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="availableResourceShortType">
+    <xs:annotation>
+      <xs:documentation>Доступный ресурс (краткое описание) с указанием замещающего реусурса</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="availableResourceBaseShortType">
+        <xs:sequence>
+          <xs:element name="deputyReason" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Причина замещения</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="deputy" type="availableResourceBaseShortType">
+            <xs:annotation>
+              <xs:documentation>Замещающий</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="moscowOfficeAddress">
+    <xs:annotation>
+      <xs:documentation>Московский адрес какой-либо организации (все элементы необязательны)</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:restriction base="moscowAddressType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="district" type="districtCodeType">
+            <xs:annotation>
+              <xs:documentation>Код округа в ОМК ТЕ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="street" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Улица</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="house" type="houseType">
+            <xs:annotation>
+              <xs:documentation>Дом</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="building" type="buildingType">
+            <xs:annotation>
+              <xs:documentation>Корпус</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="construction" type="housingType">
+            <xs:annotation>
+              <xs:documentation>Строение</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="BTICode" type="emiasIdType">
+            <xs:annotation>
+              <xs:documentation>Код дом/строение/корпус</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="OMKUMStreetCode" type="streetCodeType">
+            <xs:annotation>
+              <xs:documentation>Код улицы в ОМК УМ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="SchemeDescription" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Описание схемы проезда</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Coordinates" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Географические координаты</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="moscowOfficeAddressRestrict">
+    <xs:annotation>
+      <xs:documentation>Московский адрес какой-либо организации (дом и улица обязательны)</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:restriction base="moscowOfficeAddress">
+        <xs:sequence>
+          <xs:element name="district">
+            <xs:annotation>
+              <xs:documentation>Код округа в ОМК ТЕ</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="districtCodeType" />
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="street" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Улица</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="house" type="houseType">
+            <xs:annotation>
+              <xs:documentation>Дом</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="building" type="buildingType">
+            <xs:annotation>
+              <xs:documentation>Корпус</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="construction" type="housingType">
+            <xs:annotation>
+              <xs:documentation>Строение</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="BTICode" type="emiasIdType">
+            <xs:annotation>
+              <xs:documentation>Код дом/строение/корпус</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="OMKUMStreetCode" type="streetCodeType">
+            <xs:annotation>
+              <xs:documentation>Код улицы в ОМК УМ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="SchemeDescription" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Описание схемы проезда</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Coordinates" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Географические координаты</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="moscowRegistrationAddressType">
+    <xs:annotation>
+      <xs:documentation>Адрес московской регистрации</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:restriction base="moscowAddressType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="street" type="streetCodeType">
+            <xs:annotation>
+              <xs:documentation>Код улицы в ОМК УМ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="house" type="houseType">
+            <xs:annotation>
+              <xs:documentation>Дом/строение/корпус</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="flat" type="flatType">
+            <xs:annotation>
+              <xs:documentation>Квартира</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="nsiAttachmentChangeReasonType">
+    <xs:annotation>
+      <xs:documentation>Запись в справочнике причин изменений прикреплений</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="nsiGeneralType">
+        <xs:sequence>
+          <xs:element name="reason">
+            <xs:annotation>
+              <xs:documentation>Причина изменения прикрепления. VIEWNAME=name</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="250" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="nsiAttachmentTypeType">
+    <xs:annotation>
+      <xs:documentation>Запись в справочнике видов прикреплений</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="nsiGeneralType">
+        <xs:sequence>
+          <xs:element name="attachmentType">
+            <xs:annotation>
+              <xs:documentation>Вид прикрепления. VIEWNAME=name</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="255" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="nsiDoctorSpecialityType">
+    <xs:annotation>
+      <xs:documentation>Запись в справочнике специальностей врача</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="nsiGeneralType">
+        <xs:sequence>
+          <xs:element name="doctorSpeciality">
+            <xs:annotation>
+              <xs:documentation>Специальность врача. VIEWNAME=name</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="255" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="doctorSpecialityPluralForm">
+            <xs:annotation>
+              <xs:documentation>Специальность врача во множественном числе  VIEWNAME=name</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="255" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="isMaleDoctor" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Признак мужского специализации врача. VIEWNAME=Man</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="isFemaleDoctor" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Признак женскиой специализации врача. VIEWNAME=woman</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="nsiLDPTypesShortType">
+    <xs:annotation>
+      <xs:documentation>Запись в справочнике видов ЛДП (короткий вариант)</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="nsiGeneralType">
+        <xs:sequence>
+          <xs:element name="LDPTypeCode" type="LDPTypeCodeType">
+            <xs:annotation>
+              <xs:documentation>Код типа ЛДП</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="LDPTypeTitle" type="titleType">
+            <xs:annotation>
+              <xs:documentation>Название вида ЛДП</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="isProcedure" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Признак процедуры</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="isResearch" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Признак исследования</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="nsiLDPTypesType">
+    <xs:annotation>
+      <xs:documentation>Запись в справочнике видов ЛДП </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="nsiLDPTypesShortType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="duration" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Длительность</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="price" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Стоимость провидения</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="timeConsumingCUForDoctor">
+            <xs:annotation>
+              <xs:documentation>Условная единица трудоемкости врача (CU - conventional unit)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="timeConsumingCUForNurse">
+            <xs:annotation>
+              <xs:documentation>Условная единица трудоемкости медсестры (CU - conventional unit)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="nsiMedicalEmployeeType">
+    <xs:annotation>
+      <xs:documentation>Запись в справочнике сотрудников МУ</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="nsiGeneralType">
+        <xs:sequence>
+          <xs:element name="medicalEmployeeMUInformation" type="medicalEmployeeType">
+            <xs:annotation>
+              <xs:documentation>Описание медицинского работника, работающего в МУ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="nsiMUType">
+    <xs:annotation>
+      <xs:documentation>Запись в справочнике МУ</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="nsiGeneralType">
+        <xs:sequence>
+          <xs:element name="MUType" type="MUTypeType">
+            <xs:annotation>
+              <xs:documentation>Тип МУ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="muName">
+            <xs:annotation>
+              <xs:documentation>Наименование полное МУ. VIEWNAME=name</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="65" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="shortName">
+            <xs:annotation>
+              <xs:documentation>Наименование сокращенное МУ. VIEWNAME=nameShort</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="27" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="districtCode" type="districtCodeType">
+            <xs:annotation>
+              <xs:documentation>Ссылка на справочник «Территориальный округ». VIEWNAME=district</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="address">
+            <xs:annotation>
+              <xs:documentation>Адрес. Почтовый индекс МУ, наименование улицы, номер дома, корпуса</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="250" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="capacity">
+            <xs:annotation>
+              <xs:documentation>Мощность МУ. Штатный коечный фонд для стационарных МУ или число посещений в смену для амбулаторно-поликлинических МУ. VIEWNAME=power</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="100" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="internalOrg" type="muCodeType">
+            <xs:annotation>
+              <xs:documentation>Принадлежность МУ к входящим учреждениям. Код МУ (Un), Ссылка на справочник МУ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="nomenclatureCode" type="nomenclatureCodeType">
+            <xs:annotation>
+              <xs:documentation>Номенклатура. Ссылка на справочник «Номенклатура МУ»</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="muSpecializationCode" type="muSpecializationCodeType">
+            <xs:annotation>
+              <xs:documentation>Специализация. Ссылка на справочник «Специализация МУ». VIEWNAME=specialization</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="patientAgeGroupCode" type="patientAgeGroupCodeType">
+            <xs:annotation>
+              <xs:documentation>Возраст контингента. Ссылка на справочник «Возрастные контингенты». VIEWNAME=patientAge</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="agencyOrgCode" type="agencyOrgCodeType">
+            <xs:annotation>
+              <xs:documentation>Ведомственная принадлежность. Ссылка на справочник «Ведомственная принадлежность МУ». VIEWNAME=agency</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="clinicOrgCode" type="clinicOrgCodeType">
+            <xs:annotation>
+              <xs:documentation>Клиническое учреждение. Ссылка на справочник «Принадлежность к клиническим учреждениям». VIEWNAME=clinicOrg</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="muHierarchyLevelCode" type="muHierarchyLevelCodeType">
+            <xs:annotation>
+              <xs:documentation>Иерархия МУ. Ссылка на справочник «Уровень МУ в иерархии сети лечебных учреждений». VIEWNAME=hierarchy</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="nsiMUTypesType">
+    <xs:annotation>
+      <xs:documentation>Запись в справочнике типов МУ</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="nsiGeneralType">
+        <xs:sequence>
+          <xs:element name="MUTypeCode" type="emiasIdType">
+            <xs:annotation>
+              <xs:documentation>Код записи</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="MUType" type="MUTypeType">
+            <xs:annotation>
+              <xs:documentation>Тип МУ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="isAmbulatorMU">
+            <xs:annotation>
+              <xs:documentation>Призанка амбулаторного МУ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="isIndependentlyAttachmentPossible" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Признак возможности самостоятельного прикрепления пациента</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="nsiServiceDistrictType">
+    <xs:annotation>
+      <xs:documentation>Запись в справочнике участков обслуживания</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="nsiGeneralType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="districtName">
+            <xs:annotation>
+              <xs:documentation>Название участка</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="255" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="districtNumber">
+            <xs:annotation>
+              <xs:documentation>Номер участка</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="4" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="muCode" type="muCodeType">
+            <xs:annotation>
+              <xs:documentation>Идентификатор МУ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="inDistrictResidents" type="xs:integer">
+            <xs:annotation>
+              <xs:documentation>Норма прикрепления живущих в рамках участка</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="outDistrictResidents" type="xs:integer">
+            <xs:annotation>
+              <xs:documentation>Норма прикрепления живущих за пределами участка</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="districtTypeCode" type="districtTypeCodeType">
+            <xs:annotation>
+              <xs:documentation>Индетификатор типа участка</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="timetableARType">
+    <xs:annotation>
+      <xs:documentation>Расписание доступного ресурса, включая информацию о ресурсе (AR - availableResource)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="availableResourceInfo" type="availableResourceForTimetableType" />
+      <xs:element name="timetableForOneDay" type="timetableARForDayType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pollInfoOnDateType">
+    <xs:annotation>
+      <xs:documentation>Тип, описывающий информацию об опросе на конкретную дату - вся информация заполняется на указанную дату</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="pollInfoType">
+        <xs:sequence>
+          <xs:element name="date" type="xs:date">
+            <xs:annotation>
+              <xs:documentation>дата, на которую заполнены параметры опроса</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="deviceIdType">
+    <xs:annotation>
+      <xs:documentation>Идентификатор экземпляра устройства приема УЭК  или Идентификатор АРМ, на котором была проведена операция</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:complexType name="holderIdDescriptionType">
+    <xs:annotation>
+      <xs:documentation>Идентификация держателя карты (инфраструктура УЭК)</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element minOccurs="0" name="cardTypeCode">
+        <xs:annotation>
+          <xs:documentation>Код типа карты (УЭК, СКМ, временная, иное)</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="32" />
+            <xs:enumeration value="UEC">
+              <xs:annotation>
+                <xs:documentation>Универсальная Электронная Карта</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="MSC">
+              <xs:annotation>
+                <xs:documentation>Московская социальная карта</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="TEMP">
+              <xs:annotation>
+                <xs:documentation>Временная</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="OTHER">
+              <xs:annotation>
+                <xs:documentation>Другого типа</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="cardIdentityCode">
+        <xs:annotation>
+          <xs:documentation>Код используемого идентификатора УЭК</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="32" />
+            <xs:enumeration value="PAN">
+              <xs:annotation>
+                <xs:documentation>Permanent Account Number</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="MUID">
+              <xs:annotation>
+                <xs:documentation>MIFARE UID</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="UECN">
+              <xs:annotation>
+                <xs:documentation>Номер УЭК</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ICSN">
+              <xs:annotation>
+                <xs:documentation>Номер чипа</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="MSCN">
+              <xs:annotation>
+                <xs:documentation>Номер СКМ</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="DID">
+              <xs:annotation>
+                <xs:documentation>Динамический идентификатор</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="uecId">
+        <xs:annotation>
+          <xs:documentation>Идентификатор экземпляра УЭК</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="32" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:group name="appointmentInfoForAppointmentRequest">
+    <xs:annotation>
+      <xs:documentation>Группа, описывающая информацию для осуществления записи на приём</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MUUID" type="FERIDType">
+        <xs:annotation>
+          <xs:documentation>Уникальный идентификатор МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="availableResourceUID" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Уникальный идентификатор доступного ресурса</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="locationUID" type="FERIDType">
+        <xs:annotation>
+          <xs:documentation>Уникальный идентификатор очереди в ФЭР</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="medicalServiceTypeUID" type="FERIDType">
+        <xs:annotation>
+          <xs:documentation>Уникальный идентификатор медицинской услуги</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="appointmentDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата приёма</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="appointmentTimePeriod" type="periodForTimeTypeOptional">
+        <xs:annotation>
+          <xs:documentation>Время приёма</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="MUGroupForMUResponse">
+    <xs:annotation>
+      <xs:documentation>Группа, описывающая мед. учреждение</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MUUID" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MUType" type="nsiMUTypesType">
+        <xs:annotation>
+          <xs:documentation>Тип МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MUTitle" type="titleType">
+        <xs:annotation>
+          <xs:documentation>Наименование МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MUoperationMode" type="timetableMUForDayType">
+        <xs:annotation>
+          <xs:documentation>Режим работы МУ по дням</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MUContactPhones" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Список контактных телефонов МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MUAddress" type="moscowOfficeAddressRestrict">
+        <xs:annotation>
+          <xs:documentation>Адрес МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="district" type="districtType">
+        <xs:annotation>
+          <xs:documentation>Участок обслуживания МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="MUGroupForImpementedMUListResponse">
+    <xs:annotation>
+      <xs:documentation>Группа, описывающая мед. учреждение, для предоставления информации о МУ, в которых внедрена ЕМИАС</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MUUID" type="emiasIdType">
+        <xs:annotation>
+          <xs:documentation>Идентификатор МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MUType" type="nsiMUTypesType">
+        <xs:annotation>
+          <xs:documentation>Тип МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MUTitle" type="titleType">
+        <xs:annotation>
+          <xs:documentation>Наименование МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MUContactPhones" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Список контактных телефонов МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MUAddress" type="moscowOfficeAddressRestrict">
+        <xs:annotation>
+          <xs:documentation>Адрес МУ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

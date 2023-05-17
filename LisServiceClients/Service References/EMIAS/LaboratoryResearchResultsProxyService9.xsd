@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="urn:hl7-org:v2xml" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:hl7="urn:com.sun:encoder-hl7-1.0" targetNamespace="urn:hl7-org:v2xml" jaxb:version="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="http://195.26.187.91:10009/LIS/ProxyService/LaboratoryResearchResultsProxyService?SCHEMA%2FLIS%2FWSDL%2Fsegments" />
+  <xsd:annotation>
+    <xsd:appinfo source="urn:com.sun:encoder">
+      <encoding name="HL7 v2 Encoding" namespace="urn:com.sun:encoder-hl7-1.0" style="hl7encoder-1.0" xmlns="urn:com.sun:encoder" />
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:complexType name="ORU_R01.VISIT.CONTENT">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" ref="PV1" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ORU_R01.VISIT" type="ORU_R01.VISIT.CONTENT" />
+  <xsd:complexType name="ORU_R01.PATIENT.CONTENT">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" ref="PID" />
+      <xsd:element minOccurs="0" maxOccurs="1" ref="ORU_R01.VISIT" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ORU_R01.PATIENT" type="ORU_R01.PATIENT.CONTENT" />
+  <xsd:complexType name="ORU_R01.TIMING_QTY.CONTENT">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" ref="TQ1" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ORU_R01.TIMING_QTY" type="ORU_R01.TIMING_QTY.CONTENT" />
+  <xsd:complexType name="ORU_R01.OBSERVATION.CONTENT">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" ref="OBX" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" ref="NTE" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ORU_R01.OBSERVATION" type="ORU_R01.OBSERVATION.CONTENT" />
+  <xsd:complexType name="ORU_R01.SPECIMEN.CONTENT">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" ref="SPM" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" ref="OBX" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ORU_R01.SPECIMEN" type="ORU_R01.SPECIMEN.CONTENT" />
+  <xsd:complexType name="ORU_R01.ORDER_OBSERVATION.CONTENT">
+    <xsd:sequence>
+      <xsd:element maxOccurs="1" ref="ORC" />
+      <xsd:element minOccurs="1" maxOccurs="1" ref="OBR" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" ref="NTE" />
+      <xsd:element minOccurs="0" ref="ORU_R01.TIMING_QTY" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" ref="ORU_R01.OBSERVATION" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" ref="ORU_R01.SPECIMEN" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ORU_R01.ORDER_OBSERVATION" type="ORU_R01.ORDER_OBSERVATION.CONTENT" />
+  <xsd:complexType name="ORU_R01.PATIENT_RESULT.CONTENT">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" ref="ORU_R01.PATIENT" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" ref="ORU_R01.ORDER_OBSERVATION" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ORU_R01.PATIENT_RESULT" type="ORU_R01.PATIENT_RESULT.CONTENT" />
+  <xsd:complexType name="ORU_R01.CONTENT">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" ref="MSH" />
+      <xsd:element minOccurs="1" ref="ORU_R01.PATIENT_RESULT" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ORU_R01" type="ORU_R01.CONTENT">
+    <xsd:annotation>
+      <xsd:appinfo source="urn:com.sun:encoder">
+        <top xmlns="urn:com.sun:encoder">true</top>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>

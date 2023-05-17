@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalResult">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <Members>
+      <Property Name="Errors" Hidden="true" />
+      <Property Name="InternalNr" Hidden="true" />
+      <Property Name="UserValues" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Patient" Type="MisExchange.BusinessObjectsExchange.ExternalRequestPatient" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="2.25" Y="0.812" />
+        <Point X="3.25" Y="0.812" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="SampleResults" Type="MisExchange.BusinessObjectsExchange.ExternalSampleResult" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.958" Y="0.5" />
+        <Point X="1.958" Y="0.125" />
+        <Point X="9.35" Y="0.125" />
+        <Point X="9.35" Y="2.41" />
+        <Point X="12.5" Y="2.41" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.089" Y="0.185" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAQAAAAAAAEoAAAAAAAAAAAAAAAEACAA=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalResult\ExternalResult.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Patient" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="SampleResults" />
+      <Property Name="UserFields" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalRequestPatient">
+    <Position X="3.25" Y="0.5" Width="2.25" />
+    <Members>
+      <Property Name="UserValues" Hidden="true" />
+    </Members>
+    <AssociationLine Name="PatientCard" Type="MisExchange.BusinessObjectsExchange.ExternalRequestPatientCard">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.058" Y="0.06" Height="0.182" Width="0.986" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="UserFields" Type="MisExchange.BusinessObjectsLis.UserValue">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.185" Y="0.12" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAIAFCAAAAABAAIAAAwEUIAAAIIAAAEAAIAAAEACAg=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalRequest\ExternalRequestPatient.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PatientCard" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="UserFields" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalSampleResult">
+    <Position X="12.5" Y="1" Width="2" />
+    <AssociationLine Name="TargetResults" Type="MisExchange.BusinessObjectsExchange.ExternalTargetResult" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.938" Y="2.747" />
+        <Point X="12.938" Y="6.97" />
+        <Point X="18" Y="6.97" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="MicroResults" Type="MisExchange.BusinessObjectsExchange.ExternalMicroResult" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.5" Y="2.438" />
+        <Point X="14.875" Y="2.438" />
+        <Point X="14.875" Y="3.83" />
+        <Point X="18" Y="3.83" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAAABAAAAAEAAAAAAAAAAAAAAAAABAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalResult\ExternalSampleResult.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Defects" />
+      <Property Name="TargetResults" />
+      <Property Name="MicroResults" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalRequestPatientCard">
+    <Position X="6.75" Y="0.5" Width="2.25" />
+    <Members>
+      <Property Name="UserValues" Hidden="true" />
+    </Members>
+    <AssociationLine Name="UserFields" Type="MisExchange.BusinessObjectsLis.UserValue">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.216" Y="0.173" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAABAAAAAAAAAAEAAAAAAABIBAAAAAgEAAAA=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalRequest\ExternalRequestPatientCard.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PayCategory" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="UserFields" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsLis.UserValue">
+    <Position X="3.75" Y="5.5" Width="1.5" />
+    <AssociationLine Name="UserField" Type="MisExchange.Core.ObjectRef">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.235" Y="1.692" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Reference" Type="MisExchange.Core.ObjectRef">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.197" Y="1.199" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Values" Type="MisExchange.Core.ObjectRef" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="7.188" />
+        <Point X="11.266" Y="7.188" />
+        <Point X="11.266" Y="4.812" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.19" Y="2.112" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAgAAQAAAAAAAAAAAAoAAAAAAA=</HashCode>
+      <FileName>BusinessObjectsLis\UserValue.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UserField" />
+      <Property Name="Reference" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Values" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalDefect">
+    <Position X="18" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalResult\ExternalDefect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalMicroResult">
+    <Position X="18" Y="3" Width="1.75" />
+    <AssociationLine Name="MicroOrganism" Type="MisExchange.Core.ObjectRef">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="1.203" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Antibiotics" Type="MisExchange.BusinessObjectsExchange.ExternalWork" FixedFromPoint="true">
+      <Path>
+        <Point X="19.75" Y="3.375" />
+        <Point X="22.25" Y="3.375" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.079" Y="0.154" Height="0.182" Width="2.193" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAACAgAAQAAACAAAAAAAAgAAAAIAA=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalResult\ExternalMicroResult.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MicroOrganism" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Antibiotics" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalTargetResult">
+    <Position X="18" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAEIAA=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalResult\ExternalTargetResult.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Works" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalWork">
+    <Position X="22.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABABAAAAAAAAiAAEggAQgAAAAAJAEAAAhBQAEMAA=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalResult\ExternalWork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Norm" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Defects" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MisExchange.Core.ObjectRef" Collapsed="true">
+    <Position X="10" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAgAEEgAAAQAAGAAAAAIAgANgAogYQACI=</HashCode>
+      <FileName>Core\BloodClasses.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MisExchange.BusinessObjectsExchange.ExternalNorm">
+    <Position X="25.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAIIACIAAAAAAAAAAAAAAAAAAACICAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjectsExchange\ExternalResult\ExternalNorm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

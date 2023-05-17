@@ -1,0 +1,175 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Service References\BarsNomenclature\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Update="Service References\EMIAS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Update="Service References\EMIAS_Dictionaries\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Update="Service References\LisServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Nomenclature.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\BarsNomenclature\LisServiceClients.BarsNomenclature.sendNomenclatureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Update="Service References\EMIAS\LaboratoryResearchResultsProxyService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\EMIAS\LaboratoryResearchResultsProxyService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\EMIAS\LaboratoryResearchResultsProxyService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\EMIAS\LaboratoryResearchResultsProxyService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\EMIAS\LaboratoryResearchResultsProxyService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\EMIAS\LaboratoryResearchResultsProxyService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\EMIAS\LaboratoryResearchResultsProxyService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\EMIAS\LaboratoryResearchResultsProxyService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\EMIAS\LaboratoryResearchResultsProxyService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\EMIAS\LaboratoryResearchResultsProxyService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\EMIAS\LisServiceClients.EMIAS.ACKCONTENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Update="Service References\EMIAS\LisServiceClients.EMIAS.ORL_O22CONTENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Update="Service References\EMIAS\LisServiceClients.EMIAS.ORL_O34CONTENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Update="Service References\EMIAS_Dictionaries\commonServiceTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\EMIAS_Dictionaries\emiasTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\EMIAS_Dictionaries\LaboratoryNsiServiceTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\EMIAS_Dictionaries\LisServiceClients.EMIAS_Dictionaries.anthropometricData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Update="Service References\EMIAS_Dictionaries\LisServiceClients.EMIAS_Dictionaries.biomaterial.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Update="Service References\EMIAS_Dictionaries\LisServiceClients.EMIAS_Dictionaries.li.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Update="Service References\EMIAS_Dictionaries\LisServiceClients.EMIAS_Dictionaries.liTest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Update="Service References\EMIAS_Dictionaries\LisServiceClients.EMIAS_Dictionaries.locus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Update="Service References\EMIAS_Dictionaries\LisServiceClients.EMIAS_Dictionaries.takeBiomaterialMethod.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Update="Service References\EMIAS_Dictionaries\LisServiceClients.EMIAS_Dictionaries.test.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Update="Service References\EMIAS_Dictionaries\LisServiceClients.EMIAS_Dictionaries.unit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Update="Service References\EMIAS_Dictionaries\LisServiceClients.EMIAS_Dictionaries.vial.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Update="Service References\LisServiceReference\LisService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LisServiceReference\LisService1.wsdl" />
+    <None Update="Service References\LisServiceReference\LisService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\LisServiceReference\LisService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\LisServiceReference\LisService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Service References\LisServiceReference\LisServiceClients.LisServiceReference.RequestData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BarsNomenclature\" />
+    <WCFMetadataStorage Include="Service References\EMIAS\" />
+    <WCFMetadataStorage Include="Service References\EMIAS_Dictionaries\" />
+    <WCFMetadataStorage Include="Service References\LisServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Service References\LisServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Service References\BarsNomenclature\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Service References\EMIAS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Service References\EMIAS_Dictionaries\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.8.1" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.8.1" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="4.8.1" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appsettings.json" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:m="http://www.bars-open.ru/med/lis/" targetNamespace="http://www.bars-open.ru/med/lis/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema targetNamespace="http://www.bars-open.ru/med/lis/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="sendNomenclatureRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="Nomenclature" type="m:Nomenclature" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendNomenclatureResponse">
+        <xs:annotation>
+          <xs:documentation>Результат</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="result">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="accepted">
+                    <xs:annotation>
+                      <xs:documentation>Сообщение обработано</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="rejected">
+                    <xs:annotation>
+                      <xs:documentation>Сообщение отклонено</xs:documentation>
+                    </xs:annotation>
+                  </xs:enumeration>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="error_code" nillable="true" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Код ошибки, в случае ошибки</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Nomenclature">
+        <xs:annotation>
+          <xs:documentation>Позиция номенклатуры</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="code_lpu" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Код ЛПУ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" maxOccurs="1" name="code_ta" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Код анализа</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" maxOccurs="1" name="name_ta" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Наименование анализа</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" maxOccurs="1" name="is_group">
+            <xs:annotation>
+              <xs:documentation>Признак группы</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:int">
+                <xs:minInclusive value="0" />
+                <xs:maxInclusive value="1" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="1" name="parent_ta" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Код родителя</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" maxOccurs="1" name="action">
+            <xs:annotation>
+              <xs:documentation>
+                Действие с данными
+                1 – Добавление
+                2 – Исправление
+                3 – Удаление
+              </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:int">
+                <xs:minInclusive value="1" />
+                <xs:maxInclusive value="3" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="1" maxOccurs="1" name="is_comp">
+            <xs:annotation>
+              <xs:documentation>Комплект услуг</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:int">
+                <xs:minInclusive value="0" />
+                <xs:maxInclusive value="1" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="1" maxOccurs="1" name="is_calc">
+            <xs:annotation>
+              <xs:documentation>Расчетный показатель</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:int">
+                <xs:minInclusive value="0" />
+                <xs:maxInclusive value="1" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="1" maxOccurs="1" name="is_micro">
+            <xs:annotation>
+              <xs:documentation>Микробиология</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:int">
+                <xs:minInclusive value="0" />
+                <xs:maxInclusive value="1" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="1" maxOccurs="1" name="is_sens" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="test" type="m:Test">
+            <xs:annotation>
+              <xs:documentation>Информация по тестам в анализе</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="mc" type="m:MC">
+            <xs:annotation>
+              <xs:documentation>Информация по тестам в анализе</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="bio" type="m:Bio">
+            <xs:annotation>
+              <xs:documentation>Информация по тестам в анализе</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="locus" type="m:Locus">
+            <xs:annotation>
+              <xs:documentation>Информация по тестам в анализе</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Test">
+        <xs:annotation>
+          <xs:documentation>Исследование: состав комплекта</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="research_code" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="research_name" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Bio">
+        <xs:annotation>
+          <xs:documentation>Биоматериалы</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="bio_code" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="bio_name" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Locus">
+        <xs:annotation>
+          <xs:documentation>Локусы</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="loc_code" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="loc_name" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="MC">
+        <xs:annotation>
+          <xs:documentation>Доп. параметр анализа</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="mc_code" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="mc_name" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="mc_type">
+            <xs:annotation>
+              <xs:documentation>
+                1 – строка
+                2 – число
+                3 – дата
+              </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:int">
+                <xs:minInclusive value="1" />
+                <xs:maxInclusive value="3" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="1" maxOccurs="1" name="mc_size" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="sendNomenclatureRequest">
+    <part name="parameter" element="m:sendNomenclatureRequest" />
+  </message>
+  <message name="sendNomenclatureResponse">
+    <part name="parameter" element="m:sendNomenclatureResponse" />
+  </message>
+  <portType name="sLisBarsSendNomenclature">
+    <operation name="sendNomenclature">
+      <input message="m:sendNomenclatureRequest" />
+      <output message="m:sendNomenclatureResponse" />
+    </operation>
+  </portType>
+  <binding name="sLisBarsSNBinding" type="m:sLisBarsSendNomenclature">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="sendNomenclature">
+      <soap:operation soapAction="sendNomenclature" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="NomService">
+    <port name="sLisBarsSendNomenclature" binding="m:sLisBarsSNBinding">
+      <soap:address location="http://10.31.6.59/demo/webservice/Lis1C/Nomenclature" />
+    </port>
+  </service>
+</definitions>

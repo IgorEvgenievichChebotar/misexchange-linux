@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HelperSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Настройки "помощников обмена данными". Необходимую группу элементов раскомментировать -->
+  <!-- =======================================================================================-->
+
+  
+  
+  
+  <!-- Настройки "помощника обмена данными" SEMDIngushExchangeHelper3 -->
+  <FilePath>C:\Projects\ForTest</FilePath>
+  <MisNumber>1</MisNumber>
+  <SoapServiceEnpoint>http://192.168.210.3:8892/EMDAService</SoapServiceEnpoint>
+  <SystemId>1</SystemId> <!-- Уникальный идентификатор ИС -->
+  <ClientEntityId>84ccfa89-f736-4929-a44a-a3ca9bf55b91</ClientEntityId>
+  <SignCertSerialNumber>01e6afad006aaf79804b1c117c4944b25f</SignCertSerialNumber> <!-- Сертификат должен быть в Локальном компьютере в Личное -->
+
+  <!-- Польз поля -->
+  <Snils>snils</Snils> <!-- СНИЛС пациента -->
+  <MessageIdFieldCode>MessageIdFieldCode</MessageIdFieldCode> <!-- От витакора -->
+  <DocType>docType</DocType> <!-- От витакора -->
+  <DocSeries>docSeries</DocSeries> <!-- От витакора -->
+  <DocNumber>docNumber</DocNumber> <!-- От витакора -->
+  
+  
+  <!-- Настройки "помощника обмена данными" SEMDExchangeHelper3 -->
+  <FilePath>C:\Projects\ForTest</FilePath>
+  <RabbitServer>10.1.0.123</RabbitServer>
+  <RabbitPort>5672</RabbitPort>
+  <RabbitLogin>innova</RabbitLogin>
+  <RabbitPassword>innova</RabbitPassword>
+  <RabbitExchange>exchange.innova</RabbitExchange>
+  <RabbitRoutingKey>document</RabbitRoutingKey>
+  <RabbitConnectionTimeout>60</RabbitConnectionTimeout> <!-- В секундах -->
+  <MisNumber>1</MisNumber>
+  
+  <!--  Адрес организации, оформившей протокол лабораторного исследования -->
+  <OrgStreetAddressLine>Тест адрес строка</OrgStreetAddressLine> <!-- Адрес текстом -->
+  <OrgStateCode>77</OrgStateCode> <!-- Субъект РФ (Код ФНС по справочнику "Субъекты Российской Федерации" (OID:1.2.643.5.1.13.13.99.2.206)) -->
+  <OrgStateName>г.Москва</OrgStateName> <!-- Название -->
+  
+  <!-- Польз поля -->
+  <Snils>snils</Snils> <!-- СНИЛС пациента -->
+  <OrderCaseId>orderCaseId</OrderCaseId>
+  <Mkb10Code>mkb10code</Mkb10Code>
+  <Mkb10Name>mkb10name</Mkb10Name>
+  <DoctorSnils>doctorSnils</DoctorSnils> <!-- СНИЛС направившего лица -->
+  <DoctorPositionCode>doctorPositionCode</DoctorPositionCode> <!-- Код должности направившего лица по справочнику 1.2.643.5.1.13.13.11.1002 -->
+  <DoctorPositionName>doctorPositionName</DoctorPositionName> <!-- Название должности направившего лица -->
+  
+  
+  <!-- Настройки "помощника обмена данными" <f t="s" n="exchangeMode" v="ExchangeHelper3_Vitacore" /> -->
+  <!-- Настройки RabbiMQ-->
+  <Host>192.168.110.139</Host>
+  <Port>5672</Port>
+  <User>lis</User>
+  <Password>lis2022</Password>
+  <Key>lis.result</Key>
+  <ExchangeName>mo.mis.direction</ExchangeName>
+  <QueueName>mo.mis.direction.export06</QueueName>
+  <MessageIdFieldCode>SNILS</MessageIdFieldCode>
+  <!-- Код пользовательского поля "Диагноз" -->
+  <Diagnosis>DiagnosisList</Diagnosis>
+  <Snils>snils</Snils>
+  <WorkPlaceName>workPlaceName</WorkPlaceName>
+  <DocType>docType</DocType>
+  <DocSeries>docSeries</DocSeries>
+  <DocNumber>docNumber</DocNumber>
+  <DocIssueDate>docIssueDate</DocIssueDate>
+  <ReportName>Ответ по заявке_general</ReportName>
+
+  <!-- Настройки "помощника обмена данными" HL7ExchangeHelper3-->
+  <!--<LocalTCPHost>172.1.1.2</LocalTCPHost>
+  <RemoteTCPHost>172.1.1.3</RemoteTCPHost>
+  <LocalTCPPortNumber>5056</LocalTCPPortNumber>
+  <RemoteTCPPortNumber>8090</RemoteTCPPortNumber>-->
+  <LocalTCPPortNumber>8888</LocalTCPPortNumber>
+  <TimeOut>1000</TimeOut>
+  <PatientCodePrefix></PatientCodePrefix>
+  <HospitalCode>1</HospitalCode>
+  <ReportName>RepExchangeService</ReportName>
+  <UploadResultReports>true</UploadResultReports>
+  <DebugMode>true</DebugMode>
+  <LocalTCPHostRestartInterval>300</LocalTCPHostRestartInterval>
+  <!-- Количество попыток отправки результатов в МИС -->
+  <SendResultsAttemptsCount>5</SendResultsAttemptsCount>
+  <!-- Тайм-аут ожидания подтверждения от МИС об успешном приеме результатов исследований (в секундах) -->
+  <!--<MISAcknowledgmentTimeOut>1200</MISAcknowledgmentTimeOut>-->
+  <!--<Diagnosis>diagnosis_text</Diagnosis>-->
+  <Drug>Drugs</Drug>
+  
+  <!-- Настройки "помощника обмена данными" FilesExchangeHelper -->
+  <!--<SourcePath>Requests</SourcePath>
+  <ArchivePath>Archive</ArchivePath>
+  <ErrorPath>Errors</ErrorPath>
+  <WarningPath>Warnings</WarningPath>
+  <ResultsPath>Results</ResultsPath>
+  <BackupPath></BackupPath>
+  <DictionaryExportPath></DictionaryExportPath>
+  <IsEnabledMessageCaching>true</IsEnabledMessageCaching>-->
+  <!--<ConnectionString>Provider=sqloledb;Server=LIS60;Database=MisExchangeRequestService;Uid=sa;Pwd=sa;</ConnectionString>
+  <PatientCodePrefix>HL7</PatientCodePrefix>-->
+  <!--  
+  <FileGroupingMode>ByHospital</FileGroupingMode>
+  <FileGroupDirectioriesList>
+    <FileGroupDirectories>
+      <GroupCode>001</GroupCode>
+      <SourcePath>C:\withGrouping\req1</SourcePath>
+      <ResultsPath>C:\withGrouping\res1</ResultsPath>
+      <ArchivePath>C:\withGrouping\Archive</ArchivePath>
+      <ErrorPath>C:\withGrouping\Errors</ErrorPath>
+    </FileGroupDirectories>
+    <FileGroupDirectories>
+      <SourcePath>C:\withGrouping\req2</SourcePath>
+    </FileGroupDirectories>
+  </FileGroupDirectioriesList>
+-->
+
+  <!-- Настройки "помощника обмена данными" InfonomExchangeHelper -->
+  <!-- <RequestsPath>D:\Temp\ORD</RequestsPath>
+  <ResultsPath>D:\Temp\REP</ResultsPath>
+  <ReportByServicesPath>D:\Temp\SVC</ReportByServicesPath> -->
+  <!--  <AcknowledgeMessagesPath>D:\Temp\ACK</AcknowledgeMessagesPath>
+  <RequestsArchivePath>RequestsArchive</RequestsArchivePath>
+  <ResultsArchivePath>ResultsArchive</ResultsArchivePath>
+  <NeedArchive>false</NeedArchive>
+  <ResultDailyCounter>
+    <SequenceNr>0</SequenceNr>
+    <Date>2013-01-25T00:00:00</Date>
+  </ResultDailyCounter>
+  <AcknowledgeMessageDailyCounter>
+    <SequenceNr>0</SequenceNr>
+    <Date>2013-01-25T00:00:00</Date>
+  </AcknowledgeMessageDailyCounter>
+  <ReportByServicesDailyCounter>
+    <SequenceNr>0</SequenceNr>
+    <Date>2013-01-25T00:00:00</Date>
+  </ReportByServicesDailyCounter> -->
+
+
+  <!-- Настройки "помощника обмена данными" CsmExchangeHelper -->
+  <!--   <RequestsArchivePath>Archive</RequestsArchivePath>   
+   <ResultsArchivePath>Results</ResultsArchivePath> 
+   <BloodGroupUserFieldName></BloodGroupUserFieldName>
+   <PhotoUrlUserFieldName></PhotoUrlUserFieldName>
+   <PurposeCodeUserFieldName></PurposeCodeUserFieldName>
+   <PhotoUrlPrefix></PhotoUrlPrefix>-->
+
+  <!-- =========================================================================================================================== -->
+
+  <!-- Настройки "помощника обмена данными" HL7ExchangeHelper3-->
+  <!--<LocalTCPHost>192.168.100.104</LocalTCPHost>
+  <RemoteTCPHost>localhost</RemoteTCPHost>
+  <LocalTCPPortNumber>8090</LocalTCPPortNumber>
+  <RemoteTCPPortNumber>9091</RemoteTCPPortNumber>
+  <TimeOut>1000</TimeOut>
+  <PatientCodePrefix></PatientCodePrefix>-->
+
+  <!-- =========================================================================================================================== -->
+
+  <!-- Настройки "помощника обмена данными" CgmNetraadExchangeHelper3-->
+  <!--<LocalTCPHost>192.168.100.104</LocalTCPHost>-->
+  <RemoteTCPHost>localhost</RemoteTCPHost>
+  <LocalTCPPortNumber>8090</LocalTCPPortNumber>
+  <RemoteTCPPortNumber>9091</RemoteTCPPortNumber>
+  <TimeOut>1000</TimeOut>
+  <PatientCodePrefix></PatientCodePrefix>
+  <HospitalCode>1</HospitalCode>
+  <ReportName>Ответ</ReportName>
+  <!-- <UploadResultReports>true</UploadResultReports> -->
+  <!-- <DebugMode>true</DebugMode> -->
+  <!-- Интервал рестарта локального хоста для приема заявок от МИС (в секундах) -->
+  <LocalTCPHostRestartInterval>30000</LocalTCPHostRestartInterval> 
+  <!-- Количество попыток отправки результатов в МИС -->
+  <SendResultsAttemptsCount>1</SendResultsAttemptsCount>
+  <!-- Тайм-аут ожидания подтверждения от МИС об успешном приеме результатов исследований (в секундах) -->
+  <MISAcknowledgmentTimeOut>1200</MISAcknowledgmentTimeOut>
+  <!-- Код пользовательского поля Диагноз -->
+  <!-- <Diagnosis>Diagnosis</Diagnosis> -->
+  <!-- Код пользовательского поля Лекарства -->
+  <!-- <Drug>Drug</Drug> -->
+  <UseMultipleConnectionsToSendResults>false</UseMultipleConnectionsToSendResults>
+  
+  <!-- =========================================================================================================================== -->
+  
+  <!-- Настройки "помощника обмена данными" ExchangeHelper3_Medialog -->
+   <ListenerURI>http://*:1005/</ListenerURI> 
+  
+  <!-- =========================================================================================================================== -->
+  
+  <!-- Настройки "помощника обмена данными" ExchangeHelper3_MedialogFiles -->
+  <!-- <PatientCardNrUserFieldCode>CardNr</PatientCardNrUserFieldCode> -->
+  
+  <!-- =========================================================================================================================== -->
+
+  <!-- Настройки "помощника обмена данными" ExchangeHelper3_UniGateBregis -->
+  <!--<ListenerURI>http://*:1005/</ListenerURI>-->
+  <ClientIcmid>1550b7c8-457e-4c2b-b9f6-f8212dff4ac4</ClientIcmid> <!-- Наш icmid -->
+  <ValidateIcmid>508205d7-5f84-4e6d-a797-3a82bb529a99</ValidateIcmid> <!-- icmid в заголовках, который нужно проверять -->
+
+  <!-- =========================================================================================================================== -->
+  
+  <!-- Настройки "помощника обмена данными" HL7FilesExchangeHelper3-->
+  <!--<SourcePath>Source</SourcePath>
+  <ArchivePath>Archive</ArchivePath>
+  <ErrorPath>Errors</ErrorPath>
+  <WarningPath>Warnings</WarningPath>
+  <ResultsPath>Results</ResultsPath>
+  <BackupPath></BackupPath>
+  <DictionaryExportPath></DictionaryExportPath>
+  <PatientCodePrefix></PatientCodePrefix>-->
+  <!--<HospitalCode>1</HospitalCode>
+  <HospitalName>По умолчанию</HospitalName>-->
+  <!--<HospitalCode>127</HospitalCode>
+  <HospitalName>СКММЦ</HospitalName>-->
+
+  <!-- =========================================================================================================================== -->
+  
+  <!-- Настройки "помощника обмена данными" ExchangeHelper3_EMIAS -->
+   <!-- <LisID>ALISA-67</LisID> -->
+   <!-- <LisIDStr>АЛИСА</LisIDStr> -->
+   <!-- <Schema4ValidateURL>D:\Projects\EMIAS\From_wsdl\OUL_R22.xsd</Schema4ValidateURL> -->
+   <!-- <MapperSettingStr>data source=testserver1\sql2016;initial catalog=MIS_Exchange_developer;persist security info=True;user id=sa;password=sa;</MapperSettingStr> -->
+   <!-- <IsLogSoapInFiles>true</IsLogSoapInFiles> -->
+   <!-- <IsDisabledResearchResultsMapping>true</IsDisabledResearchResultsMapping> -->
+   <!-- <VidFinans>1</VidFinans> -->
+   <!-- <HospitalCode>2</HospitalCode> -->
+   <!-- <ResultsResendingAttemptCount>5</ResultsResendingAttemptCount> -->
+   <!-- <DiagnosisDictionaryId>3</DiagnosisDictionaryId> -->
+   <!-- <DiagnosisUserFieldName>Диагноз</DiagnosisUserFieldName> -->
+   <!-- <DiagnosisUserFieldCode>diagnosisEnum</DiagnosisUserFieldCode> -->
+   <!-- <MicrobiologyTargetCode>ESLI.LI.5.5001</MicrobiologyTargetCode> -->
+
+  <!-- =========================================================================================================================== -->
+
+  <!-- Настройки "помощника обмена данными" InovusExchangeHelper3 -->
+  <!-- <ReportName>InovusReport</ReportName> -->
+  <!-- <ServerAddress>https://rmis33.r-mis.ru/service-attachments/rs/serviceAttachments111</ServerAddress> -->
+  <!-- <http://192.168.100.103/</ServerAddress> -->
+  <!-- <HttpPatientSearchAuToken>dGVzdGZvcjpUZXN0Rm9yMTIz</HttpPatientSearchAuToken> -->
+  <!-- <IsLoggingAllSoapMessages>true</IsLoggingAllSoapMessages> -->
+
+  <!-- =========================================================================================================================== -->
+
+  <!--Настройки "помощника обмена данными" ExchangeHelper3_FederalServiceDLI -->
+  <!--<MapperConnectionStr>data source=TESTSERVER1\SQL2016;initial catalog=MisExchangeMapperFederalServiceDLI;user id=sa;password=sa;</MapperConnectionStr>-->
+  <!--<MapperConnectionStr>data source=DBSERV\DEV2016;initial catalog=MisExchangeMapperFederalServiceDLI_NEW;user id=sa;password=Sqlserver;</MapperConnectionStr>-->
+  <!--<IsLoggingJsonRequest>true</IsLoggingJsonRequest>-->
+  <!--<ServiceAddress>http://194.0.219.199/pdkdl/api/fhir/?_format=json</ServiceAddress>-->
+  <!--<SystemCode>1.2.643.2.69.1.2.33.2</SystemCode>-->
+  <!--<IDMO>a2936d8f-24e5-48c4-9beb-b9580ed3a89b</IDMO>-->
+  <!--<AuthorizationToken>86770d74-3e84-418b-88b6-4c9de7cc4cdb</AuthorizationToken>-->
+
+  <!-- 1.2.643.5.1.13.13.11.1080 - код справочника "ФСЛИ. Справочник лабораторных тестов" -->
+  <!--<TestDictionaryOID_ClinicalTest>urn:oid:1.2.643.5.1.13.13.11.1080</TestDictionaryOID_ClinicalTest>-->
+  <!--<TestDictionaryVersion_ClinicalTest>3.7</TestDictionaryVersion_ClinicalTest>-->
+
+  <!-- 1.2.643.2.69.1.1.1.74 - код справочника "Справочник антибиотиков" -->
+  <!--<AntibioticDictionaryOID>urn:oid:1.2.643.2.69.1.1.1.74</AntibioticDictionaryOID>-->
+  <!--<AntibioticDictionaryVersion>1</AntibioticDictionaryVersion>-->
+
+  <!-- 1.2.643.5.1.13.13.11.1070 - код справочника "Номенклатура медицинских услуг" -->
+  <!--<TargetDictionaryOID>urn:oid:1.2.643.5.1.13.13.11.1070</TargetDictionaryOID>-->
+  <!--<TargetDictionaryVersion>2.4</TargetDictionaryVersion>-->
+
+  <!--  1.2.643.5.1.13.13.11.1117 - код справочника "ФСЛИ. Группы лабораторных исследований" -->
+  <!--<TargetCategoryDictionaryOID>urn:oid:1.2.643.5.1.13.13.11.1117</TargetCategoryDictionaryOID>-->
+  <!--<TargetCategoryDictionaryVersion>1.1</TargetCategoryDictionaryVersion>-->
+
+  <!--  1.2.643.5.1.13.13.11.1381 - код справочника "Справочник кодов интерпретации результатов" -->
+  <!--<InterpretationDictionaryOID>urn:oid:1.2.643.5.1.13.13.11.1381</InterpretationDictionaryOID>-->
+  <!--<InterpretationDictionaryVersion>1.1</InterpretationDictionaryVersion>-->
+
+  <!--  Внешний код "синтетического" микробиологического теста, необходимого для передачи структуры "Тест -> Микроорганизм -> Тест на антибиотик" -->
+  <!--<SyntheticMicrobiologyTestExternalCode>1132935</SyntheticMicrobiologyTestExternalCode>-->
+
+  <!-- =========================================================================================================================== -->
+
+  <!-- Настройки "помощника обмена данными" ExchangeHelper3_BARS -->
+  <!--<IsStacUserFieldCode>is_stac</IsStacUserFieldCode> -->
+  <!--<DiagnosisUserFieldCode></DiagnosisUserFieldCode>-->
+  <!--<DiagnosisTextUserFieldCode></DiagnosisTextUserFieldCode> -->
+  <!--<DefaultMicroorganismTestCode>defaultMicro</DefaultMicroorganismTestCode>-->
+  <!--<DefaultMicroorganismTestName>MicroDefault</DefaultMicroorganismTestName>-->
+  <!--<PatientCardNumberUserFieldCode>patient_card_number</PatientCardNumberUserFieldCode>-->
+  
+  <!-- =========================================================================================================================== -->
+  
+  <!-- Настройки "помощника обмена данными" ExchangeHelper3_BARS_2020 -->
+   <ServerAddress>http://test-lis.emias.mosreg.ru</ServerAddress>
+   <GetOrdersURL>/ws/exlab/api/fhir/$getorders?_format=json</GetOrdersURL>
+   <GetOrderURL>/ws/exlab/api/fhir/$getorder?_format=json</GetOrderURL>
+   <PostResultURL>/ws/exlab/api/fhir/$postresult?_format=json</PostResultURL> 
+   <AuthorizationKey>BARSLIS 88bfdb32-0218-4859-af4b-b0e59b6c2e54</AuthorizationKey> 
+   <HospitalGUID>939a9611-21cf-4169-8000-695c05baf7de</HospitalGUID> 
+   <LaboratoryGUID>939a9611-21cf-4169-8000-695c05baf7de</LaboratoryGUID> 
+  <!-- Интервал отправки запроса GetOrders в секундах -->
+   <GetOrdersRequestInterval>60</GetOrdersRequestInterval>
+   <ReportName>Ответ</ReportName>
+   <!--<MapperConnectionStr>data source=TESTSERVER1\SQL2016;initial catalog=MisExchangeMapperBars_2020;user id=sa;password=sa;</MapperConnectionStr> -->
+   <LisOID>1.2.643.5.1.13.13.12.2.61.6333.35</LisOID> 
+   <MisOID>1.2.643.5.1.13.13.12.2.77.7799.55</MisOID> 
+   <HospitalCode>2</HospitalCode> -->
+   <UseTestMode>true</UseTestMode>
+   <MessagesEncoding>System.Text.Encoding.BigEndianUnicode</MessagesEncoding>
+  <Snils>SNILS</Snils>
+  <!-- Код пользовательского поля "Диагноз" -->
+  <Diagnosis>DiagnosisList</Diagnosis>
+  <!-- Код пользовательского поля "ОМС" -->
+  <OMS>OMS</OMS>
+  <!-- Код пользовательского поля "Комментарий к адресу" -->
+  <СommentAddress>commentAddress</СommentAddress>
+  <!-- Код перечислимого пользовательского поля "Тип документа" -->
+  <DocumentType>DocumentType</DocumentType>
+  <DocumentTypeDictionaryId>urn:oid:1.2.643.2.69.1.1.1.6.</DocumentTypeDictionaryId>
+  <!-- Код строкового пользовательского поля "Номер документа" -->
+  <DocumentNumber>DocumentNumber</DocumentNumber>
+  <!-- Код строкового пользовательского поля "Серия документа" -->
+  <DocumentSeries>DocumentSeries</DocumentSeries>
+  <!-- Код строкового пользовательского поля "Кем выдан" -->
+  <DocumentIssue>DocumentIssue</DocumentIssue>
+  <!-- Код строкового пользовательского поля "Дата выдачи" -->
+  <DocumentIssueDate>DocumentIssueDate</DocumentIssueDate>
+  <!-- Код тест-системы -->
+  <TestSystemPrefix>TS_</TestSystemPrefix>
+  <!-- Код перечислимого пользовательского поля "Код контингента" -->
+  <ContingentCode>contingentCode</ContingentCode>
+  <!-- Код пользовательского поля "Комментарий к заявке" -->
+  <Comment>comment</Comment>
+  <!-- Код пользовательского поля "День цикла" -->
+  <DayOfCycle>DayOfCycle</DayOfCycle>
+  <!-- Код пользовательского поля типа тест "Рост" -->
+  <Height>Height</Height>
+  <!-- Код пользовательского поля типа тест "Вес" -->
+  <BodyMass>BodyMass</BodyMass>
+  <!-- Код пользовательского поля типа тест "Диурез" -->
+  <Diuresis>Diuresis</Diuresis>
+  
+  <!-- =========================================================================================================================== -->
+  
+  <!-- Настройки "помощника обмена данными" ExchangeHelper3_RCELRD_Kirov -->
+  <!-- <ServerAddress>http://r43-rc.zdrav.netrika.ru</ServerAddress> -->
+  <!-- <PostBundleURL>/exlab/api/fhir?_format=json</PostBundleURL> -->
+  <!-- <AuthorizationKey>N3 8cfbd581-6034-4fcd-b00e-e88a1e9efbfe</AuthorizationKey> -->
+  <!-- <HospitalGUID>422c9dec-abd3-4a5c-8fe6-4376349a70ec</HospitalGUID> -->
+  <!-- <PractitionerCode>PractitionerCode</PractitionerCode> -->
+  <!-- <PractitionerIIAN>422c9dec-abd3-4a5c-8fe6-4376349a70ec</PractitionerIIAN> -->
+  <!-- <PractitionerLastName>PractitionerLastName</PractitionerLastName> -->
+  <!-- <PractitionerFirstName>PractitionerFirstName</PractitionerFirstName> -->
+  <!-- <PractitionerMiddleName>PractitionerMiddleName</PractitionerMiddleName> -->
+  <!-- <UserFieldCode_PatientIIAN>PatientIIAN</UserFieldCode_PatientIIAN> -->
+  <!-- <LisOID>1.2.643.2.69.1.2.4</LisOID> -->
+  <!-- <ServicesDictionaryOID>1.2.643.5.1.13.13.11.1070</ServicesDictionaryOID> -->
+  <!-- <TestsDictionaryOID>1.2.643.5.1.13.13.11.1080</TestsDictionaryOID> -->
+  <!-- <ResultsInterpretationDictionaryOID>1.2.643.5.1.13.13.11.1381</ResultsInterpretationDictionaryOID> -->
+  <!-- <ServicesDictionaryVersion>2.4</ServicesDictionaryVersion> -->
+  <!-- <TestsDictionaryVersion>3.17</TestsDictionaryVersion> -->
+  <!-- <ResultsInterpretationDictionaryVersion>1</ResultsInterpretationDictionaryVersion> -->
+  <!-- <ReportName>Ответ</ReportName> -->
+  
+  <!-- =========================================================================================================================== -->
+
+  <!--Настройки "помощника обмена данными" ExchangeHelper3_FTMIS-->
+  <!--<HospitalCode>62</HospitalCode>
+  <HospitalName>СКММЦ</HospitalName>
+  <NotFormPdf>true</NotFormPdf>
+  <NotFormPracSign>true</NotFormPracSign>
+  <NotFormOrgSign>true</NotFormOrgSign>-->
+
+  <!-- =========================================================================================================================== -->
+
+  <!--Настройки "помощника обмена данными" ExchangeHelper3_INTERIN-->
+  <!--<Org>LIS</Org>-->
+  <!--<Token>123</Token>-->
+  <!--<PatientCardUserFieldCode>I1</PatientCardUserFieldCode>-->
+  <!--<CodeContingentUserFieldCode>I3</CodeContingentUserFieldCode>-->
+  <!--<DiagnosisCodeUserFieldCode>I7</DiagnosisCodeUserFieldCode>-->
+
+  <!-- Настройки обработки складских операций -->
+  <!-- Директория, в которую должны помещаться файлы с операциями прихода материалов -->
+  <!--<ReceiptOperationsPath>ReceiptOperations</ReceiptOperationsPath>-->
+  <!-- Ссылка на склад по умолчанию (для регистрации операций прихода) -->
+  <!--<ReceiptOperationsDefaultStorage>6005684</ReceiptOperationsDefaultStorage>-->
+  <!-- Директория, в которую будут помещаться файлы подтверждения обработки операции прихода -->
+  <!--<ReceiptOperationsAcknowledgmentPath>ReceiptOperationsAcknowledgment</ReceiptOperationsAcknowledgmentPath>-->
+  <!-- Директория, в которую будут помещаться файлы информации о расходе -->
+  <!--<ExpenditureInfosPath>ExpenditureInfos</ExpenditureInfosPath>-->
+  <!-- Директория, в которую будут помещаться файлы подтверждения обработки информации о расходе -->
+  <!--<ExpenditureAcknowledgmentPath>ExpenditureAcknowledgment</ExpenditureAcknowledgmentPath>-->
+
+  <!-- =========================================================================================================================== -->
+
+  <!-- Настройки "помощника обмена данными" <f t="s" n="exchangeMode" v="ExchangeHelper3_Medwork" /> -->
+  <!-- Директория, в которую должны помещаться заявки для ЛИС -->
+  <!--<SourcePath>Requests</SourcePath>-->
+  <!-- Директория, в которую будут помещаться файлы подтверждения обработки заявки -->
+  <!--<RequestAcknowledgmentPath>RequestAcknowledgment</RequestAcknowledgmentPath>-->
+  <!-- Директория, в которую будут перемещаться файлы заявок после успешной обработки -->
+  <!--<ArchivePath>Archive</ArchivePath>-->
+  <!-- Директория, в которую будут помещаться копии файлов ответов по заявкам -->
+  <!--<BackupPath>Backup</BackupPath>-->
+  <!-- Директория, в которую будут перемещаться файлы заявок при возникновении ошибок -->
+  <!--<ErrorPath>Errors</ErrorPath> -->
+  <!-- Директория, в которую будут помещаться результаты (ответы по заявкам) -->
+  <!--<ResultsPath>Results</ResultsPath> -->
+  <!-- Директория, в которую должны помещаться файлы подтверждения обработки результатов -->
+  <!--<ResultAcknowledgmentPath>ResultAcknowledgment</ResultAcknowledgmentPath>-->
+  <!-- Префикс, который будет добавляться к коду пациента при создании заявки -->
+  <!--<PatientCodePrefix>MW</PatientCodePrefix> -->
+
+  <!-- =========================================================================================================================== -->
+
+  <!-- Настройки "помощника обмена данными" FilesExchangeHelper3_v2_05+_Xml -->
+  <!-- Директория, в которую должны помещаться заявки для ЛИС -->
+  <SourcePath>Requests</SourcePath>
+  <!-- Директория, в которую будут перемещаться файлы заявок после успешной обработки -->
+  <ArchivePath>Archive</ArchivePath>
+  <!-- Директория, в которую будут перемещаться файлы заявок при возникновении ошибок -->
+  <ErrorPath>Errors</ErrorPath>
+ <!-- Директория, в которую будут помещаться файлы подтверждения обработки заявки -->
+  <RequestAcknowledgmentPath>RequestAcknowledgment</RequestAcknowledgmentPath>
+  <!-- Директория, в которую будут помещаться результаты (ответы по заявкам) -->
+  <ResultsPath>Results</ResultsPath>
+ <!-- Директория, в которую должны помещаться файлы подтверждения обработки результатов -->
+  <ResultAcknowledgmentPath>ResultAcknowledgment</ResultAcknowledgmentPath>
+
+  <IsEnabledMessageCaching>true</IsEnabledMessageCaching>
+
+  <!-- =========================================================================================================================== -->
+
+  <!-- Настройки "помощника обмена данными" ExchangeHelper3_Avicenna -->
+  <!-- Директория, в которую должны помещаться заявки для ЛИС -->
+  <!--<SourcePath>Requests</SourcePath>-->
+  <!-- Директория, в которую будут перемещаться файлы заявок после успешной обработки -->
+  <!--<ArchivePath>Archive</ArchivePath>-->
+  <!-- Директория, в которую будут перемещаться файлы заявок при возникновении ошибок -->
+  <!--<ErrorPath>Errors</ErrorPath>-->
+  <!-- Директория, в которую будут помещаться файлы подтверждения обработки заявки -->
+  <!--<RequestAcknowledgmentPath>RequestAcknowledgment</RequestAcknowledgmentPath>-->
+  <!-- Директория, в которую будут помещаться результаты (ответы по заявкам) -->
+  <!--<ResultsPath>Results</ResultsPath>-->
+  <!-- Директория, в которую должны помещаться файлы подтверждения обработки результатов -->
+  <!--<ResultAcknowledgmentPath>ResultAcknowledgment</ResultAcknowledgmentPath>-->
+  <!-- Код ЛПУ -->
+  <!--<HospitalCode>3</HospitalCode>-->
+  <!-- Код отделения в ЛПУ -->
+  <!--<DepartmentCode></DepartmentCode>-->
+  <!-- Код пользовательского поля, в которое записывается диагноз -->
+  <!--<DiagnosisUserFieldCode>diagnosisString</DiagnosisUserFieldCode> -->
+
+  <!-- =========================================================================================================================== -->
+
+  <!-- Настройки "помощника обмена данными" FilesExchangeHelper3_Nexadia -->
+  <!-- Директория, в которую будут помещаться результаты (ответы по заявкам) -->
+  <!-- <ResultsPath>Results</ResultsPath>-->
+  <!-- Директория, в которую будут помещаться резервные копии результатов (ответов по заявкам) -->
+  <!-- <BackupPath>Backup</BackupPath>-->
+  <!-- Код пользовательского поля, в которое записывается Nexadia_ID. По нему осуществляется фильтрация результатов -->
+  <!-- <NexadiaIDUserFieldCode>Nexadia_ID</NexadiaIDUserFieldCode>-->
+  <!-- Включить выгрузку справочников из ЕМИАС-->
+  <!--IsEMIASExportDictionaries>true</IsEMIASExportDictionaries>-->
+  <!-- Путь для создания файлов с SQL скриптам-->-->
+  <!-- <EMIASDictionariesSqlFilePath>D:\Work\dev_NLSdotNetProjects\MisExchangeService\bin\Debug\EMIAS\</EMIASDictionariesSqlFilePath>-->
+  <!--Строка подключения к БД ЛИМС-->
+  <!-- <LIMSServerDBConnectionString>Password=lims;Persist Security Info=True;User ID=lims;Initial Catalog=LIMS_PEA_2;Data Source=testserver1\SQL2016</LIMSServerDBConnectionString>-->
+  <!--Id биоматериала (общего) для исследований-->
+  <!-- <BiomaterialId>36</BiomaterialId>-->
+  <!--Id отделения для исследований-->
+  <!-- <DepartmentId>493928</DepartmentId>-->
+
+  <!-- =========================================================================================================================== -->
+
+  <!--Настройки "помощника обмена данными" ExchangeHelper3_SOAP-->
+  <!--<FillExecutorOrganizationAsHospital>false</FillExecutorOrganizationAsHospital>-->
+  <!--<UseAlternativeBiomaterialChecking>true</UseAlternativeBiomaterialChecking>-->
+  <!--<DoNotSendResultsWithEmptySamples>true</DoNotSendResultsWithEmptySamples>-->
+  <!--<ReportName>Ответ по пробе</ReportName>-->
+  <!--<ActionType>View</ActionType>-->
+  <!--<DocumentType>Specimen</DocumentType>-->
+  <!--<UploadSampleResultReport>true</UploadSampleResultReport>-->
+  
+  <!-- Отключение данных опций ускоряет работу службы-->
+
+  <!--<IsEnabledMessageCaching>true</IsEnabledMessageCaching> -->
+  <!--<IsValidateSchema>false</IsValidateSchema> -->
+  <!--<IsLogSoapInFiles>false</IsLogSoapInFiles> -->
+  <!--<IsEnabledTargetsBiomaterialsMapping>false</IsEnabledTargetsBiomaterialsMapping> -->
+  <!--<IsDisabledPatientSave>true</IsDisabledPatientSave> -->
+  <!--<IsDisabledValidation>true</IsDisabledValidation> -->
+
+  <!-- =========================================================================================================================== -->
+
+  <!--Настройки "помощника обмена данными" ExchangeHelper3_MIS_RTLabs -->
+ <!-- Код пользовательского поля, в которое записывается Вид финансирования  -->
+  <!--<VidFinans>1</VidFinans> -->
+  <!-- Код пользовательского поля, в которое записывается Код диагноза по МКБ 10  -->
+  <!--<Diagnos>ОРВИ</Diagnos> -->
+  <!-- Код пользовательского поля, в которое записывается Номер случая, из которого создано направление -->
+  <!--<CaseCode>1</CaseCode> -->
+  <!-- Код пользовательского поля, в которое записывается СНИЛС пациента -->
+  <!--<Snils>12345</Snils> -->
+  <!-- Код пользовательского поля, в которое записывается СНИЛС врача, разместившего заявку -->
+  <!--<SNILSDoctor>12345</SNILSDoctor> -->
+  <!-- Код пользовательского поля, в которое записывается Наименование должности врача, создавшего заявку -->
+  <!--<PositionName>Терапевт</PositionName> -->
+  <!--<IsLoggingAllSoapMessages>true</IsLoggingAllSoapMessages> -->
+  <ServerAddress>http://localhost:8089</ServerAddress>
+  <HttpUserAgent>Apache-HttpClient/4.1.1 (java 1.5)</HttpUserAgent>
+  <!--<OrganizationCode>25</OrganizationCode> -->
+  <TaskManagerRequestInterval>300000</TaskManagerRequestInterval> 
+  <!--<SoapUiSSL>true</SoapUiSSL>  -->
+  <HttpAuthorizationToken>YWRtaW46MTZSZnXXXXX</HttpAuthorizationToken>
+
+  <!-- =========================================================================================================================== -->
+
+  <!-- Настройки "помощника обмена данными" <f t="s" n="exchangeMode" v="ExchangeHelper3_INVITRO" /> -->
+  <!-- Директория, в которую должны помещаться заявки для ЛИС -->
+  <SourcePath>C:\Test\Requests</SourcePath>
+  <!-- Директория, в которую будут помещаться результаты (ответы по заявкам) -->
+  <ResultsPath>C:\Test\Results</ResultsPath>
+  <!-- Директория, в которую будут помещаться резервные копии результатов (ответов по заявкам) -->
+  <BackupPath>C:\Test\Backup</BackupPath>
+  <!-- Директория, в которую будут перемещаться файлы заявок после успешной обработки -->
+  <ArchivePath>C:\Test\Archive</ArchivePath> 
+  <!-- Директория, в которую будут перемещаться файлы заявок при возникновении ошибок -->
+  <ErrorPath>C:\Test\Errors</ErrorPath> 
+  <!-- Код ЛПУ -->
+  <HospitalCode>28</HospitalCode>
+  <BaseObservations>116ЧЛБ</BaseObservations>
+  <!-- Строка соединения с БД для маппинга микроорганизмов и антибиотиков -->
+  <MapperConnectionStr>data source=DBSERV\DEV2019;initial catalog=MisExchangeMapperInvitro;user id=sa;password=Sqlserver;</MapperConnectionStr>
+
+  <!-- =========================================================================================================================== -->
+
+  <!-- Настройки хелпера <f t="s" n="exchangeMode" v="ExchangeHelper3_YandexAPI" /> -->
+  <!-- Код заказчика, от имени которого будут регистрироваться заявки (ЛИС, справочник "Заказчики")-->
+  <HospitalCode>ya</HospitalCode>
+  <!-- Код исследования на COVID-19 (ЛИС, справочник "Исследования")-->
+  <COVID19_ObservationCode>COVID-19</COVID19_ObservationCode>
+  <!-- Код строкового пользовательского поля "Документ (пациент)" -->
+  <PatientDocumentUserFieldCode>PatientDocument</PatientDocumentUserFieldCode>
+  <!-- Код строкового пользовательского поля "Адрес (пациент)" -->
+  <PatientAddressUserFieldCode>PatientAddress</PatientAddressUserFieldCode>
+  <!-- Код строкового пользовательского поля "Документ (опекун)" -->
+  <GuardianDocumentUserFieldCode>GuardianDocument</GuardianDocumentUserFieldCode>
+  <!-- Идентификатор лаборатории/внешней системы (ЛИС), выданный яндексом" -->
+  <X_External_Service>sandbox</X_External_Service>
+  <!-- "Ключ" лаборатории/внешней системы (ЛИС), выданный яндексом" -->
+  <X_External_API_Key>sandbox_key</X_External_API_Key>
+  <!-- Значение заголовка "Origin" в запросе к сервису -->
+  <Origin>https://labs-api.tst.yandex.ru</Origin>
+  <!-- Адрес ендпоинта для получения "сумок" с заказами от Яндекс -->
+  <GetBucketsBaseAddress>https://labs-api.tst.yandex.ru/lab/v1/buckets?</GetBucketsBaseAddress>
+  <!-- Адрес ендпоинта для изменения статуса заказа -->
+  <ChangeOrderStatusBaseAddress>https://labs-api.tst.yandex.ru/lab/v1/orders/status?id=</ChangeOrderStatusBaseAddress>
+  <!-- Адрес ендпоинта для сохранения штрих-кода заказа -->
+  <SaveOrderBarcodeBaseAddress>https://labs-api.tst.yandex.ru/lab/v1/orders/barcode?id=</SaveOrderBarcodeBaseAddress>
+  <!-- Id лаборатории, выданный Яндексом -->
+  <Yandex_lab_id>sandbox_1</Yandex_lab_id>  
+  <!--<DANGER_EnableSelfSignedCertificate>true</DANGER_EnableSelfSignedCertificate>-->
+
+  <!-- =========================================================================================================================== -->
+
+  <!-- Настройки "помощника обмена данными" ExchangeHelper3_PersonalTreatment_Innovasystem -->
+  <RabbitMQHostName>testserver2</RabbitMQHostName>
+  <RabbitMQQueueName>lims_to_pt_results</RabbitMQQueueName>
+  
+  <UserFieldCode_ambulatoryCardRegistrationDate>ambulatoryCardRegistrationDate</UserFieldCode_ambulatoryCardRegistrationDate>
+  <UserFieldCode_snils>snils</UserFieldCode_snils>
+  <UserFieldCode_polis>polis</UserFieldCode_polis>
+  <UserFieldCode_documentType>documentType</UserFieldCode_documentType>
+  <UserFieldCode_documentSubmittedDate>documentSubmittedDate</UserFieldCode_documentSubmittedDate>
+  <UserFieldCode_documentSeries>documentSeries</UserFieldCode_documentSeries>
+  <UserFieldCode_documentNumber>documentNumber</UserFieldCode_documentNumber>
+  <UserFieldCode_addressOfficial>addressOfficial</UserFieldCode_addressOfficial>
+  <UserFieldCode_addressCurrent>addressCurrent</UserFieldCode_addressCurrent>
+
+  <!-- =========================================================================================================================== -->
+
+  <!-- =========================================================================================================================== -->
+
+  <!-- Настройки хелпера <f t="s" n="exchangeMode" v="ExchangeHelper3_RosPotrebNadzor" /> -->
+  <!-- Код лаборатии в системе РосПотребНадзора"-->
+  <DepartNumber>101071</DepartNumber>
+  <!-- Код качественного теста на COVID-19 ПЦР COVID (ЛИС, справочник "Тесты")-->
+  <COVID19_TestQualCodePCR>COVIDPCR9</COVID19_TestQualCodePCR>
+  <!-- Код качественного теста на COVID-19 Антитела COVID, качественное IgG (ЛИС, справочник "Тесты")-->
+  <COVID19_TestQualCodeIGG>COVIDIGG</COVID19_TestQualCodeIGG>
+  <!-- Код количественного теста на COVID-19 Антитела COVID, количественное IgG (ЛИС, справочник "Тесты")-->
+  <COVID19_TestCalcCodeIGG>1005180</COVID19_TestCalcCodeIGG>
+  <!-- Код качественного теста на COVID-19 Антитела COVID, качественное IgM (ЛИС, справочник "Тесты")-->
+  <!-- Код качественного теста на COVID-19 Антитела COVID, качественное IgM (ЛИС, справочник "Тесты")-->
+  <COVID19_TestQualCodeIGM>COVIDIGM</COVID19_TestQualCodeIGM>
+  <!-- Код количественного теста на COVID-19 Антитела COVID, количественное IgM (ЛИС, справочник "Тесты")-->
+  <COVID19_TestCalcCodeIGM>1005180</COVID19_TestCalcCodeIGM>
+  <!-- Код качественного теста на COVID-19 Антитела COVID, суммарное значение IgG и IgM (ЛИС, справочник "Тесты")-->
+  <COVID19_TestQualCodeIGGIGM>COVIDIGMIGG</COVID19_TestQualCodeIGGIGM>
+  <!-- Код количественного теста на COVID-19 Антитела COVID, суммарное значение IgG и IgM (ЛИС, справочник "Тесты")-->
+  <COVID19_TestCalcCodeIGMIGG>1005180</COVID19_TestCalcCodeIGMIGG>
+  <!-- Код количественного теста на COVID-19 (ЛИС, справочник "Тесты")-->
+  <COVID19_TestCalcCode>1005180</COVID19_TestCalcCode>
+  <COVID19_TestCalcCodeIGGIGM>1005180</COVID19_TestCalcCodeIGGIGM>
+<!-- Код пользовательского поля, в которое записывается СНИЛС пациента -->
+  <Snils>Snils</Snils>
+  <!-- Код строкового пользовательского поля "Тип документа" -->
+  <DocumentType>DocumentType</DocumentType>
+  <!-- Код строкового пользовательского поля "Серия документа" -->
+  <DocumentNumber>DocumentNumber</DocumentNumber>
+  <!-- Код строкового пользовательского поля "Номер документа" -->
+  <DocumentSerNumber>DocumentSerNumber</DocumentSerNumber>
+  <!-- Адрес ендпоинта для выгрузки заявок -->
+  <PostOrdersBaseAddress>https://result.crie.ru/api/v2/order/ext-orders-package</PostOrdersBaseAddress>
+  <!-- Адрес ендпоинта для получения токена -->
+  <PostTokenAddress>https://result.crie.ru/api/v2/order/get-depart-token</PostTokenAddress>
+  <!-- Токен лаборатории -->
+  <LabToken>B397900C-4231-FE5B-BC74-62DDD54C3CF5</LabToken>
+  <!-- Код экспресс качественного теста на COVID-19 (ЛИС, справочник "Тесты")-->
+  <COVID19_TestQualCitoCode>CovidCitoQual</COVID19_TestQualCitoCode>
+  <!-- Код экспресс количественного теста на COVID-19 (ЛИС, справочник "Тесты")-->
+  <COVID19_TestCalcCitoCode>CovidCitoCalc</COVID19_TestCalcCitoCode>
+  <!-- Код теста для поддержки тест-системы-->
+  <TestSystemCode>20-320-5.16</TestSystemCode>
+  <!-- ОГРН заказчика лаборатории-->
+  <OGRN>OGRN</OGRN>
+
+  <!-- Настройки хелпера <f t="s" n="exchangeMode" v="ExchangeHelper3_RedMine_ExchangeHelper" /> -->
+  <!-- Код строкового пользовательского поля "Тип документа" -->
+  <DocumentType>DocumentType</DocumentType>
+  <!-- Код строкового пользовательского поля "Серия документа" -->
+  <DocumentNumber>DocumentNumber</DocumentNumber>
+  <!-- Код строкового пользовательского поля "Номер документа" -->
+  <DocumentSerNumber>DocumentSerNumber</DocumentSerNumber>
+  <!-- Код строкового пользовательского поля "ОМС" -->
+  <SNILS>SNILS</SNILS>
+  <!-- Код строкового пользовательского поля "СНИЛС" -->
+  <OMS>OMS</OMS>
+  <!-- Код строкового пользовательского поля "Гражданство" -->
+  <Сitizenship>Сitizenship</Сitizenship>
+  <!-- Код исследования на Covid-19-->
+  <ObservationCode>COVID-19</ObservationCode>
+  <!-- Адресс для получения заявок-->
+  <GetIssuesBaseAddress>https://5501379b-98e3-40d5-9c7b-550e6a1dd86b.mock.pstmn.io/PAS:8090/projects/covid_proverki/issues.json?cf_54=835</GetIssuesBaseAddress>
+  <GetIssueBaseAddress>https://20d4fb9f-43eb-4611-80b2-c400b54fe3e8.mock.pstmn.io/PAS:8090/issues</GetIssueBaseAddress>
+  <PostIssueBaseAddress>https://94d84401-b4e7-4b04-82b6-d34d71d6f2e2.mock.pstmn.io/issues</PostIssueBaseAddress>
+  <!-- Пользователь для авторизации-->
+  <Username>TregubPP</Username>
+  <!-- Пароль для авторизации-->
+  <!--<Password>UEZPtNxReJ</Password>-->
+
+
+  <!-- Настройки хелпера <f t="s" n="exchangeMode" v="ExchangeHelper3_EMIAS_COVID19" /> -->
+  <!-- Адрес ендпоинта для получения токена -->
+  <PostTokenURL>https://test-materials.mosmedzdrav.ru/api/auth/login</PostTokenURL>
+  <!-- Адрес ендпоинта для отправки результатов -->
+  <PostResponseURL>https://test-materials.mosmedzdrav.ru/api/auth/login</PostResponseURL>
+  <!-- Адрес ендпоинта для отправки регистрации пробы -->
+  <GetCheckinURL>https://test-materials.mosmedzdrav.ru/api/main/getNumSamples</GetCheckinURL>
+  <!-- Логин пользователя -->
+  <Login>onkodiagnostika</Login>
+  <!-- Пароль пользователя -->
+  <!--<Password>onkodiagnostika</Password>-->
+  <!-- Код лаборатории заказчика -->
+  <HospitalCode>2</HospitalCode>
+
+
+  <!-- Настройки хелпера <f t="s" n="exchangeMode" v="ExchangeHelper3_KSAMU" /> -->
+  <!-- Папка для выгрузки XML-файлов -->
+  <FileExportPath>C:\Test\Results</FileExportPath>
+  <!-- Код строкового пользовательского поля "СНИЛС" -->
+  <SNILS>SNILS</SNILS>
+  <!-- Код перечислимого пользовательского поля "Тип документа" -->
+  <DocumentType>DocumentType</DocumentType>
+  <!-- Код строкового пользовательского поля "Номер документа" -->
+  <DocumentNumber>DocumentNumber</DocumentNumber>
+  <!-- Код строкового пользовательского поля "Серия документа" -->
+  <DocumentSer>DocumentSeries</DocumentSer>
+  <!-- Код перечислимого пользовательского поля "Тип ОМС" -->
+  <OMSPolisType>DocumentType</OMSPolisType>
+  <!-- Код строкового пользовательского поля "Код страховой компании по реестру" -->
+  <OMSPolisSmo>OMSPolisSmo</OMSPolisSmo>
+  <!-- Код перечислимого пользовательского поля "Диагноз" -->
+  <!--<Diagnosis>DocumentType</Diagnosis>-->
+  <!-- Фамилия врача -->
+  <FAM_MD>Хутов</FAM_MD>
+  <!-- Имя врача -->
+  <IM_MD>Мурат</IM_MD>
+  <!-- Отчество врача -->
+  <OT_MD>Рамазанович</OT_MD>
+</HelperSettings>

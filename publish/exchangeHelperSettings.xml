@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HelperSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- Настройки "помощника обмена данными" FilesExchangeHelper3_v2_05+_Xml -->
+ 
+  <!-- Директория, в которую должны помещаться заявки для ЛИС -->
+  <SourcePath>C:\Projects\temp\ExchangeFolders\Requests</SourcePath>
+  <!-- Директория, в которую будут перемещаться файлы заявок после успешной обработки -->
+  <ArchivePath>C:\Projects\temp\ExchangeFolders\Archive</ArchivePath>
+  <!-- Директория, в которую будут перемещаться файлы заявок при возникновении ошибок -->
+  <ErrorPath>C:\Projects\temp\ExchangeFolders\Errors</ErrorPath>
+  <!-- Директория, в которую будут помещаться файлы подтверждения обработки заявки -->
+  <RequestAcknowledgmentPath>C:\Projects\temp\ExchangeFolders\RequestAcknowledgment</RequestAcknowledgmentPath>
+  <!-- Директория, в которую будут помещаться результаты (ответы по заявкам) -->
+  <ResultsPath>C:\Projects\temp\ExchangeFolders\Results</ResultsPath>
+  <!-- Директория, в которую должны помещаться файлы подтверждения обработки результатов -->
+  <ResultAcknowledgmentPath>C:\Projects\temp\ExchangeFolders\ResultAcknowledgment</ResultAcknowledgmentPath>
+</HelperSettings>

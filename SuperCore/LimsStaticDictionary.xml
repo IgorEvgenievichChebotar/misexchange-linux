@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<content>
+  <sex>
+    <o n ="Sex">
+      <f t="S" n="name" v="sex"/>
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="Не указан"/>
+          <f t="S" n="code" v="НУ"/>
+          <f t="S" n="mnemonics" v="Не указан"/>
+          <f t="S" n="ExternalCode" v="НУ"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Мужской"/>
+          <f t="S" n="code" v="Муж."/>
+          <f t="S" n="mnemonics" v="Муж."/>
+          <f t="S" n="ExternalCode" v="М"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Женский"/>
+          <f t="S" n="code" v="Жен."/>
+          <f t="S" n="mnemonics" v="Жен."/>
+          <f t="S" n="ExternalCode" v="Ж"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="Не важно"/>
+          <f t="S" n="code" v="НВ"/>
+          <f t="S" n="mnemonics" v="Не важно"/>
+          <f t="S" n="ExternalCode" v="НВ"/>
+        </o>
+      </s>
+    </o>
+  </sex>
+
+  <sex-filter>
+    <o n ="SexFilter">
+      <f t="S" n="name" v="sex"/>
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="Не указан"/>
+          <f t="S" n="code" v="НУ"/>
+          <f t="S" n="mnemonics" v="Не указан"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Мужской"/>
+          <f t="S" n="code" v="Муж."/>
+          <f t="S" n="mnemonics" v="Муж."/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Женский"/>
+          <f t="S" n="code" v="Жен."/>
+          <f t="S" n="mnemonics" v="Жен."/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="Не важно"/>
+          <f t="S" n="code" v="НВ"/>
+          <f t="S" n="mnemonics" v="Не важно"/>
+        </o>
+      </s>
+    </o>
+  </sex-filter>
+
+  <yesNoIgnore>
+    <o n ="yes-no-ignore">
+      <f t="S" n="name" v="yes-no-ignore"/>
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="Да"/>
+          <f t="S" n="code" v="Да"/>
+          <f t="S" n="mnemonics" v="Да"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Нет"/>
+          <f t="S" n="code" v="Нет"/>
+          <f t="S" n="mnemonics" v="Нет"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Не важно"/>
+          <f t="S" n="code" v="Не важно"/>
+          <f t="S" n="mnemonics" v="Не важно"/>
+        </o>
+      </s>
+    </o>
+  </yesNoIgnore>
+
+  <requestState>
+    <o n ="requestState">
+      <f t="S" n="name" v="requestState"/>
+      <s n="elements">
+
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Регистрация"/>
+          <f t="S" n="code" v="Регистрация"/>
+          <f t="S" n="mnemonics" v="Регистрация"/>
+          <f t="S" n="color" v="#7CB9E8"/>
+        </o>
+
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Открыта"/>
+          <f t="S" n="code" v="Открыта"/>
+          <f t="S" n="mnemonics" v="Открыта"/>
+          <f t="S" n="color" v="#C9FFE5"/>
+        </o>
+
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="Закрыта"/>
+          <f t="S" n="code" v="Закрыта"/>
+          <f t="S" n="mnemonics" v="Закрыта"/>
+          <f t="S" n="color" v="#B284BE"/>
+        </o>
+
+        <o n="elements">
+          <f t="I" n="id" v="4"/>
+          <f t="S" n="name" v="Удалено"/>
+          <f t="S" n="code" v="Удалено"/>
+          <f t="S" n="mnemonics" v="Удалено"/>
+          <f t="S" n="color" v="#5D8AA8"/>
+        </o>
+
+        <o n="elements">
+          <f t="I" n="id" v="5"/>
+          <f t="S" n="name" v="Просрочено"/>
+          <f t="S" n="code" v="Просрочено"/>
+          <f t="S" n="mnemonics" v="Просрочено"/>
+          <f t="S" n="color" v="#00308F"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="6"/>
+          <f t="S" n="name" v="Распечатано"/>
+          <f t="S" n="code" v="Распечатано"/>
+          <f t="S" n="mnemonics" v="Распечатано"/>
+          <f t="S" n="color" v="#72A0C1"/>
+        </o>
+
+        <o n="elements">
+          <f t="I" n="id" v="7"/>
+          <f t="S" n="name" v="Не распечатано"/>
+          <f t="S" n="code" v="Не распечатано"/>
+          <f t="S" n="mnemonics" v="Не распечатано"/>
+          <f t="S" n="color" v="#A32638"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="8"/>
+          <f t="S" n="name" v="Отправлен оригинал"/>
+          <f t="S" n="code" v="Отпр. оригинал"/>
+          <f t="S" n="mnemonics" v="Отпр. оригинал"/>
+          <f t="S" n="color" v="#F0F8FF"/>
+        </o>
+
+        <o n="elements">
+          <f t="I" n="id" v="9"/>
+          <f t="S" n="name" v="Оригинал не отправлен"/>
+          <f t="S" n="code" v="Оригинал не отпр."/>
+          <f t="S" n="mnemonics" v="Оригинал не отпр."/>
+          <f t="S" n="color" v="#E32636"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="10"/>
+          <f t="S" n="name" v="Отправлено в электронном виде"/>
+          <f t="S" n="code" v="Отпр. email"/>
+          <f t="S" n="mnemonics" v="Отпр. email"/>
+          <f t="S" n="color" v="#C46210"/>
+        </o>
+
+        <o n="elements">
+          <f t="I" n="id" v="11"/>
+          <f t="S" n="name" v="В электронном виде не отправлялось"/>
+          <f t="S" n="code" v="Не отпр. email"/>
+          <f t="S" n="mnemonics" v="Не отпр. email"/>
+          <f t="S" n="color" v="#7CB9E8"/>
+        </o>
+
+      </s>
+    </o>
+  </requestState>
+
+  <cyclePeriod>
+    <o n="cyclePeriod">
+      <f t="S" n="name" v="CyclePeriod"/>
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Овуляция"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Фолликулиновая"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="Лютеиновая"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="4"/>
+          <f t="S" n="name" v="Менопауза"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="(Не указана)"/>
+        </o>
+      </s>
+    </o>
+  </cyclePeriod>
+
+  <guiElementReportExecutors>
+    <o n ="guiElementReportExecutors">
+      <f t="S" n="name" v="GuiElements"/>
+      <s n="elements">
+
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Журнал заявок"/>
+          <f t="S" n="code" v="TfrRegistrationJournal"/>
+        </o>
+
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Карта заявки"/>
+          <f t="S" n="code" v="TfRequestEditor"/>
+        </o>
+
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="Журнал пациентов"/>
+          <f t="S" n="code" v="TfrPatientJournal"/>
+        </o>
+
+        <o n="elements">
+          <f t="I" n="id" v="4"/>
+          <f t="S" n="name" v="Карта пациента"/>
+          <f t="S" n="code" v="TfPatientEditor"/>
+        </o>
+
+        <o n="elements">
+          <f t="I" n="id" v="5"/>
+          <f t="S" n="name" v="Журнал проб"/>
+          <f t="S" n="code" v="TfrWorkJournal"/>
+        </o>
+
+        <o n="elements">
+          <f t="I" n="id" v="6"/>
+          <f t="S" n="name" v="Карта пробы"/>
+          <f t="S" n="code" v="TfSampleEditor"/>
+        </o>
+      </s>
+    </o>
+  </guiElementReportExecutors>
+
+  <biomaterialStateEx>
+    <o n="biomaterialStateEx">
+      <f t="S" n="name" v="biomaterialStateEx"/>
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="Нет"/>
+          <f t="S" n="code" v="None"/>
+          <f t="S" n="mnemonics" v="None"/>
+          <f t="S" n="color" v="#CCCCFF"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Регистрация"/>
+          <f t="S" n="code" v="Registration"/>
+          <f t="S" n="mnemonics" v="Registration"/>
+          <f t="S" n="color" v="#D7D7D7"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Доставлен"/>
+          <f t="S" n="code" v="Delivered"/>
+          <f t="S" n="mnemonics" v="Delivered"/>
+          <f t="S" n="color" v="#88FF88"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="В работе"/>
+          <f t="S" n="code" v="InPriogress"/>
+          <f t="S" n="mnemonics" v="InPriogress"/>
+          <f t="S" n="color" v="#FFD782"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="4"/>
+          <f t="S" n="name" v="Закрыт"/>
+          <f t="S" n="code" v="Closed"/>
+          <f t="S" n="mnemonics" v="Closed"/>
+          <f t="S" n="color" v="#A4FFFF"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="5"/>
+          <f t="S" n="name" v="Удален"/>
+          <f t="S" n="code" v="Deleted"/>
+          <f t="S" n="mnemonics" v="Deleted"/>
+          <f t="S" n="color" v="#CCCCFF"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="6"/>
+          <f t="S" n="name" v="Задержан"/>
+          <f t="S" n="code" v="Dalayed"/>
+          <f t="S" n="mnemonics" v="Dalayed"/>
+          <f t="S" n="color" v="#CCCCFF"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="7"/>
+          <f t="S" n="name" v="Частично доставлен"/>
+          <f t="S" n="code" v="PartDelivered"/>
+          <f t="S" n="mnemonics" v="PartDelivered"/>
+          <f t="S" n="color" v="#008D20"/>
+        </o>
+      </s>
+    </o>
+  </biomaterialStateEx>
+
+  <normalityState>
+    <o n="normalityState">
+      <f t="S" n="name" v="normalityState"/>
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="Нет данных"/>
+          <f t="S" n="code" v="None"/>
+          <f t="S" n="mnemonics" v="None"/>
+          <f t="S" n="color" v="#FFCFCE"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Норма"/>
+          <f t="S" n="code" v="Normal"/>
+          <f t="S" n="mnemonics" v="Normal"/>
+          <f t="S" n="color" v="#C2FFAE"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Не норма"/>
+          <f t="S" n="code" v="Abnormal"/>
+          <f t="S" n="mnemonics" v="Abnormal"/>
+          <f t="S" n="color" v="#FF8242"/>
+        </o>
+      </s>
+    </o>
+  </normalityState>
+
+  <priority>
+    <o n="priority">
+      <f t="S" n="name" v="priority" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="(все)"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="10"/>
+          <f t="S" n="name" v="Не срочные"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="20"/>
+          <f t="S" n="name" v="Срочные"/>
+        </o>
+      </s>
+    </o>
+  </priority>
+
+  <static-sampleState>
+    <o n="static-sampleState">
+      <f t="S" n="name" v="static-sampleState" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Открыта"/>
+          <f t="S" n="color" v="#AEFFC2"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Закрыта"/>
+          <f t="S" n="color" v="#EBEBEB"/>
+        </o>
+      </s>
+    </o>
+  </static-sampleState>
+
+  <has-defects>
+    <o n="has-defects">
+      <f t="S" n="name" v="has-defects" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="(не важно)"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="С браком"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Без браков"/>
+        </o>
+      </s>
+    </o>
+  </has-defects>
+
+  <removed>
+    <o n="removed">
+      <f t="S" n="name" v="removed" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="Да"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Нет"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="(не важно)"/>
+        </o>
+      </s>
+    </o>
+  </removed>
+
+  <static-normality>
+    <o n="static-normality">
+      <f t="S" n="name" v="static-normality" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="Норма не определилась"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Качественный тест в норме"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Качественный тест не в норме"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="Значение ниже критической нормы"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="4"/>
+          <f t="S" n="name" v="Значение ниже нормы"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="5"/>
+          <f t="S" n="name" v="Значение в норме"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="6"/>
+          <f t="S" n="name" v="Значение выше нормы"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="7"/>
+          <f t="S" n="name" v="Значение выше критической нормы"/>
+        </o>
+      </s>
+    </o>
+  </static-normality>
+
+  <document-state>
+    <o n="document-state">
+      <f t="S" n="name" v="document-state" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v=""/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Распечатан"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Распеч. повт."/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="4"/>
+          <f t="S" n="name" v="Отправлен"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="8"/>
+          <f t="S" n="name" v="Отпр. повт."/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="16"/>
+          <f t="S" n="name" v="Не отправ."/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="32"/>
+          <f t="S" n="name" v="Отправлена СМС"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="7"/>
+          <f t="S" n="name" v="Ошибка СМС"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="36"/>
+          <f t="S" n="name" v="Отправлен; Отправлена СМС"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="40"/>
+          <f t="S" n="name" v="Отпр. повт.; Отправлена СМС"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="48"/>
+          <f t="S" n="name" v="Не отправ.; Отправлена СМС"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="64"/>
+          <f t="S" n="name" v="Ошибка СМС"/>
+        </o>
+      </s>
+    </o>
+  </document-state>
+
+  <static-fillingDirection>
+    <o n="static-fillingDirection">
+      <f t="S" n="name" v="static-fillingDirection" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Слева-направо, сверху-вниз"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Сверху-вниз, слева-направо"/>
+        </o>
+      </s>
+    </o>
+  </static-fillingDirection>
+
+  <static-axisNumerationType>
+    <o n="static-axisNumerationType">
+      <f t="S" n="name" v="static-axisNumerationType" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Числовая"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Буквенная"/>
+        </o>
+      </s>
+    </o>
+  </static-axisNumerationType>
+
+  <static-archiveRackContentType>
+    <o n="static-archiveRackContentType">
+      <f t="S" n="name" v="static-archiveRackContentType" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Пробирки"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Стёкла"/>
+        </o>
+      </s>
+    </o>
+  </static-archiveRackContentType>
+
+  <static-workState>
+    <o n="static-workState">
+      <f t="S" n="name" v="static-workState"/>
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="Превью"/>
+          <f t="S" n="code" v="Preview"/>
+          <f t="S" n="mnemonics" v="Prev"/>
+          <f t="S" n="color" v="#7CB9E8"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Открыта"/>
+          <f t="S" n="code" v="New"/>
+          <f t="S" n="mnemonics" v="New"/>
+          <f t="S" n="color" v="#C9FFE5"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Загружена"/>
+          <f t="S" n="code" v="Loaded"/>
+          <f t="S" n="mnemonics" v="Load"/>
+          <f t="S" n="color" v="#B284BE"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="Выполнена"/>
+          <f t="S" n="code" v="Done"/>
+          <f t="S" n="mnemonics" v="Done"/>
+          <f t="S" n="color" v="#5D8AA8"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="4"/>
+          <f t="S" n="name" v="Утверждена"/>
+          <f t="S" n="code" v="Approved"/>
+          <f t="S" n="mnemonics" v="Appr"/>
+          <f t="S" n="color" v="#72A0C1"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="5"/>
+          <f t="S" n="name" v="Отменена"/>
+          <f t="S" n="code" v="Cancelled"/>
+          <f t="S" n="mnemonics" v="Canc"/>
+          <f t="S" n="color" v="#A32638"/>
+        </o>
+      </s>
+    </o>
+  </static-workState>
+  
+  <static-DefectState>
+    <o n="sDefectState">
+      <f t="S" n="name" v="sDefectState" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v=" "/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Частичный брак"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Полный брак"/>
+        </o>
+      </s>
+    </o>
+  </static-DefectState>
+
+  <static-quota-states>
+    <o n="static-quota-states">
+      <f t="S" n="name" v="static-quota-states" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="Не исчерпана"/>
+          <f t="S" n="color" v="#FFFFFF"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Приближается к пределу"/>
+          <f t="S" n="color" v="#FFFF00"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Исчерпана частично"/>
+          <f t="S" n="color" v="#FFBCD9"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="Исчерпана полностью"/>
+          <f t="S" n="color" v="#FF1493"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="4"/>
+          <f t="S" n="name" v="Просрочена"/>
+          <f t="S" n="color" v="#99958C"/>
+        </o>
+      </s>
+    </o>
+  </static-quota-states>
+
+  <date-type>
+    <o n="date-type">
+      <f t="S" n="name" v="date-type" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="по дате начала"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="по дате окончания"/>
+        </o>       
+      </s>
+    </o>
+  </date-type>
+  
+  <static-quota-controlTypes>
+    <o n="static-quota-controlTypes">
+      <f t="S" n="name" v="static-quota-controlTypes" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="по сумме и по количеству услуг"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="по сумме"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="по сумме и по номенклатуре услуг"/>
+        </o>
+      </s>
+    </o>
+  </static-quota-controlTypes>
+
+  <static-log-objectTypes>
+    <o n="static-log-objectTypes">
+      <f t="S" n="name" v="static-log-objectTypes" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Заявка"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Проба"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="Тест"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="4"/>
+          <f t="S" n="name" v="Операция (склад)"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="5"/>
+          <f t="S" n="name" v="Счет"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="6"/>
+          <f t="S" n="name" v="Рабочий список"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="7"/>
+          <f t="S" n="name" v="Пакет ответов"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="8"/>
+          <f t="S" n="name" v="Квота"/>
+        </o>
+      </s>
+    </o>
+  </static-log-objectTypes>
+
+  <static-log-operationTypes>
+    <o n="static-log-operationTypes">
+      <f t="S" n="name" v="static-log-operationTypes" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Создание"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Редактирование"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="Удаление"/>
+        </o>        
+      </s>
+    </o>
+  </static-log-operationTypes>
+
+  <static-requestFilterState>
+    <o n="static-requestFilterState">
+      <f t="S" n="name" v="static-requestFilterState" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Регистрация"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Открыта"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="3"/>
+          <f t="S" n="name" v="Закрыта"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="4"/>
+          <f t="S" n="name" v="Удалено"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="5"/>
+          <f t="S" n="name" v="Просрочено"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="6"/>
+          <f t="S" n="name" v="Распечатано"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="7"/>
+          <f t="S" n="name" v="Не распечатано"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="8"/>
+          <f t="S" n="name" v="Отправлен оригинал"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="9"/>
+          <f t="S" n="name" v="Оригинал не отправлялся"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="10"/>
+          <f t="S" n="name" v="Отправлено в электронном виде"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="11"/>
+          <f t="S" n="name" v="В электронном виде не отправлялось"/>
+        </o>
+      </s>
+    </o>
+  </static-requestFilterState>
+  <static-targetInfoState>
+  <o n="static-targetInfoState">
+    <f t="S" n="name" v="static-targetInfoState"/>
+    <s n="elements">
+      <o n="elements">
+        <f t="I" n="id" v="1"/>
+        <f t="S" n="name" v="Новое"/>
+        <f t="S" n="code" v="New"/>
+        <f t="S" n="mnemonics" v="New"/>
+        <f t="S" n="color" v="#C9FFE5"/>
+      </o>
+      <o n="elements">
+        <f t="I" n="id" v="2"/>
+        <f t="S" n="name" v="В работе"/>
+        <f t="S" n="code" v="InProgress"/>
+        <f t="S" n="mnemonics" v="InProg"/>
+        <f t="S" n="color" v="#FFD782"/>
+      </o>
+      <o n="elements">
+        <f t="I" n="id" v="3"/>
+        <f t="S" n="name" v="Выполнено"/>
+        <f t="S" n="code" v="Done"/>
+        <f t="S" n="mnemonics" v="Done"/>
+        <f t="S" n="color" v="#D09EDE"/>
+      </o>
+      <o n="elements">
+        <f t="I" n="id" v="4"/>
+        <f t="S" n="name" v="Отменено"/>
+        <f t="S" n="code" v="Cancelled"/>
+        <f t="S" n="mnemonics" v="Canc"/>
+        <f t="S" n="color" v="#EF8383"/>
+      </o>
+    </s>
+  </o>
+  </static-targetInfoState>
+
+  <static-paymentState>
+    <o n="static-paymentState">
+      <f t="S" n="name" v="static-paymentState" />
+      <s n="elements">
+        <o n="elements">
+          <f t="I" n="id" v="0"/>
+          <f t="S" n="name" v="Не передан кассиру"/>
+          <f t="S" n="color" v="#C9FFE5"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="1"/>
+          <f t="S" n="name" v="Передан кассиру"/>
+          <f t="S" n="color" v="#B284BE"/>
+        </o>
+        <o n="elements">
+          <f t="I" n="id" v="2"/>
+          <f t="S" n="name" v="Передан кассиру (есть возвраты)"/>
+          <f t="S" n="color" v="#B284BE"/>
+        </o>
+      </s>
+    </o>
+  </static-paymentState>
+  </content>
