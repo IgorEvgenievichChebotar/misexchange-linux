@@ -515,9 +515,9 @@ namespace ru.novolabs.SuperCore
     public struct SettingsConst
     {
         public const String Settings_File_Name = "settings.xml";
-        internal const String Mapping_File_Name = "\\Mapping.xml";
-        public const String Lims_Dictionary_File_Name = "\\LimsStaticDictionary.xml";
-        public const String Hem_Dictionary_File_Name = "\\HemStaticDictionary.xml";
+        internal const String Mapping_File_Name = "/Mapping.xml";
+        public const String Lims_Dictionary_File_Name = "/LimsStaticDictionary.xml";
+        public const String Hem_Dictionary_File_Name = "/HemStaticDictionary.xml";
         internal const String Settings_WayBill_FileName = "waybill.frx";
         public const String Dictionary_Mapping_FileName = "DictionaryMapping.xml";
     }
